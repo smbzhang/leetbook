@@ -52,7 +52,7 @@ public:
 };
 ```
 
-## Go实现
+### Go实现
 
 ```
 func twoSum(nums []int, target int) []int {
@@ -70,7 +70,7 @@ func twoSum(nums []int, target int) []int {
 }
 ```
 
-## Python实现
+### Python实现
 
 ```
 class Solution(object):
