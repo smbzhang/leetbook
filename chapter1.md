@@ -32,7 +32,14 @@ return [0, 1].
 
 ### C++实现
 
-
+```
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        
+    }
+};
+```
 
 
 
