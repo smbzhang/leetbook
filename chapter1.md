@@ -54,5 +54,21 @@ public:
 
 ## Go实现
 
+```
+func twoSum(nums []int, target int) []int {
+    var ret []int
+    for i := 0; i < len(nums) - 1; i++ {
+        for j := i + 1; j < len(nums); j++ {
+            if nums[i] + nums[j] == target {
+                ret = append(ret, i)
+                ret = append(ret, j)
+                return ret
+            }
+        }
+    }
+    return ret
+}
+```
+
 
 
