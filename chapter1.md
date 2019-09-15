@@ -28,7 +28,7 @@ return [0, 1].
 
 ## 解法一
 
-简单粗暴
+简单粗暴，两重循环，外层遍历下标 i：\[0，n\)，内层 j：\[j + 1，n\] 
 
 ### C++实现
 
@@ -36,7 +36,7 @@ return [0, 1].
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        
+
     }
 };
 ```
