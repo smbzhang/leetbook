@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* [试试](chapter1.md)
+* [LeetCode\_1\_TwoSum](chapter1.md)
 
