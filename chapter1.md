@@ -72,7 +72,7 @@ func twoSum(nums []int, target int) []int {
 
 ## Python实现
 
+```
 
-
-
+```
 
