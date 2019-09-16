@@ -97,7 +97,13 @@ class Solution(object):
 
 ## 解法二
 
+> 第二个循环是为了找出 target-nums\[i\] 的值，代替循环我们可以使用hash map来存储数组信息 key：数组的值 value：数组的下标
 
+### C++实现
+
+```
+
+```
 
 ## 总结
 
