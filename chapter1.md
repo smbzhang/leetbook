@@ -102,7 +102,27 @@ class Solution(object):
 ### C++实现
 
 ```
-
+class Solution2 {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> result;
+        int n = nums.size();
+        std::unordered_map<int, int> hmap;
+        for (int i = 0; i < nums.size(); i++) {
+            hmap[nums[i]] = i;
+        }
+        for (int i = 0; i < n - 1; i++) {
+            int sub = target - nums[i];
+            auto iter = hmap.find(sub);
+            if (iter != hmap.end() && iter->second != i) {
+                result.emplace_back(i);
+                result.emplace_back(iter->second);
+                break;
+            }
+        }
+        return result;
+    }
+};
 ```
 
 ## 总结
