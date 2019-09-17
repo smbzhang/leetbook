@@ -22,9 +22,7 @@ unorderedmap的内部是使用 hashtable 数据结构存储的，hash就会存�
 
 当出现冲突的时候会通过链表连在前一个元素后面，这个位置被称为bucket
 
-![](/assets/import.png)
+![](/images/hashmap.png)
 
 所以unordered\_map内部其实是由很多哈希桶组成的，每个哈希桶中可能没有元素，也可能有多个元素。
-
-
 
