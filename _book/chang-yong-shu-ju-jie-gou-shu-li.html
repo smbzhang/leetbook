@@ -309,8 +309,63 @@ iterator erase ( const_iterator first, const_iterator last );
 <pre><code>void swap ( unordered_map&amp; ump );
 </code></pre><p>&#x4EA4;&#x6362;&#x4E24;&#x4E2A;unordered_map&#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x4E0D;&#x662F;&#x4EA4;&#x6362;&#x7279;&#x5B9A;&#x5143;&#x7D20;&#xFF0C;&#x662F;&#x6574;&#x4E2A;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;map&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF09;</p>
 <h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><a name="&#x793A;&#x4F8B;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x793A;&#x4F8B;&#x4EE3;&#x7801;</h3>
-<pre><code>
+<pre><code>// unordered_map::insert
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;unordered_map&gt;
+using namespace std;
 
+void display(unordered_map&lt;string,double&gt; myrecipe,string str)
+{
+    cout &lt;&lt; str &lt;&lt; endl;
+    for (auto&amp; x: myrecipe)
+        cout &lt;&lt; x.first &lt;&lt; &quot;: &quot; &lt;&lt; x.second &lt;&lt; endl;
+    cout &lt;&lt; endl;
+}
+
+int main ()
+{
+    unordered_map&lt;string,double&gt;
+    myrecipe,
+    mypantry = {{&quot;milk&quot;,2.0},{&quot;flour&quot;,1.5}};
+
+    /****************&#x63D2;&#x5165;*****************/
+    pair&lt;string,double&gt; myshopping (&quot;baking powder&quot;,0.3);
+    myrecipe.insert (myshopping);                        // &#x590D;&#x5236;&#x63D2;&#x5165;
+    myrecipe.insert (make_pair&lt;string,double&gt;(&quot;eggs&quot;,6.0)); // &#x79FB;&#x52A8;&#x63D2;&#x5165;
+    myrecipe.insert (mypantry.begin(), mypantry.end());  // &#x8303;&#x56F4;&#x63D2;&#x5165;
+    myrecipe.insert ({{&quot;sugar&quot;,0.8},{&quot;salt&quot;,0.1}});    // &#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4;&#x63D2;&#x5165;(&#x53EF;&#x4EE5;&#x7528;&#x4E8C;&#x7EF4;&#x4E00;&#x6B21;&#x63D2;&#x5165;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x7EF4;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x5143;&#x7D20;)
+    myrecipe[&quot;coffee&quot;] = 10.0;  //&#x6570;&#x7EC4;&#x5F62;&#x5F0F;&#x63D2;&#x5165;
+
+    display(myrecipe,&quot;myrecipe contains:&quot;);
+
+    /****************&#x67E5;&#x627E;*****************/
+    unordered_map&lt;string,double&gt;::const_iterator got = myrecipe.find (&quot;coffee&quot;);
+
+    if ( got == myrecipe.end() )
+        cout &lt;&lt; &quot;not found&quot;;
+    else
+        cout &lt;&lt; &quot;found &quot;&lt;&lt;got-&gt;first &lt;&lt; &quot; is &quot; &lt;&lt; got-&gt;second&lt;&lt;&quot;\n\n&quot;;
+    /****************&#x4FEE;&#x6539;*****************/
+    myrecipe.at(&quot;coffee&quot;) = 9.0;
+    myrecipe[&quot;milk&quot;] = 3.0;
+    display(myrecipe,&quot;After modify myrecipe contains:&quot;);
+
+
+    /****************&#x64E6;&#x9664;*****************/
+    myrecipe.erase(myrecipe.begin());  //&#x901A;&#x8FC7;&#x4F4D;&#x7F6E;
+    myrecipe.erase(&quot;milk&quot;);    //&#x901A;&#x8FC7;key
+    display(myrecipe,&quot;After erase myrecipe contains:&quot;);
+
+    /****************&#x4EA4;&#x6362;*****************/
+    myrecipe.swap(mypantry);
+    display(myrecipe,&quot;After swap with mypantry, myrecipe contains:&quot;);
+
+    /****************&#x6E05;&#x7A7A;*****************/
+    myrecipe.clear();
+    display(myrecipe,&quot;After clear, myrecipe contains:&quot;);
+    return 0;
+}
 </code></pre>
                                 
                                 </section>
@@ -350,7 +405,7 @@ iterator erase ( const_iterator first, const_iterator last );
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常用数据结构梳理","level":"1.3","depth":1,"previous":{"title":"LeetCode_1_TwoSum(两数之和)","level":"1.2","depth":1,"path":"chapter1.md","ref":"chapter1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"chang-yong-shu-ju-jie-gou-shu-li.md","mtime":"2019-09-17T12:07:57.158Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T11:27:47.263Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常用数据结构梳理","level":"1.3","depth":1,"previous":{"title":"LeetCode_1_TwoSum(两数之和)","level":"1.2","depth":1,"path":"chapter1.md","ref":"chapter1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"chang-yong-shu-ju-jie-gou-shu-li.md","mtime":"2019-09-17T12:08:33.813Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T11:27:47.263Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
