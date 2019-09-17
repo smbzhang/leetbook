@@ -366,5 +366,114 @@ map[18:x 10:x 14:x 4:x 6:x 16:x 24:x]
 map[12:x 16:x 4:x 40:x 14:x 18:x]
 ```
 
+## Python的hashmap
 
+同样的python中的字典也是hashmap，实现的方式也是和C++相同。键一般是唯一的，如果重复最后的一个键值对会替换前面的，值不需要唯一。键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。
+
+### 构造方式
+
+```
+dict = {'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}
+dict = {}
+```
+
+因为python是弱类型语言，所以直接构造方式即可
+
+### 元素访问
+
+如果key值不存在就会抛异常
+
+### 查找
+
+```
+dict.has_key(key)
+```
+
+有则返回True，否则返回False
+
+### 删除字典元素
+
+```
+del dict['Name']  # 删除键是'Name'的条目
+dict.clear()      # 清空字典所有条目
+del dict          # 删除字典
+```
+
+删除不存在的key值，会抛出异常
+
+### 容量
+
+```
+len(dict)
+```
+
+使用len函数进行容量的计算
+
+### 遍历
+
+```
+dict={"a":"Alice","b":"Bruce","J":"Jack"}
+
+# 实例一：
+for i in dict:
+    print "dict[%s]=" % i,dict[i]
+
+# 实例二：
+for i in  dict.items():
+    print i
+
+# 实例三：
+for (k,v) in  dict.items():
+    print "dict[%s]=" % k,v
+
+# 实例四：
+for k,v in dict.iteritems():
+        print "dict[%s]=" % k,v
+
+#实例五:
+for k in dict.keys():
+    print key
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+地方
 
