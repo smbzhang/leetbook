@@ -89,53 +89,59 @@ iterator find ( const key_type& k );
 
 查找key所在的元素。
 
-- 找到：返回元素的迭代器。通过迭代器的second属性获取值
+* 找到：返回元素的迭代器。通过迭代器的second属性获取值
 
-- 没找到：返回unordered\_map::end
+* 没找到：返回unordered\_map::end
 
 #### insert
 
 插入有几种方式：
-- 复制插入 (复制一个已有的pair的内容)
-- 数组插入（直接插入一个二维数组）
-- 范围插入（复制一个起始迭代器和终止迭代器中间的内容）
-- 数组访问模式插入(和数组的[]操作很相似)
-具体看后面的例子
+
+* 复制插入 \(复制一个已有的pair的内容\)
+* 数组插入（直接插入一个二维数组）
+* 范围插入（复制一个起始迭代器和终止迭代器中间的内容）
+* 数组访问模式插入\(和数组的\[\]操作很相似\)
+  具体看后面的例子
 
 #### at
 
 ```
 mapped_type& at ( const key_type& k );
 ```
+
 查找key所对应的值
-- 如果存在：返回key对应的值，可以直接修改，和[]操作一样。
-- 如果不存在：抛出 out\_of\_range 异常.
+
+* 如果存在：返回key对应的值，可以直接修改，和\[\]操作一样。
+* 如果不存在：抛出 out\_of\_range 异常.
 
 #### erase
 
 擦除元素也有几种方式：
 
+
+
+```
 1. 通过位置（迭代器）
-```
 iterator erase ( const_iterator position );
-```
 2. 通过key
-```
 size_type erase ( const key_type& k );
-```
 3. 通过范围（两个迭代器）
-```
 iterator erase ( const_iterator first, const_iterator last );
 ```
 
 #### clear
+
 ```
 void clear() noexcept
 ```
-清空unordered_map
+
+清空unordered\_map
 
 #### swap
+
 ```
 void swap ( unordered_map& ump );
 ```
+
 交换两个unordered\_map（注意，不是交换特定元素，是整个交换两个map中的所有元素）
+
