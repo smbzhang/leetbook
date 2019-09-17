@@ -210,7 +210,51 @@ Go语言的map数据结构就是hashmap
 
 ### 特性
 
-Go语言的map底层的实现和C++的实现原理相同，同样是基于bucket来实现内存管理的。Go语言中的map和
+Go语言的map底层的实现和C++的实现原理相同，同样是基于bucket来实现内存管理的。Go语言中的map和slice以及channel一样是引用类型。键必须是支持相等运算符 \("=="、"!="\) 类型， 如 number、string、 pointer、array、struct，以及对应的 interface。值可以是任意类型，没有限制。slice，map，function都不能当做key。
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+的
 
