@@ -79,5 +79,21 @@ bool empty() const noexcept;
 size_type size() const noexcept;
 ```
 
+### 元素操作
+
+#### find
+
+```
+iterator find ( const key_type& k );
+```
+
+查找key所在的元素。
+
+- 找到：返回元素的迭代器。通过迭代器的second属性获取值
+
+- 没找到：返回unordered\_map::end
+
+#### insert
+
 
 
