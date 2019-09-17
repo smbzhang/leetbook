@@ -27,3 +27,5 @@ node_modules
 book.pdf
 book.epub
 book.mobi
+
+cp_book_to_docs.sh
