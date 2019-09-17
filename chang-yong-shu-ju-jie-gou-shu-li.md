@@ -212,39 +212,157 @@ Go语言的map数据结构就是hashmap
 
 Go语言的map底层的实现和C++的实现原理相同，同样是基于bucket来实现内存管理的。Go语言中的map和slice以及channel一样是引用类型。键必须是支持相等运算符 \("=="、"!="\) 类型， 如 number、string、 pointer、array、struct，以及对应的 interface。值可以是任意类型，没有限制。slice，map，function都不能当做key。
 
+### 构造方式
 
+```
+1. 直接构造
+var m1 map[string]float32 = map[string]float32{"C": 5, "Go": 4.5, "Python": 4.5, "C++": 2}
+2. make构造
+// 创建了一个键类型为string,值类型为int的map
+m1 := make(map[string]int)
+// 也可以选择是否在创建时指定该map的初始存储能力，如创建了一个初始存储能力为5的map
+m2 := make(map[string]int, 5)
+```
 
+### 元素操作
 
+```
+m := map[string]string{"key0": "value0", "key1": "value1"}
+fmt.Printf("map m : %v\n", m)
+//map插入
+m["key2"] = "value2"
+fmt.Printf("inserted map m : %v\n", m)
+//map修改
+m["key0"] = "hello world!"
+fmt.Printf("updated map m : %v\n", m)
+```
 
+### 容量
 
+获取键值对的数量 builtin.len
 
+```
+len := len(m)
+// cap 无效，error
+// cap := cap(m)    //invalid argument m (type map[string]string) for cap
+// fmt.Printf("map's cap is %v\n", cap)
+```
 
+map的容量只能通过len来进行计算，不能使用cap计算容量
 
+### 查找
 
+```
+val, ok := m["key0"]
+if ok {
+	fmt.Printf("map's key0 is %v\n", val)
+}
+```
 
+通过返回值来进行查找，返回的ok如果是true查找成功，false查找失败
 
+### 删除（如果key不存在不会报错）
 
+delete
 
+```
+if val, ok = m["key1"]; ok {
+	delete(m, "key1")
+	fmt.Printf("deleted key1 map m : %v\n", m)
+}
+```
 
+因为key 不存在的时候删除操作不会报错所以需要先进行存在判断
 
+### 遍历
 
+```
+for k, v := range m {
+    fmt.Printf("key -> value : %v -> %v\n", k, v)
+}
+```
 
+### 注意坑
 
+从 map 中取回的是一个 value 临时复制品，对其成员的修改是没有任何意义的。
 
+```
+func main() {
+	m := map[int]string{1: "x", 2: "w"}
+	fmt.Println(m)
+	for k, v := range m {
+		m[k] = v + v   //修改map的值
+		v = v + "copy" //临时复制品，修改无效
+	}
+	fmt.Println(m)
+}
+```
 
+容器和结构体（map and struct）
 
+```
+语法比较：
+map[type]struct
+map[type]*struct
+```
 
+```
+func main() {
+	type user struct{ name string }
+	/*
+	   当 map 因扩张而重新哈希时，各键值项存储位置都会发生改变。
+	   因此，map 被设计成 not addressable。
+	   类似 m[1].name 这种期望透过原 value 指针修改成员的行为自然会被禁 。
+	*/
+	m := map[int]user{ //
 
+		1: {"user1"},
+	}
+	// m[1].name = "Tom"
+	// ./main.go:16:12: cannot assign to struct field m[1].name in map
+	fmt.Println(m)
 
+	// 正确做法是完整替换 value 或使用指针。
+	u := m[1]
+	u.name = "Tom"
+	m[1] = u // 替换 value。
 
+	m2 := map[int]*user{
+		1: &user{"user1"},
+	}
 
+	m2[1].name = "Jack" // 返回的是指针复制品。透过指针修改原对象是允许的。
+	fmt.Println(m2)
+}
+```
 
+可以在迭代时安全删除键值。但如果期间有新增操作，那么就不知道会有什么意外了。
 
+```
+func main() {
+	for i := 0; i < 5; i++ {
+		m := map[int]string{
+			0: "a", 1: "a", 2: "a", 3: "a", 4: "a",
+			5: "a", 6: "a", 7: "a", 8: "a", 9: "a",
+		}
 
+		for k := range m {
+			m[k+k] = "x"
+			delete(m, k)
+		}
 
+		fmt.Println(m)
+	}
+}
 
-
-
+输出:
+//每次输出都会变化
+map[36:x 28:x 32:x 2:x 8:x 10:x 12:x]
+map[12:x 6:x 16:x 28:x 4:x 10:x 72:x]
+map[12:x 14:x 16:x 18:x 20:x]
+map[18:x 10:x 14:x 4:x 6:x 16:x 24:x]
+map[12:x 16:x 4:x 40:x 14:x 18:x]
+```
 
 
 
