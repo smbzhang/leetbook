@@ -188,7 +188,6 @@ int main ()
     myrecipe["milk"] = 3.0;
     display(myrecipe,"After modify myrecipe contains:");
 
-
     /****************擦除*****************/
     myrecipe.erase(myrecipe.begin());  //通过位置
     myrecipe.erase("milk");    //通过key
