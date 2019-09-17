@@ -255,7 +255,7 @@ map的容量只能通过len来进行计算，不能使用cap计算容量
 ```
 val, ok := m["key0"]
 if ok {
-	fmt.Printf("map's key0 is %v\n", val)
+    fmt.Printf("map's key0 is %v\n", val)
 }
 ```
 
@@ -267,8 +267,8 @@ delete
 
 ```
 if val, ok = m["key1"]; ok {
-	delete(m, "key1")
-	fmt.Printf("deleted key1 map m : %v\n", m)
+    delete(m, "key1")
+    fmt.Printf("deleted key1 map m : %v\n", m)
 }
 ```
 
@@ -288,13 +288,13 @@ for k, v := range m {
 
 ```
 func main() {
-	m := map[int]string{1: "x", 2: "w"}
-	fmt.Println(m)
-	for k, v := range m {
-		m[k] = v + v   //修改map的值
-		v = v + "copy" //临时复制品，修改无效
-	}
-	fmt.Println(m)
+    m := map[int]string{1: "x", 2: "w"}
+    fmt.Println(m)
+    for k, v := range m {
+        m[k] = v + v   //修改map的值
+        v = v + "copy" //临时复制品，修改无效
+    }
+    fmt.Println(m)
 }
 ```
 
@@ -308,31 +308,31 @@ map[type]*struct
 
 ```
 func main() {
-	type user struct{ name string }
-	/*
-	   当 map 因扩张而重新哈希时，各键值项存储位置都会发生改变。
-	   因此，map 被设计成 not addressable。
-	   类似 m[1].name 这种期望透过原 value 指针修改成员的行为自然会被禁 。
-	*/
-	m := map[int]user{ //
+    type user struct{ name string }
+    /*
+       当 map 因扩张而重新哈希时，各键值项存储位置都会发生改变。
+       因此，map 被设计成 not addressable。
+       类似 m[1].name 这种期望透过原 value 指针修改成员的行为自然会被禁 。
+    */
+    m := map[int]user{ //
 
-		1: {"user1"},
-	}
-	// m[1].name = "Tom"
-	// ./main.go:16:12: cannot assign to struct field m[1].name in map
-	fmt.Println(m)
+        1: {"user1"},
+    }
+    // m[1].name = "Tom"
+    // ./main.go:16:12: cannot assign to struct field m[1].name in map
+    fmt.Println(m)
 
-	// 正确做法是完整替换 value 或使用指针。
-	u := m[1]
-	u.name = "Tom"
-	m[1] = u // 替换 value。
+    // 正确做法是完整替换 value 或使用指针。
+    u := m[1]
+    u.name = "Tom"
+    m[1] = u // 替换 value。
 
-	m2 := map[int]*user{
-		1: &user{"user1"},
-	}
+    m2 := map[int]*user{
+        1: &user{"user1"},
+    }
 
-	m2[1].name = "Jack" // 返回的是指针复制品。透过指针修改原对象是允许的。
-	fmt.Println(m2)
+    m2[1].name = "Jack" // 返回的是指针复制品。透过指针修改原对象是允许的。
+    fmt.Println(m2)
 }
 ```
 
@@ -340,19 +340,19 @@ func main() {
 
 ```
 func main() {
-	for i := 0; i < 5; i++ {
-		m := map[int]string{
-			0: "a", 1: "a", 2: "a", 3: "a", 4: "a",
-			5: "a", 6: "a", 7: "a", 8: "a", 9: "a",
-		}
+    for i := 0; i < 5; i++ {
+        m := map[int]string{
+            0: "a", 1: "a", 2: "a", 3: "a", 4: "a",
+            5: "a", 6: "a", 7: "a", 8: "a", 9: "a",
+        }
 
-		for k := range m {
-			m[k+k] = "x"
-			delete(m, k)
-		}
+        for k := range m {
+            m[k+k] = "x"
+            delete(m, k)
+        }
 
-		fmt.Println(m)
-	}
+        fmt.Println(m)
+    }
 }
 
 输出:
@@ -365,14 +365,4 @@ map[12:x 16:x 4:x 40:x 14:x 18:x]
 ```
 
 
-
-
-
-
-
-
-
-
-
-的
 
