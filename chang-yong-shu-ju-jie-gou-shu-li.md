@@ -26,5 +26,25 @@ unorderedmap的内部是使用 hashtable 数据结构存储的，hash就会存�
 
 所以unordered\_map内部其实是由很多哈希桶组成的，每个哈希桶中可能没有元素，也可能有多个元素。
 
+### 迭代器
+
+unordered\_map的迭代器是一个指针，指向这个元素，通过迭代器来取得它的值。
+
+```
+unordered_map<Key,T>::iterator it;
+(*it).first;             // the key value (of type Key)
+(*it).second;            // the mapped value (of type T)
+(*it);                   // the "element value" (of type pair<const Key,T>) 
+```
+
+它的键值分别是迭代器的first和second属性。
+
+```
+it->first;               // same as (*it).first   (the key value)
+it->second;              // same as (*it).second  (the mapped value) 
+```
+
+
+
 
 
