@@ -34,14 +34,37 @@ unordered\_map的迭代器是一个指针，指向这个元素，通过迭代器
 unordered_map<Key,T>::iterator it;
 (*it).first;             // the key value (of type Key)
 (*it).second;            // the mapped value (of type T)
-(*it);                   // the "element value" (of type pair<const Key,T>) 
+(*it);                   // the "element value" (of type pair<const Key,T>)
 ```
 
 它的键值分别是迭代器的first和second属性。
 
 ```
 it->first;               // same as (*it).first   (the key value)
-it->second;              // same as (*it).second  (the mapped value) 
+it->second;              // same as (*it).second  (the mapped value)
+```
+
+### 构造方式
+
+```
+- 构造空的容器
+- 复制构造
+- 范围构造
+- 用数组构造
+
+typedef unordered_map<string,string> stringmap;
+int main ()
+{
+  stringmap first;                                                 // 空
+  stringmap second ( {{"apple","red"},{"lemon","yellow"}} );       // 用数组初始
+  stringmap fourth (second);                                       // 复制初始化
+  stringmap sixth (second.begin(),second.end());                   // 范围初始化
+
+  for (auto& x: sixth) cout << " " << x.first << ":" << x.second;
+  cout << endl;
+
+  return 0;
+}
 ```
 
 
