@@ -430,50 +430,10 @@ for (k,v) in  dict.items():
 for k,v in dict.iteritems():
         print "dict[%s]=" % k,v
 
-#实例五:
+# 实例五:
 for k in dict.keys():
     print key
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-地方
+遍历的方式非常的多
 
