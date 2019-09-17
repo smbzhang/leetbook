@@ -65,5 +65,19 @@ int main ()
 }
 ```
 
+### 容量操作
+
+#### empty
+
+```
+bool empty() const noexcept;
+```
+
+#### size
+
+```
+size_type size() const noexcept;
+```
+
 
 
