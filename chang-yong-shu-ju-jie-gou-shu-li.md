@@ -281,12 +281,10 @@ for k, v := range m {
     fmt.Printf("key -> value : %v -> %v\n", k, v)
 }
 ```
-
----
-
 ### 注意坑
-
+<font color="red">
 从 map 中取回的是一个 value 临时复制品，对其成员的修改是没有任何意义的。
+</font>
 
 ```
 func main() {
@@ -299,9 +297,9 @@ func main() {
     fmt.Println(m)
 }
 ```
-
+<font color="red">
 容器和结构体（map and struct）
-
+</font>
 ```
 语法比较：
 map[type]struct
@@ -337,9 +335,9 @@ func main() {
     fmt.Println(m2)
 }
 ```
-
+<font color="red">
 可以在迭代时安全删除键值。但如果期间有新增操作，那么就不知道会有什么意外了。
-
+</font>
 ```
 func main() {
     for i := 0; i < 5; i++ {
