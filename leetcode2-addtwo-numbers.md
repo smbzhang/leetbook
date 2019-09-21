@@ -26,9 +26,9 @@
 
 时间复杂度 O\(n\) 空间复杂度O\(1\)
 
-### 代码
+## 代码
 
-#### C++实现
+### C++实现
 
 下面两个其实实现是一样的，只不过第一个没有使用 num1和num2来进行设计，所以写出来的程序很丑陋。
 
@@ -116,7 +116,7 @@ public:
 };
 ```
 
-#### python实现
+### python实现
 
 ```
 class Solution(object):
@@ -159,7 +159,7 @@ class Solution(object):
         return ret
 ```
 
-#### Go实现
+### Go实现
 
 ```
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
