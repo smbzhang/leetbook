@@ -114,5 +114,48 @@ public:
 };
 ```
 
+#### python实现
+
+```
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        """
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        ret = None
+        pcur = ret
+        num1 = 0
+        num2 = 0
+        carry = 0
+        while l1 != None or l2 != None :
+            if l1 == None:
+                num1 = 0
+            else:
+                num1 = l1.val
+            if l2 == None:
+                num2 = 0
+            else:
+                num2 = l2.val
+            mod = (num1 + num2 + carry) % 10
+            carry = (num1 + num2 + carry) / 10
+            node = ListNode(mod)
+            if pcur == None:
+                pcur = node
+                ret = pcur
+            else:
+                pcur.next = node
+                pcur = node
+            if l1 != None:
+                l1 = l1.next
+            if l2 != None:
+                l2 = l2.next
+        if carry != 0:
+            node = ListNode(carry)
+            pcur.next = node
+        return ret
+```
+
 
 
