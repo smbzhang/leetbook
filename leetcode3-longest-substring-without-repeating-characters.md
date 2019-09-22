@@ -51,7 +51,7 @@ public:
 使用最简单的递归实现动态规划算法，leetcode显示内存超出限制，递归深度太高了，对于非常长的字符串。
 
 ```
-//加入记录数组，提升查找速度, Memory Limit Exceeded 这解决不了内存的问题，递归层数太深了
+//加入记录数组，提升查找速度, Memory Limit Exceeded 一定程度上解决内存问题
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
@@ -89,5 +89,39 @@ public:
 };
 ```
 
-上面的程序通过加入记录数组来解决每次递归都重新计算重复的以i开头的最长无重复子串，这样可以减少递归的深度，并且减少时间复杂度。
+上面的程序通过加入记录数组来解决每次递归都重新计算重复的以i开头的最长无重复子串，这样可以减少递归的深度，并且减少时间复杂度。很遗憾对于长字符串还是内存超限了，所以我们必须干掉递归程序
+
+```
+// 改成递推求解，减少栈内存消耗
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int n = s.length();
+        std::vector<int> records(n, 0);
+        if (n <= 1) {return n;}
+        records[n - 1] = 1;
+        for (int i = n - 2; i >= 0; i--) {
+            if (s[i] == s[i + 1]) {
+                records[i] = 1;
+            }else{
+                int index = s.substr(i + 1, records[i + 1]).find(s[i]);
+                if (index == string::npos) {
+                    records[i] = records[i + 1] + 1;
+                }else {
+                    records[i] = index + 1;
+                }
+            }
+        }
+        int max = 0;
+        for (int i = 0; i < records.size(); i++) {
+            if (records[i] > max) {
+                max = records[i];
+            }
+        }
+        return max;
+    }
+};
+```
+
+改造成递推求解，这样时间复杂度就是O\(n\), 空间复杂度也是O\(n\)，顺利通过leetcode检查
 
