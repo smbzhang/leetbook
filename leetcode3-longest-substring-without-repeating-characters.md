@@ -153,5 +153,35 @@ func lengthOfLongestSubstring(s string) int {
 }
 ```
 
+### Python实现
+
+```
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        n = len(s)
+        if n <= 1:
+            return len(s)
+        records = [0] * n
+        records[n - 1] = 1
+        for i in range(n-2, -1, -1):
+            if s[i] == s[i + 1]:
+                records[i] = 1
+            else:
+                index = s[i + 1: i + 1 + records[i + 1]].find(s[i])
+                if index == -1:
+                    records[i] = records[i + 1] + 1
+                else:
+                    records[i] = index + 1
+        max = 0
+        for i in range(n):
+            if records[i] > max:
+                max = records[i]
+        return max
+```
+
 
 
