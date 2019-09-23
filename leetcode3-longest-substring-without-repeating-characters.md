@@ -125,3 +125,33 @@ public:
 
 改造成递推求解，这样时间复杂度就是O\(n\), 空间复杂度也是O\(n\)，顺利通过leetcode检查
 
+### Go语言实现
+
+```
+func lengthOfLongestSubstring(s string) int {
+    n := len(s)
+    if (n <= 1) {return len(s)}
+    var records []int = make([]int, n)
+    records[n - 1] = 1
+    for i := n -2; i >= 0; i-- {
+        if (s[i] == s[i + 1]) {
+            records[i] = 1;
+        }else{
+            if (!strings.Contains(s[i + 1: i + 1 + records[i +1]], string(s[i]))) {
+                records[i] = records[i + 1] + 1;
+            }else {
+                index := strings.Index(s[i + 1: i + 1 + records[i +1]], string(s[i]))
+                records[i] = index + 1
+            }
+        }
+    }
+    max := 0
+    for _, num := range(records) {
+        if num > max {max = num}
+    }
+    return max
+}
+```
+
+
+
