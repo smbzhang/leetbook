@@ -1,0 +1,517 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>002-AddTwoNumbers · leetbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="smbzhang">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta  name="baidu-site-verification"  content="iFzduP9Qsi" >
+    
+    <meta  name="google-site-verification"  content="qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o" >
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="003-LongestSubstringWithoutRepeatingCharacters.html" />
+    
+    
+    <link rel="prev" href="001-TwoSum.html" />
+    
+
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://smbzhang.top" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="DataStruct.html">
+            
+                <a href="DataStruct.html">
+            
+                    
+                    常用数据结构梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="001-TwoSum.html">
+            
+                <a href="001-TwoSum.html">
+            
+                    
+                    001-TwoSum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="002-AddTwoNumbers.html">
+            
+                <a href="002-AddTwoNumbers.html">
+            
+                    
+                    002-AddTwoNumbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="003-LongestSubstringWithoutRepeatingCharacters.html">
+            
+                <a href="003-LongestSubstringWithoutRepeatingCharacters.html">
+            
+                    
+                    003-LongestSubstringWithoutRepeatingCharacters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="020-validparentheses.html">
+            
+                <a href="020-validparentheses.html">
+            
+                    
+                    020-ValidParentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >002-AddTwoNumbers</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c&#x5B9E;&#x73B0;"><b>3.1. </b>C++&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#python&#x5B9E;&#x73B0;"><b>3.2. </b>python&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#go&#x5B9E;&#x73B0;"><b>3.3. </b>Go&#x5B9E;&#x73B0;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
+<h2 id=""><img src="assets/list.png" alt=""></h2>
+<p>&#x8FD9;&#x4E2A;&#x9898;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5927;&#x6570;&#x52A0;&#x6CD5;&#x9898;&#xFF0C;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x8868;&#x793A;&#x4E24;&#x4E2A;&#x5927;&#x6570;&#x5B57;&#xFF0C;&#x4E0D;&#x8FC7;&#x94FE;&#x8868;&#x7684;&#x8282;&#x70B9;&#x662F;&#x6309;&#x7167;&#x6570;&#x5B57;&#x7684;&#x4F4E;&#x4F4D;&#x5230;&#x9AD8;&#x4F4D;&#x8FDB;&#x884C;&#x6392;&#x5217;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4ECE;&#x5934;&#x904D;&#x5386;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x5E76;&#x628A;&#x7ED3;&#x70B9;&#x503C;&#x76F8;&#x52A0;&#xFF0C;&#x8FDB;&#x4F4D;&#x7528;carry&#x8868;&#x793A;&#x3002;&#x4F2A;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>1. &#x521D;&#x59CB;&#x5316;&#x4E24;&#x4E2A;NULL&#x8282;&#x70B9; pcur &#x548C; ret&#xFF0C; ret&#x7528;&#x6765;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x94FE;&#x8868;&#xFF0C;pcur&#x6307;&#x5411;&#x5F53;&#x524D;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#x94FE;&#x8868;&#x8282;&#x70B9;
+2. &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;int&#x7C7B;&#x578B;&#x7684;&#x8FDB;&#x4F4D;&#x503C; carry = 0
+3. &#x521D;&#x59CB;&#x5316;&#x4E24;&#x4E2A;int&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x5F53;&#x524D;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x503C;&#xFF0C; num1 = 0 num2 = 0
+4. while(l1 != NULL || l2 != NULL)
+    1. num1 = (l1 == NULL) ? 0 : l1-&gt;val
+    2. num2 = (l2 == NULL) ? 0 : l2-&gt;val
+    3. &#x8BA1;&#x7B97; mod = num1 + num2 + carry % 10
+    4. &#x8BA1;&#x7B97; carry = num1 + num2 + carry / 10
+    &#x5982;&#x679C; pcur &#x7B49;&#x4E8E; NULL
+        5. &#x65B0;&#x5EFA;&#x4E00;&#x4E2A; node &#x8282;&#x70B9;&#xFF0C;&#x4F7F;&#x7528; mod &#x521D;&#x59CB;&#x5316;&#xFF0C; &#x5E76;&#x4E14; pcur &#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#xFF0C; ret = pcur &#x521D;&#x59CB;&#x5316;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x5934;
+    &#x5426;&#x5219;&#x7684;&#x8BDD;
+        5. &#x65B0;&#x5EFA;&#x4E00;&#x4E2A; node &#x8282;&#x70B9;&#xFF0C;&#x4F7F;&#x7528; mod &#x521D;&#x59CB;&#x5316;&#xFF0C; &#x5E76;&#x4E14; pcur-&gt;next &#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;, pcur = node
+    6. &#x5224;&#x65AD; l1 &#x548C; l2 &#x662F;&#x5426;&#x4E3A; NULL &#x5E76;&#x5411;&#x524D;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x8282;&#x70B9;
+5. &#x5224;&#x65AD; carry &#x662F;&#x4E0D;&#x662F;0&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x7684;&#x8BDD;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8282;&#x70B9;node&#x4F7F;&#x7528;carry&#x521D;&#x59CB;&#x5316;&#xFF0C;pcur&#x6307;&#x5411;&#x8FD9;&#x4E2A;node
+6. &#x8FD4;&#x56DE; ret
+</code></pre><p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(n) &#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)</p>
+<h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
+<h3 id="c&#x5B9E;&#x73B0;"><a name="c&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. C++&#x5B9E;&#x73B0;</h3>
+<p>&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x5176;&#x5B9E;&#x5B9E;&#x73B0;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x7B2C;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x4F7F;&#x7528; num1&#x548C;num2&#x6765;&#x8FDB;&#x884C;&#x8BBE;&#x8BA1;&#xFF0C;&#x6240;&#x4EE5;&#x5199;&#x51FA;&#x6765;&#x7684;&#x7A0B;&#x5E8F;&#x5F88;&#x4E11;&#x964B;&#x3002;</p>
+<pre><code>class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode *pcur1 = l1, *pcur2 = l2, *pcur = NULL, *ret = NULL;
+        int carry = 0;
+        while (pcur1 != NULL) {
+            int num1 = pcur1-&gt;val;
+            if (pcur2 != NULL) {
+                int num2 = pcur2-&gt;val;
+                    int mod = (num1 + num2 + carry) % 10;
+                    if (pcur == NULL) {
+                        pcur = new ListNode(mod);
+                        ret = pcur;
+                    }else {
+                        ListNode *node = new ListNode(mod);
+                        pcur-&gt;next = node;
+                        pcur = node;
+                    }
+                    carry = (num1 + num2 + carry) / 10;
+                    pcur2 = pcur2-&gt;next;
+            }else
+                break;
+            pcur1 = pcur1-&gt;next;
+        }
+        while(pcur1 != NULL) {
+            int mod = (pcur1-&gt;val + carry) % 10;
+            carry = (pcur1-&gt;val + carry) / 10;
+            ListNode *node = new ListNode(mod);
+            pcur-&gt;next = node;
+            pcur = node;
+            pcur1 = pcur1-&gt;next;
+        }
+        while(pcur2 != NULL) {
+            int mod = (pcur2-&gt;val + carry) % 10;
+            carry = (pcur2-&gt;val + carry) / 10;
+            ListNode *node = new ListNode(mod);
+            pcur-&gt;next = node;
+            pcur = node;
+            pcur2 = pcur2-&gt;next;
+
+        }
+
+        if (carry != 0) {
+            ListNode *node = new ListNode(carry);
+            pcur-&gt;next = node;
+            pcur = node;
+        }
+        return ret;
+    }
+};
+</code></pre><pre><code>class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode *ret = NULL, *pcur = NULL;
+        int num1 = 0, num2 = 0, carry = 0;
+        while (l1 != NULL || l2 != NULL) {
+            num1 = (l1 == NULL) ? 0 : l1-&gt;val;
+            num2 = (l2 == NULL) ? 0 : l2-&gt;val;
+            int mod = (num1 + num2 + carry) % 10;
+            carry = (num1 + num2 + carry) / 10;
+            ListNode *node = new ListNode(mod);
+            if (pcur == NULL) {
+                pcur = node;
+                ret = pcur;
+            } else {
+                pcur-&gt;next = node;
+                pcur = node;
+            }
+            if (l1 != NULL) l1 = l1-&gt;next;
+            if (l2 != NULL) l2 = l2-&gt;next;
+        }
+        if (carry != 0) {
+            ListNode *node = new ListNode(carry);
+            pcur-&gt;next = node;
+        }
+        return ret;
+    }
+};
+</code></pre><h3 id="python&#x5B9E;&#x73B0;"><a name="python&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#python&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. python&#x5B9E;&#x73B0;</h3>
+<pre><code>class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        &quot;&quot;&quot;
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        &quot;&quot;&quot;
+        ret = None
+        pcur = ret
+        num1 = 0
+        num2 = 0
+        carry = 0
+        while l1 != None or l2 != None :
+            if l1 == None:
+                num1 = 0
+            else:
+                num1 = l1.val
+            if l2 == None:
+                num2 = 0
+            else:
+                num2 = l2.val
+            mod = (num1 + num2 + carry) % 10
+            carry = (num1 + num2 + carry) / 10
+            node = ListNode(mod)
+            if pcur == None:
+                pcur = node
+                ret = pcur
+            else:
+                pcur.next = node
+                pcur = node
+            if l1 != None:
+                l1 = l1.next
+            if l2 != None:
+                l2 = l2.next
+        if carry != 0:
+            node = ListNode(carry)
+            pcur.next = node
+        return ret
+</code></pre><h3 id="go&#x5B9E;&#x73B0;"><a name="go&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#go&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. Go&#x5B9E;&#x73B0;</h3>
+<pre><code>func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+    var pcur, ret *ListNode = nil, nil
+    var num1, num2, carry int = 0, 0, 0
+    for l1 != nil || l2 != nil {
+        if (l1 == nil) {num1 = 0} else {num1 = l1.Val}
+        if (l2 == nil) {num2 = 0} else {num2 = l2.Val}
+        mod := (num1 + num2 + carry) % 10
+        carry = (num1 + num2 + carry) / 10
+        node := new(ListNode)
+        node.Val = mod
+        node.Next = nil
+        if (pcur == nil) {
+            pcur = node
+            ret = node
+        }else {
+            pcur.Next = node
+            pcur = node
+        }
+        if (l1 != nil) {l1 = l1.Next}
+        if (l2 != nil) {l2 = l2.Next}
+    }
+    if (carry != 0) {
+        node := new(ListNode)
+        node.Val = carry
+        node.Next = nil
+        pcur.Next = node
+    }
+    return ret
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="001-TwoSum.html" class="navigation navigation-prev " aria-label="Previous page: 001-TwoSum">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="003-LongestSubstringWithoutRepeatingCharacters.html" class="navigation navigation-next " aria-label="Next page: 003-LongestSubstringWithoutRepeatingCharacters">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"002-AddTwoNumbers","level":"1.4","depth":1,"next":{"title":"003-LongestSubstringWithoutRepeatingCharacters","level":"1.5","depth":1,"path":"003-LongestSubstringWithoutRepeatingCharacters.md","ref":"003-LongestSubstringWithoutRepeatingCharacters.md","articles":[]},"previous":{"title":"001-TwoSum","level":"1.3","depth":1,"path":"001-TwoSum.md","ref":"001-TwoSum.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"002-AddTwoNumbers.md","mtime":"2019-10-05T12:45:17.230Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-05T15:36:31.913Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
