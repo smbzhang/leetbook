@@ -52,6 +52,7 @@ it->second;              // same as (*it).second  (the mapped value)
 - 复制构造
 - 范围构造
 - 用数组构造
+{% raw %}
 typedef unordered_map<string,string> stringmap;
 int main ()
 {
@@ -63,6 +64,7 @@ int main ()
   cout << endl;
   return 0;
 }
+{% endraw %}
 ```
 
 ### 容量操作
