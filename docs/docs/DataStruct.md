@@ -148,6 +148,7 @@ void swap ( unordered_map& ump );
 ### 示例代码
 
 ```
+{% raw %}
 // unordered_map::insert
 #include <iostream>
 #include <string>
@@ -166,7 +167,7 @@ int main ()
 {
     unordered_map<string,double>
     myrecipe,
-    mypantry = {{"milk",2.0},{"flour",1.5}};
+    mypantry = { {"milk",2.0}, {"flour",1.5} };
 
     /****************插入*****************/
     pair<string,double> myshopping ("baking powder",0.3);
@@ -204,6 +205,7 @@ int main ()
     display(myrecipe,"After clear, myrecipe contains:");
     return 0;
 }
+{% endraw %}
 ```
 
 ## Go的hashmap

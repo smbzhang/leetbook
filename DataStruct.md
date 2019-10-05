@@ -1,5 +1,4 @@
 # HashMap无序Map
-{% raw %}
 
 ## C++的hash\_map & unordered\_map
 
@@ -438,4 +437,3 @@ for k in dict.keys():
 ```
 
 遍历的方式非常的多
-{% endraw %}
