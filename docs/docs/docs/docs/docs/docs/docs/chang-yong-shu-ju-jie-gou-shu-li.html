@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="chapter1.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="chapter1.html" />
     
 
 
@@ -147,51 +145,25 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="chang-yong-shu-ju-jie-gou-shu-li.html">
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    LeetCode_1_TwoSum(两数之和)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="chang-yong-shu-ju-jie-gou-shu-li.html">
             
                 <a href="chang-yong-shu-ju-jie-gou-shu-li.html">
             
                     
                     常用数据结构梳理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3" data-path="chapter1.html">
-            
-                <a href="chapter1.html">
-            
-                    
-                    LeetCode_1_Two_Sum
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="leetcode2-addtwo-numbers.html">
-            
-                <a href="leetcode2-addtwo-numbers.html">
-            
-                    
-                    LeetCode_2_Add_Two_Numbers
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5" data-path="leetcode3-longest-substring-without-repeating-characters.html">
-            
-                <a href="leetcode3-longest-substring-without-repeating-characters.html">
-            
-                    
-                    LeetCode_3_Longest Substring Without Repeating Characters
             
                 </a>
             
@@ -438,11 +410,9 @@ if ok {
 <pre><code>for k, v := range m {
     fmt.Printf(&quot;key -&gt; value : %v -&gt; %v\n&quot;, k, v)
 }
-</code></pre><h3 id="&#x6CE8;&#x610F;&#x5751;"><a name="&#x6CE8;&#x610F;&#x5751;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;&#x5751;"><i class="fa fa-link" aria-hidden="true"></i></a>2.8. &#x6CE8;&#x610F;&#x5751;</h3>
-<font color="red">
-&#x4ECE; map &#x4E2D;&#x53D6;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A; value &#x4E34;&#x65F6;&#x590D;&#x5236;&#x54C1;&#xFF0C;&#x5BF9;&#x5176;&#x6210;&#x5458;&#x7684;&#x4FEE;&#x6539;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x4E49;&#x7684;&#x3002;
-</font>
-
+</code></pre><hr>
+<h3 id="&#x6CE8;&#x610F;&#x5751;"><a name="&#x6CE8;&#x610F;&#x5751;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;&#x5751;"><i class="fa fa-link" aria-hidden="true"></i></a>2.8. &#x6CE8;&#x610F;&#x5751;</h3>
+<p>&#x4ECE; map &#x4E2D;&#x53D6;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A; value &#x4E34;&#x65F6;&#x590D;&#x5236;&#x54C1;&#xFF0C;&#x5BF9;&#x5176;&#x6210;&#x5458;&#x7684;&#x4FEE;&#x6539;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x4E49;&#x7684;&#x3002;</p>
 <pre><code>func main() {
     m := map[int]string{1: &quot;x&quot;, 2: &quot;w&quot;}
     fmt.Println(m)
@@ -452,9 +422,7 @@ if ok {
     }
     fmt.Println(m)
 }
-</code></pre><p><font color="red">
-&#x5BB9;&#x5668;&#x548C;&#x7ED3;&#x6784;&#x4F53;&#xFF08;map and struct&#xFF09;
-</font></p>
+</code></pre><p>&#x5BB9;&#x5668;&#x548C;&#x7ED3;&#x6784;&#x4F53;&#xFF08;map and struct&#xFF09;</p>
 <pre><code>&#x8BED;&#x6CD5;&#x6BD4;&#x8F83;&#xFF1A;
 map[type]struct
 map[type]*struct
@@ -485,9 +453,7 @@ map[type]*struct
     m2[1].name = &quot;Jack&quot; // &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6307;&#x9488;&#x590D;&#x5236;&#x54C1;&#x3002;&#x900F;&#x8FC7;&#x6307;&#x9488;&#x4FEE;&#x6539;&#x539F;&#x5BF9;&#x8C61;&#x662F;&#x5141;&#x8BB8;&#x7684;&#x3002;
     fmt.Println(m2)
 }
-</code></pre><p><font color="red">
-&#x53EF;&#x4EE5;&#x5728;&#x8FED;&#x4EE3;&#x65F6;&#x5B89;&#x5168;&#x5220;&#x9664;&#x952E;&#x503C;&#x3002;&#x4F46;&#x5982;&#x679C;&#x671F;&#x95F4;&#x6709;&#x65B0;&#x589E;&#x64CD;&#x4F5C;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x77E5;&#x9053;&#x4F1A;&#x6709;&#x4EC0;&#x4E48;&#x610F;&#x5916;&#x4E86;&#x3002;
-</font></p>
+</code></pre><p>&#x53EF;&#x4EE5;&#x5728;&#x8FED;&#x4EE3;&#x65F6;&#x5B89;&#x5168;&#x5220;&#x9664;&#x952E;&#x503C;&#x3002;&#x4F46;&#x5982;&#x679C;&#x671F;&#x95F4;&#x6709;&#x65B0;&#x589E;&#x64CD;&#x4F5C;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x77E5;&#x9053;&#x4F1A;&#x6709;&#x4EC0;&#x4E48;&#x610F;&#x5916;&#x4E86;&#x3002;</p>
 <pre><code>func main() {
     for i := 0; i &lt; 5; i++ {
         m := map[int]string{
@@ -580,14 +546,10 @@ for k in dict.keys():
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="chapter1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: LeetCode_1_TwoSum(两数之和)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="chapter1.html" class="navigation navigation-next " aria-label="Next page: LeetCode_1_Two_Sum">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -596,7 +558,7 @@ for k in dict.keys():
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常用数据结构梳理","level":"1.2","depth":1,"next":{"title":"LeetCode_1_Two_Sum","level":"1.3","depth":1,"path":"chapter1.md","ref":"chapter1.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"chang-yong-shu-ju-jie-gou-shu-li.md","mtime":"2019-09-21T10:18:32.040Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-23T14:00:52.410Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常用数据结构梳理","level":"1.3","depth":1,"previous":{"title":"LeetCode_1_TwoSum(两数之和)","level":"1.2","depth":1,"path":"chapter1.md","ref":"chapter1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"chang-yong-shu-ju-jie-gou-shu-li.md","mtime":"2019-09-17T13:01:09.729Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T13:03:12.628Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
