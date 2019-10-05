@@ -1,0 +1,502 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>003-LongestSubstringWithoutRepeatingCharacters · leetbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="smbzhang">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta  name="baidu-site-verification"  content="iFzduP9Qsi" >
+    
+    <meta  name="google-site-verification"  content="qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o" >
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="020-validparentheses.html" />
+    
+    
+    <link rel="prev" href="002-AddTwoNumbers.html" />
+    
+
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://smbzhang.top" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chang-yong-shu-ju-jie-gou-shu-li.md">
+            
+                <span>
+            
+                    
+                    常用数据结构梳理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="001-TwoSum.html">
+            
+                <a href="001-TwoSum.html">
+            
+                    
+                    001-TwoSum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="002-AddTwoNumbers.html">
+            
+                <a href="002-AddTwoNumbers.html">
+            
+                    
+                    002-AddTwoNumbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="003-LongestSubstringWithoutRepeatingCharacters.html">
+            
+                <a href="003-LongestSubstringWithoutRepeatingCharacters.html">
+            
+                    
+                    003-LongestSubstringWithoutRepeatingCharacters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="020-validparentheses.html">
+            
+                <a href="020-validparentheses.html">
+            
+                    
+                    020-ValidParentheses
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >003-LongestSubstringWithoutRepeatingCharacters</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c&#x5B9E;&#x73B0;"><b>3.1. </b>C++&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#go&#x8BED;&#x8A00;&#x5B9E;&#x73B0;"><b>3.2. </b>Go&#x8BED;&#x8A00;&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#python&#x5B9E;&#x73B0;"><b>3.3. </b>Python&#x5B9E;&#x73B0;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<p>&#x8FD9;&#x4E2A;&#x9898;&#x8BA9;&#x627E;&#x51FA;&#x6700;&#x957F;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x8BE5;&#x5B50;&#x4E32;&#x91CC;&#x9762;&#x6CA1;&#x6709;&#x91CD;&#x590D;&#x7684;&#x5B57;&#x6BCD;</p>
+<h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
+<p>&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x9898;&#xFF0C;&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x662F;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x6765;&#x89E3;&#xFF0C;&#x6C42;&#x51FA;&#x4EE5;i&#x5F00;&#x5934;&#x7684;&#x6700;&#x957F;&#x65E0;&#x91CD;&#x590D;&#x5B50;&#x4E32;&#xFF0C;&#x4ECE;&#x8FD9;&#x4E9B;&#x5B50;&#x4E32;&#x4E2D;&#x627E;&#x51FA;&#x6700;&#x957F;&#x7684;&#x3002;&#x5176;&#x4E2D;&#x4EE5;i&#x5F00;&#x5934;&#x7684;&#x6700;&#x957F;&#x65E0;&#x91CD;&#x590D;&#x5B50;&#x4E32;&#x662F;&#x548C;&#x4EE5;i+1&#x5F00;&#x59CB;&#x7684;&#x6700;&#x957F;&#x65E0;&#x91CD;&#x590D;&#x5B50;&#x4E32;&#x6709;&#x76F8;&#x5E94;&#x5173;&#x7CFB;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x5217;&#x51FA;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#x3002;</p>
+<p><img src="assets/3.1.png" alt=""></p>
+<pre><code>1. &#x5FAA;&#x73AF;&#x6C42;&#x51FA;&#x4EE5;i&#x5F00;&#x5934;&#x7684;&#x6700;&#x957F;&#x65E0;&#x91CD;&#x590D;&#x5B50;&#x4E32;&#x957F;&#x5EA6;
+2. &#x6839;&#x636E;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#x5199;&#x51FA;&#x8BA1;&#x7B97;&#x4EE5;i&#x5F00;&#x5934;&#x7684;&#x65E0;&#x91CD;&#x590D;&#x5B50;&#x4E32;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x7A0B;&#x5E8F;&#x3002;
+</code></pre><h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
+<h3 id="c&#x5B9E;&#x73B0;"><a name="c&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. C++&#x5B9E;&#x73B0;</h3>
+<pre><code>//&#x52A8;&#x6001;&#x89C4;&#x5212;&#x9012;&#x5F52;&#x6C42;&#x89E3;, Memory Limit Exceeded
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int max = 0;
+        for (int i = 0 ; i &lt; s.length(); i++) {
+            int len = lengthOfTheFirstSub(s, i);
+            max = (len &gt; max) ? len : max;
+        }
+        return max;
+    }
+
+    int lengthOfTheFirstSub(string str, int index) {
+        string s = str.substr(index);
+        if (s.length() &lt;= 1) return s.length();
+        if (s[0] == s[1]) {
+            return 1;
+        } else {
+            int len = lengthOfTheFirstSub(str, index + 1);
+            int n = s.substr(1, len).find(s[0]);
+            if (n != string::npos) {
+                return n + 1;
+            } else {
+                return len + 1;
+            }
+        }
+    }
+};
+</code></pre><p>&#x4F7F;&#x7528;&#x6700;&#x7B80;&#x5355;&#x7684;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7B97;&#x6CD5;&#xFF0C;leetcode&#x663E;&#x793A;&#x5185;&#x5B58;&#x8D85;&#x51FA;&#x9650;&#x5236;&#xFF0C;&#x9012;&#x5F52;&#x6DF1;&#x5EA6;&#x592A;&#x9AD8;&#x4E86;&#xFF0C;&#x5BF9;&#x4E8E;&#x975E;&#x5E38;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code>//&#x52A0;&#x5165;&#x8BB0;&#x5F55;&#x6570;&#x7EC4;&#xFF0C;&#x63D0;&#x5347;&#x67E5;&#x627E;&#x901F;&#x5EA6;, Memory Limit Exceeded &#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x89E3;&#x51B3;&#x5185;&#x5B58;&#x95EE;&#x9898;
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int max = 0;
+        std::vector&lt;int&gt; records(s.length(), -1);
+        for (int i = 0 ; i &lt; s.length(); i++) {
+            int len = lengthOfTheFirstSub(s, i, records);
+            max = (len &gt; max) ? len : max;
+        }
+        return max;
+    }
+
+    int lengthOfTheFirstSub(string str, int index, std::vector&lt;int&gt; &amp;records) {
+        if (records[index] != -1) {return records[index];}
+        string s = str.substr(index);
+        if (s.length() &lt;= 1) {
+            records[index] = s.length();
+            return s.length();
+        }
+        if (s[0] == s[1]) {
+            records[index] = 1;
+            return 1;
+        } else {
+            int len = lengthOfTheFirstSub(str, index + 1, records);
+            int n = s.substr(1, len).find(s[0]);
+            if (n != string::npos) {
+                records[index] = n + 1;
+                return n + 1;
+            } else {
+                records[index] = len + 1;
+                return len + 1;
+            }
+        }
+    }
+};
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x901A;&#x8FC7;&#x52A0;&#x5165;&#x8BB0;&#x5F55;&#x6570;&#x7EC4;&#x6765;&#x89E3;&#x51B3;&#x6BCF;&#x6B21;&#x9012;&#x5F52;&#x90FD;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x91CD;&#x590D;&#x7684;&#x4EE5;i&#x5F00;&#x5934;&#x7684;&#x6700;&#x957F;&#x65E0;&#x91CD;&#x590D;&#x5B50;&#x4E32;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x9012;&#x5F52;&#x7684;&#x6DF1;&#x5EA6;&#xFF0C;&#x5E76;&#x4E14;&#x51CF;&#x5C11;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x3002;&#x5F88;&#x9057;&#x61BE;&#x5BF9;&#x4E8E;&#x957F;&#x5B57;&#x7B26;&#x4E32;&#x8FD8;&#x662F;&#x5185;&#x5B58;&#x8D85;&#x9650;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5E72;&#x6389;&#x9012;&#x5F52;&#x7A0B;&#x5E8F;</p>
+<pre><code>// &#x6539;&#x6210;&#x9012;&#x63A8;&#x6C42;&#x89E3;&#xFF0C;&#x51CF;&#x5C11;&#x6808;&#x5185;&#x5B58;&#x6D88;&#x8017;
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        int n = s.length();
+        std::vector&lt;int&gt; records(n, 0);
+        if (n &lt;= 1) {return n;}
+        records[n - 1] = 1;
+        for (int i = n - 2; i &gt;= 0; i--) {
+            if (s[i] == s[i + 1]) {
+                records[i] = 1;
+            }else{
+                int index = s.substr(i + 1, records[i + 1]).find(s[i]);
+                if (index == string::npos) {
+                    records[i] = records[i + 1] + 1;
+                }else {
+                    records[i] = index + 1;
+                }
+            }
+        }
+        int max = 0;
+        for (int i = 0; i &lt; records.size(); i++) {
+            if (records[i] &gt; max) {
+                max = records[i];
+            }
+        }
+        return max;
+    }
+};
+</code></pre><p>&#x6539;&#x9020;&#x6210;&#x9012;&#x63A8;&#x6C42;&#x89E3;&#xFF0C;&#x8FD9;&#x6837;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F;O(n), &#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E5F;&#x662F;O(n)&#xFF0C;&#x987A;&#x5229;&#x901A;&#x8FC7;leetcode&#x68C0;&#x67E5;</p>
+<h3 id="go&#x8BED;&#x8A00;&#x5B9E;&#x73B0;"><a name="go&#x8BED;&#x8A00;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#go&#x8BED;&#x8A00;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. Go&#x8BED;&#x8A00;&#x5B9E;&#x73B0;</h3>
+<pre><code>func lengthOfLongestSubstring(s string) int {
+    n := len(s)
+    if (n &lt;= 1) {return len(s)}
+    var records []int = make([]int, n)
+    records[n - 1] = 1
+    for i := n -2; i &gt;= 0; i-- {
+        if (s[i] == s[i + 1]) {
+            records[i] = 1;
+        }else{
+            if (!strings.Contains(s[i + 1: i + 1 + records[i +1]], string(s[i]))) {
+                records[i] = records[i + 1] + 1;
+            }else {
+                index := strings.Index(s[i + 1: i + 1 + records[i +1]], string(s[i]))
+                records[i] = index + 1
+            }
+        }
+    }
+    max := 0
+    for _, num := range(records) {
+        if num &gt; max {max = num}
+    }
+    return max
+}
+</code></pre><h3 id="python&#x5B9E;&#x73B0;"><a name="python&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#python&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. Python&#x5B9E;&#x73B0;</h3>
+<pre><code>class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        &quot;&quot;&quot;
+        :type s: str
+        :rtype: int
+        &quot;&quot;&quot;
+        n = len(s)
+        if n &lt;= 1:
+            return len(s)
+        records = [0] * n
+        records[n - 1] = 1
+        for i in range(n-2, -1, -1):
+            if s[i] == s[i + 1]:
+                records[i] = 1
+            else:
+                index = s[i + 1: i + 1 + records[i + 1]].find(s[i])
+                if index == -1:
+                    records[i] = records[i + 1] + 1
+                else:
+                    records[i] = index + 1
+        max = 0
+        for i in range(n):
+            if records[i] &gt; max:
+                max = records[i]
+        return max
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="002-AddTwoNumbers.html" class="navigation navigation-prev " aria-label="Previous page: 002-AddTwoNumbers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="020-validparentheses.html" class="navigation navigation-next " aria-label="Next page: 020-ValidParentheses">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"003-LongestSubstringWithoutRepeatingCharacters","level":"1.5","depth":1,"next":{"title":"020-ValidParentheses","level":"1.6","depth":1,"path":"020-validparentheses.md","ref":"020-validparentheses.md","articles":[]},"previous":{"title":"002-AddTwoNumbers","level":"1.4","depth":1,"path":"002-AddTwoNumbers.md","ref":"002-AddTwoNumbers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"003-LongestSubstringWithoutRepeatingCharacters.md","mtime":"2019-10-05T12:45:17.231Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-05T14:24:32.141Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
