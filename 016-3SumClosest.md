@@ -8,7 +8,7 @@
 ![](/assets/016-2.jpg)
 
 ## 代码
-## C++ 实现
+### C++ 实现
 ```
 // 优化一下上面找第二个和第三个数的算法，上面是循环遍历找，这里使用两个指针进行查找
 int threeSumClosest_2(vector<int>& nums, int target) {
