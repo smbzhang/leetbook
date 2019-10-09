@@ -5,6 +5,8 @@
 * [001-TwoSum](001-TwoSum.md)
 * [002-AddTwoNumbers](002-AddTwoNumbers.md)
 * [003-LongestSubstringWithoutRepeatingCharacters](003-LongestSubstringWithoutRepeatingCharacters.md)
+* [013-RomanToInteger](013-RomanToInteger.md)
+* [014-LongestCommonPrefix](014-LongestCommonPrefix.md)
 * [015-3Sum](015-3Sum.md)
 * [016-3SumClosest](016-3SumClosest.md)
 * [017-LetterCombinationsOfAPhoneNumber](017-LetterCombinationsOfAPhoneNumber.md)

@@ -5,6 +5,8 @@
 <url> <loc>https://leetcode.wang/001-TwoSum.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/002-AddTwoNumbers.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/003-LongestSubstringWithoutRepeatingCharacters.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/013-RomanToInteger.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/014-LongestCommonPrefix.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/015-3Sum.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/016-3SumClosest.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/017-LetterCombinationsOfAPhoneNumber.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
