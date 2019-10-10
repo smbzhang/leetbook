@@ -5,6 +5,11 @@
 <url> <loc>https://leetcode.wang/001-TwoSum.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/002-AddTwoNumbers.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/003-LongestSubstringWithoutRepeatingCharacters.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/007-ReverseInteger.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/008-StringToIntegerAtoi.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/009-PalindromeNumber.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/011-ContainerWithMostWater.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/012-IntegerToRoman.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/013-RomanToInteger.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/014-LongestCommonPrefix.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/015-3Sum.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>

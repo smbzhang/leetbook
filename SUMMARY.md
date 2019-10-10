@@ -5,6 +5,8 @@
 * [001-TwoSum](001-TwoSum.md)
 * [002-AddTwoNumbers](002-AddTwoNumbers.md)
 * [003-LongestSubstringWithoutRepeatingCharacters](003-LongestSubstringWithoutRepeatingCharacters.md)
+* [005-LongestPalindromicSubstring](005-LongestPalindromicSubstring.md)
+* [006-ZigZagConversion](006-ZigZagConversion.md)
 * [007-ReverseInteger](007-ReverseInteger.md)
 * [008-StringToIntegerAtoi](008-StringToIntegerAtoi.md)
 * [009-PalindromeNumber](009-PalindromeNumber.md)
