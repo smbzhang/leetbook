@@ -28,4 +28,7 @@ book.pdf
 book.epub
 book.mobi
 
-cp_book_to_docs.sh
+# github 上面只映射了 docs
+_book/
+
+.DS_Store
