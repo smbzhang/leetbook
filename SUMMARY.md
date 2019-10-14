@@ -23,3 +23,5 @@
 * [020-ValidParentheses](020-validparentheses.md)
 * [021-MergeTwoSortedLists](021-MergeTwoSortedLists.md)
 * [<>022-GenerateParentheses](022-GenerateParentheses.md)
+* [*023-MergeKSortedLists](023-MergeKSortedLists.md)
+* [024-SwapNodesInPairs](024-SwapNodesInPairs.md)

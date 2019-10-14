@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · leetbook</title>
+        <title>024-SwapNodesInPairs · leetbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,8 +81,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="DataStruct.html" />
     
+    <link rel="prev" href="023-MergeKSortedLists.html" />
     
 
 
@@ -132,7 +132,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -444,7 +444,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.25" data-path="024-SwapNodesInPairs.html">
+        <li class="chapter active" data-level="1.25" data-path="024-SwapNodesInPairs.html">
             
                 <a href="024-SwapNodesInPairs.html">
             
@@ -487,7 +487,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >024-SwapNodesInPairs</a>
     </h1>
 </div>
 
@@ -502,10 +502,51 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4ECB;&#x7ECD;"><b> </b>&#x4ECB;&#x7ECD;</a></li></ul></div><a href="#&#x4ECB;&#x7ECD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4ECB;&#x7ECD;"><a name="&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a> &#x4ECB;&#x7ECD;</h1>
-<p>leetcode&#x5730;&#x5740;&#xFF1A; <a href="https://leetcode.com/" target="_blank">https://leetcode.com/</a></p>
-<p>leetcode&#x4E2D;&#x56FD;&#x5730;&#x5740;&#xFF1A;<a href="https://leetcode-cn.com/" target="_blank">https://leetcode-cn.com</a>/</p>
-<p>github&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/smbzhang/leetcode" target="_blank">https://github.com/smbzhang/leetcode</a></p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;"><b>2.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;"><b>2.2. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c&#x5B9E;&#x73B0;"><b>3.1. </b>C++&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;_1"><b>3.2. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>4. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<p><a href="https://leetcode.com/problems/swap-nodes-in-pairs/" target="_blank">https://leetcode.com/problems/swap-nodes-in-pairs/</a>
+<img src="assets/024-1.png" alt=""></p>
+<p>&#x53CD;&#x8F6C;&#x94FE;&#x8868;&#x76F8;&#x90BB;&#x5143;&#x7D20;</p>
+<h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
+<h3 id="&#x601D;&#x8DEF;&#x4E00;"><a name="&#x601D;&#x8DEF;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x601D;&#x8DEF;&#x4E00;</h3>
+<p>&#x9012;&#x5F52;&#x6C42;&#x89E3;, &#x5355;&#x72EC;&#x5904;&#x7406;&#x524D;&#x4E24;&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x7ED3;&#x70B9;&#x8FDB;&#x884C;&#x53CD;&#x8F6C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x5934;&#x7ED3;&#x70B9;&#x3002;
+<img src="assets/024-2.jpg" alt=""></p>
+<h3 id="&#x601D;&#x8DEF;&#x4E8C;"><a name="&#x601D;&#x8DEF;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x601D;&#x8DEF;&#x4E8C;</h3>
+<p>&#x904D;&#x5386;&#x4E00;&#x904D;&#xFF0C;&#x76F4;&#x63A5;&#x53CD;&#x8F6C;&#x5B8C;&#x6210;&#x3002;&#x4E3A;&#x4E86;&#x5904;&#x7406;&#x65B9;&#x4FBF;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5934;&#x6307;&#x9488;&#x7ED3;&#x70B9;&#x7A7A;&#x7684;&#x3002;
+<img src="assets/024-3.jpg" alt=""></p>
+<h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
+<h3 id="c&#x5B9E;&#x73B0;"><a name="c&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. C++&#x5B9E;&#x73B0;</h3>
+<h4 id="&#x601D;&#x8DEF;&#x4E00;_1"><a name="&#x601D;&#x8DEF;&#x4E00;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x601D;&#x8DEF;&#x4E00;</h4>
+<pre><code>class Solution {
+public:
+    // &#x9012;&#x5F52;&#x5B9E;&#x73B0;
+    ListNode* swapPairs_2(ListNode* head) {
+        if (!head || !head-&gt;next) return head;
+        ListNode *ret = swapPairs_2(head-&gt;next-&gt;next);
+        auto node = head-&gt;next;
+        head-&gt;next = ret;
+        node-&gt;next = head;
+        return node;
+    }
+};
+</code></pre><h3 id="&#x601D;&#x8DEF;&#x4E8C;_1"><a name="&#x601D;&#x8DEF;&#x4E8C;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x601D;&#x8DEF;&#x4E8C;</h3>
+<pre><code>class Solution {
+public:
+    ListNode* swapPairs(ListNode* head) {
+        ListNode *n = new ListNode(0), *cur = n;
+        n-&gt;next = head;
+        while(cur-&gt;next &amp;&amp; cur-&gt;next-&gt;next) {
+            auto node1 = cur-&gt;next;
+            auto node2 = cur-&gt;next-&gt;next;
+            cur-&gt;next = node2;
+            node1-&gt;next = node2-&gt;next;
+            node2-&gt;next = node1;
+            cur = node1;
+        }
+        return n-&gt;next;
+    }
+};
+</code></pre><h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x603B;&#x7ED3;</h2>
+<p>&#x5999;&#x7528;&#x5934;&#x6307;&#x9488;&#x7ED3;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x514D;&#x53BB;&#x5355;&#x72EC;&#x5904;&#x7406;head&#x7ED3;&#x70B9;&#x9EBB;&#x70E6;&#x7684;&#x903B;&#x8F91;&#x3002;&#x4EE3;&#x7801;&#x66F4;&#x6E05;&#x723D;&#x3002;</p>
 
                                 
                                 </section>
@@ -533,10 +574,10 @@
 
             
                 
-                
-                <a href="DataStruct.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 常用数据结构梳理">
-                    <i class="fa fa-angle-right"></i>
+                <a href="023-MergeKSortedLists.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: *023-MergeKSortedLists">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -545,7 +586,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"常用数据结构梳理","level":"1.2","depth":1,"path":"DataStruct.md","ref":"DataStruct.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"README.md","mtime":"2019-09-15T06:46:27.096Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-14T14:07:36.159Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"024-SwapNodesInPairs","level":"1.25","depth":1,"previous":{"title":"*023-MergeKSortedLists","level":"1.24","depth":1,"path":"023-MergeKSortedLists.md","ref":"023-MergeKSortedLists.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"024-SwapNodesInPairs.md","mtime":"2019-10-14T14:06:27.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-14T14:07:36.159Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

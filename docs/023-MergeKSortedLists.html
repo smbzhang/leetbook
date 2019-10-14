@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>017-LetterCombinationsOfAPhoneNumber · leetbook</title>
+        <title>*023-MergeKSortedLists · leetbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="018-4Sum.html" />
+    <link rel="next" href="024-SwapNodesInPairs.html" />
     
     
-    <link rel="prev" href="016-3SumClosest.html" />
+    <link rel="prev" href="022-GenerateParentheses.html" />
     
 
 
@@ -355,7 +355,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.18" data-path="017-LetterCombinationsOfAPhoneNumber.html">
+        <li class="chapter " data-level="1.18" data-path="017-LetterCombinationsOfAPhoneNumber.html">
             
                 <a href="017-LetterCombinationsOfAPhoneNumber.html">
             
@@ -433,7 +433,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.24" data-path="023-MergeKSortedLists.html">
+        <li class="chapter active" data-level="1.24" data-path="023-MergeKSortedLists.html">
             
                 <a href="023-MergeKSortedLists.html">
             
@@ -489,7 +489,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >017-LetterCombinationsOfAPhoneNumber</a>
+        <a href="." >*023-MergeKSortedLists</a>
     </h1>
 </div>
 
@@ -504,143 +504,111 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#dfs&#x89E3;&#x6CD5;&#x4EE3;&#x7801;"><b>3. </b>DFS&#x89E3;&#x6CD5;&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c-&#x5B9E;&#x73B0;"><b>3.1. </b>C++ &#x5B9E;&#x73B0;</a></li></ul><li><span class="title-icon "></span><a href="#bfs&#x89E3;&#x6CD5;&#x4EE3;&#x7801;"><b>4. </b>BFS&#x89E3;&#x6CD5;&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c-&#x5B9E;&#x73B0;_1"><b>4.1. </b>C++ &#x5B9E;&#x73B0;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;"><b>5. </b>&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;</a></li><ul><li><span class="title-icon "></span><a href="#java-&#x5B9E;&#x73B0;&#xFF0C;-&#x81EA;&#x5B9A;&#x4E49;&#x76F8;&#x4E58;"><b>5.1. </b>Java &#x5B9E;&#x73B0;&#xFF0C; &#x81EA;&#x5B9A;&#x4E49;&#x76F8;&#x4E58;</a></li><li><span class="title-icon "></span><a href="#python-&#x7684;-&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;---map-reduce"><b>5.2. </b>python &#x7684; &#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0; - map reduce</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
-<p><img src="assets/017-1.jpg" alt="">
-&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x62E8;&#x53F7;&#x952E;&#x76D8;&#xFF0C;&#x8F93;&#x5165;&#x4E00;&#x4E32;&#x6570;&#x5B57;&#xFF0C;&#x8F93;&#x51FA;&#x8FD9;&#x4E32;&#x6570;&#x5B57;&#x5BF9;&#x5E94;&#x952E;&#x76D8;&#x4E0A;&#x7684;&#x5B57;&#x6BCD;&#x7684;&#x6240;&#x6709;&#x7684;&#x6392;&#x5217;&#x7EC4;&#x5408;&#x3002;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;"><b>2.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;"><b>2.2. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E09;"><b>2.3. </b>&#x601D;&#x8DEF;&#x4E09;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c&#x5B9E;&#x73B0;"><b>3.1. </b>C++&#x5B9E;&#x73B0;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>4. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<p><a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank">https://leetcode.com/problems/merge-k-sorted-lists/</a>
+<img src="assets/023-1.jpg" alt=""></p>
+<p>&#x5408;&#x5E76; k &#x4E2A;&#x62CD;&#x5E8F;&#x597D;&#x7684;&#x5355;&#x94FE;&#x8868;&#x3002;</p>
 <h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
-<p>&#x5F88;&#x660E;&#x663E;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5168;&#x6392;&#x5217;&#x7684;&#x95EE;&#x9898;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;BFS&#x6216;&#x8005;DFS&#x6765;&#x8FDB;&#x884C;&#x904D;&#x5386;</p>
-<p>&#x4F7F;&#x7528;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x904D;&#x5386;&#x6C42;&#x89E3;&#xFF1A;
-<img src="assets/017-2.jpg" alt="">
-&#x4F7F;&#x7528;BFS&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x904D;&#x5386;&#x5B9E;&#x73B0;,BFS&#x7684;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x501F;&#x52A9;&#x961F;&#x5217;&#x6765;&#x5B9E;&#x73B0;
-<img src="assets/017-3.jpg" alt="">
-&#x4F7F;&#x7528;&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x6765;&#x8FDB;&#x884C;&#x5B9E;&#x73B0;
-<img src="assets/017-4.jpg" alt=""></p>
-<h2 id="dfs&#x89E3;&#x6CD5;&#x4EE3;&#x7801;"><a name="dfs&#x89E3;&#x6CD5;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#dfs&#x89E3;&#x6CD5;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. DFS&#x89E3;&#x6CD5;&#x4EE3;&#x7801;</h2>
-<h3 id="c-&#x5B9E;&#x73B0;"><a name="c-&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c-&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. C++ &#x5B9E;&#x73B0;</h3>
-<p>&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x5B9E;&#x73B0;DFS,&#x904D;&#x5386;&#x5230;&#x5E95;&#x90E8;&#x7136;&#x540E;&#x56DE;&#x6EAF;</p>
-<pre><code>class Solution {
-public:
-    Solution() {
-        records[&apos;2&apos;] = &quot;abc&quot;;
-        records[&apos;3&apos;] = &quot;def&quot;;
-        records[&apos;4&apos;] = &quot;ghi&quot;;
-        records[&apos;5&apos;] = &quot;jkl&quot;;
-        records[&apos;6&apos;] = &quot;mno&quot;;
-        records[&apos;7&apos;] = &quot;pqrs&quot;;
-        records[&apos;8&apos;] = &quot;tuv&quot;;
-        records[&apos;9&apos;] = &quot;wxyz&quot;;
-    }
-    vector&lt;string&gt; letterCombinations(string digits) {
-        vector&lt;string&gt; result;
-        if (digits.length() == 0) {
-            // &#x8FB9;&#x754C;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#xFF0C;&#x5FC5;&#x987B;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; &#x201C;&#x201D; string&#xFF0C; &#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x7684; result, &#x5426;&#x5219;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;
-            // result.push_back(&quot;&quot;);
-            return result;
-        }
-        if (digits.length() == 1) {
-            for (int i = 0; i &lt; records[digits[0]].length(); i++) {
-                result.push_back(records[digits[0]].substr(i,1));
-            }
-            return result;
-        }
-        auto tmp = letterCombinations(digits.substr(1));
-        for (int i = 0; i &lt; records[digits[0]].length(); i++) {
-            for (int j = 0; j &lt; tmp.size(); j++) {
-                result.push_back(records[digits[0]][i] + tmp[j]);
-            }
-        }
-        return result;
-    }
-
-    // &#x8865;&#x5145;&#x4E00;&#x4E2A; BFS &#x7684;&#x89E3;&#x6CD5;
-private:
-    unordered_map&lt;char, string&gt; records;
-};
-</code></pre><h2 id="bfs&#x89E3;&#x6CD5;&#x4EE3;&#x7801;"><a name="bfs&#x89E3;&#x6CD5;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#bfs&#x89E3;&#x6CD5;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>4. BFS&#x89E3;&#x6CD5;&#x4EE3;&#x7801;</h2>
-<h3 id="c-&#x5B9E;&#x73B0;_1"><a name="c-&#x5B9E;&#x73B0;_1" class="anchor-navigation-ex-anchor" href="#c-&#x5B9E;&#x73B0;_1"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. C++ &#x5B9E;&#x73B0;</h3>
-<p>BFS&#x89E3;&#x6CD5;&#xFF0C;&#x4E00;&#x5C42;&#x5C42;&#x904D;&#x5386;&#xFF0C;&#x6700;&#x7EC8;&#x5FAA;&#x73AF;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x961F;&#x5217;&#x6765;&#x5B9E;&#x73B0;</p>
-<pre><code>// https://leetcode.com/problems/letter-combinations-of-a-phone-number/
-// &#x5F88;&#x660E;&#x663E;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6392;&#x5217;&#x7EC4;&#x5408;&#x9898;&#xFF0C; &#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x7EC4;&#x5408;&#x53EF;&#x80FD;&#xFF0C;&#x4F7F;&#x7528;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x904D;&#x5386;&#x7B97;&#x6CD5; DFS
-class Solution {
-public:
-    Solution() {
-        records[&apos;2&apos;] = &quot;abc&quot;;
-        records[&apos;3&apos;] = &quot;def&quot;;
-        records[&apos;4&apos;] = &quot;ghi&quot;;
-        records[&apos;5&apos;] = &quot;jkl&quot;;
-        records[&apos;6&apos;] = &quot;mno&quot;;
-        records[&apos;7&apos;] = &quot;pqrs&quot;;
-        records[&apos;8&apos;] = &quot;tuv&quot;;
-        records[&apos;9&apos;] = &quot;wxyz&quot;;
-    }
-    // &#x8865;&#x5145;&#x4E00;&#x4E2A; BFS &#x7684;&#x89E3;&#x6CD5;,&#x4F7F;&#x7528;&#x961F;&#x5217;&#x5B9E;&#x73B0;
-    vector&lt;string&gt; letterCombinations(string digits) {
-        std::queue&lt;string&gt; myqueue;
-        std::vector&lt;string&gt; result;
-        if (digits.length() &lt; 1) return result;
-        for (int i = 0; i &lt; records[digits[0]].length(); i++)
-        {
-            string str = &quot;&quot;;
-            str += records[digits[0]][i];
-            myqueue.push(str);
-        }
-        for (int i = 1; i &lt; digits.length(); i++) {
-            int len = myqueue.size();
-            while(len--) {
-                string str = myqueue.front();
-                for (int j = 0; j &lt; records[digits[i]].length(); j++) {
-                    myqueue.push(str + records[digits[i]][j]);
-                }
-                myqueue.pop();
-            }
-        }
-        while(!myqueue.empty()) {
-            result.push_back(myqueue.front());
-            myqueue.pop();
-        }
-        return result;
-    }
-
-private:
-    unordered_map&lt;char, string&gt; records;
-};
-</code></pre><h2 id="&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;"><a name="&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;</h2>
-<h3 id="java-&#x5B9E;&#x73B0;&#xFF0C;-&#x81EA;&#x5B9A;&#x4E49;&#x76F8;&#x4E58;"><a name="java-&#x5B9E;&#x73B0;&#xFF0C;-&#x81EA;&#x5B9A;&#x4E49;&#x76F8;&#x4E58;" class="anchor-navigation-ex-anchor" href="#java-&#x5B9E;&#x73B0;&#xFF0C;-&#x81EA;&#x5B9A;&#x4E49;&#x76F8;&#x4E58;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. Java &#x5B9E;&#x73B0;&#xFF0C; &#x81EA;&#x5B9A;&#x4E49;&#x76F8;&#x4E58;</h3>
-<p><a href="https://leetcode.wang/leetCode-17-Letter-Combinations-of-a-Phone-Number.html" target="_blank">https://leetcode.wang/leetCode-17-Letter-Combinations-of-a-Phone-Number.html</a></p>
-<pre><code>public List&lt;String&gt; letterCombinations(String digits) {
-    List&lt;String&gt; ans = new ArrayList&lt;String&gt;();
-    for (int i = 0; i &lt; digits.length(); i++) {
-        ans = mul(ans, getList(digits.charAt(i) - &apos;0&apos;));
-    }
-    return ans;
-
+<h3 id="&#x601D;&#x8DEF;&#x4E00;"><a name="&#x601D;&#x8DEF;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x601D;&#x8DEF;&#x4E00;</h3>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x4E4B;&#x524D;&#x505A;&#x8FC7;merge&#x4E24;&#x4E2A;&#x62CD;&#x5E8F;&#x597D;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x8BF7;&#x53C2;&#x8003; <a href="021-MergeTwoSortedLists.html">021-MergeTwoSortedLists</a></p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#xFF0C;&#x53D6;&#x51FA;&#x7B2C;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x9012;&#x5F52;&#x8BA1;&#x7B97;&#x5269;&#x4F59; k-1 &#x4E2A;&#x94FE;&#x8868;&#x7684;merge&#x7ED3;&#x679C;&#xFF0C;&#x7136;&#x540E;&#x6309;&#x7167;&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x89E3;&#x6CD5;&#x5408;&#x5E76;&#x7B2C;&#x4E00;&#x4E2A;&#x548C; 2&#x81F3;k&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5408;&#x5E76;&#x7ED3;&#x679C;&#x3002;&#x9012;&#x5F52;&#x7ED3;&#x675F;&#x7684;&#x6761;&#x4EF6;&#x662F;lists&#x7684;&#x4E2A;&#x6570; &lt; 2; &#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x770B;&#x4EE3;&#x7801;&#x3002;</p>
+<h3 id="&#x601D;&#x8DEF;&#x4E8C;"><a name="&#x601D;&#x8DEF;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x601D;&#x8DEF;&#x4E8C;</h3>
+<p>&#x76F4;&#x63A5;&#x904D;&#x5386;&#x4E00;&#x904D;K&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x6240;&#x6709;&#x7ED3;&#x70B9;&#xFF0C;&#x5E76;&#x4E14;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#x548C;&#x94FE;&#x63A5;&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(nk)&#xFF0C;(n &#x662F;&#x6700;&#x957F;&#x94FE;&#x8868;&#x7684;&#x957F;&#x5EA6;) &#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)</p>
+<h3 id="&#x601D;&#x8DEF;&#x4E09;"><a name="&#x601D;&#x8DEF;&#x4E09;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E09;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x601D;&#x8DEF;&#x4E09;</h3>
+<p>&#x601D;&#x8DEF;&#x4E8C;&#x4E2D;&#xFF0C;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x503C;&#x9700;&#x8981; O(K)&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4F7F;&#x7528;&#x5806;&#x7ED3;&#x6784;&#x5B58;&#x50A8;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(lng(k));</p>
+<p>&#x4F7F;&#x7528;&#x4F18;&#x5148;&#x961F;&#x5217;&#x5B58;&#x50A8;&#x94FE;&#x8868;&#xFF0C;&#x6BD4;&#x8F83;&#x7684;&#x89C4;&#x5219;&#x662F;&#x591A;&#x6709;&#x94FE;&#x8868;&#x7684;head&#x7684;val&#x5927;&#x5C0F;&#x3002;</p>
+<p><img src="assets/023-2.jpg" alt="">
+&#x5B58;&#x50A8;&#x548C;&#x63D2;&#x5165;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x90FD;&#x662F; log(k)</p>
+<p>&#x603B;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; N(log(k)), (N &#x662F;&#x6240;&#x6709;&#x7684;&#x7ED3;&#x70B9;&#x4E2A;&#x6570;)</p>
+<h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
+<h3 id="c&#x5B9E;&#x73B0;"><a name="c&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. C++&#x5B9E;&#x73B0;</h3>
+<h4 id="&#x601D;&#x8DEF;&#x4E00;_1"><a name="&#x601D;&#x8DEF;&#x4E00;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x601D;&#x8DEF;&#x4E00;</h4>
+<pre><code>// &#x4F7F;&#x7528;&#x9012;&#x5F52;&#x5B9E;&#x73B0;
+ListNode* mergeKLists_2(vector&lt;ListNode *&gt;&amp; lists) {
+    ListNode *ret = merge(lists, 0);
+    return ret;
 }
-
-public List&lt;String&gt; getList(int digit) {
-        String digitLetter[] = { &quot;&quot;, &quot;&quot;, &quot;abc&quot;, &quot;def&quot;, &quot;ghi&quot;, &quot;jkl&quot;, &quot;mno&quot;, &quot;pqrs&quot;, &quot;tuv&quot;, &quot;wxyz&quot; };
-        List&lt;String&gt; ans = new ArrayList&lt;String&gt;();
-        for (int i = 0; i &lt; digitLetter[digit].length(); i++) {
-            ans.add(digitLetter[digit].charAt(i) + &quot;&quot;);
+ListNode* merge(vector&lt;ListNode *&gt; &amp;lists, int pos) {
+    if (pos == lists.size()) return NULL;
+    if (pos == lists.size() - 1) return lists[pos];
+    ListNode *cur = new ListNode(0);
+    ListNode *ret = cur;
+    ListNode *list1 = lists[pos];
+    ListNode *list2 = merge(lists, pos+1);
+    while (list1 || list2) {
+        if (!list1) {
+            cur-&gt;next = list2;
+            break;
         }
-          return ans;
-    }
-//&#x5B9A;&#x4E49;&#x6210;&#x4E24;&#x4E2A; List &#x76F8;&#x4E58;
-public List&lt;String&gt; mul(List&lt;String&gt; l1, List&lt;String&gt; l2) {
-    if (l1.size() != 0 &amp;&amp; l2.size() == 0) {
-        return l1;
-    }
-    if (l1.size() == 0 &amp;&amp; l2.size() != 0) {
-        return l2;
-    }
-    List&lt;String&gt; ans = new ArrayList&lt;String&gt;();
-    for (int i = 0; i &lt; l1.size(); i++)
-        for (int j = 0; j &lt; l2.size(); j++) {
-            ans.add(l1.get(i) + l2.get(j));
+        if (!list2) {
+            cur-&gt;next = list1;
+            break;
         }
-    return ans;
+        if (list1-&gt;val &lt;= list2-&gt;val) {
+            cur-&gt;next = list1;
+            list1 = list1-&gt;next;
+            cur = cur-&gt;next;
+        }else{
+            cur-&gt;next = list2;
+            list2 = list2-&gt;next;
+            cur = cur-&gt;next;
+        }
+    }
+    return ret-&gt;next;
 }
-</code></pre><h3 id="python-&#x7684;-&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;---map-reduce"><a name="python-&#x7684;-&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;---map-reduce" class="anchor-navigation-ex-anchor" href="#python-&#x7684;-&#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0;---map-reduce"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. python &#x7684; &#x7B1B;&#x5361;&#x5C14;&#x79EF;&#x5B9E;&#x73B0; - map reduce</h3>
-<p>&#x89C1;&#x601D;&#x8DEF;&#x56FE;&#x4E09;</p>
+</code></pre><h4 id="&#x601D;&#x8DEF;&#x4E8C;_1"><a name="&#x601D;&#x8DEF;&#x4E8C;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x601D;&#x8DEF;&#x4E8C;</h4>
+<pre><code>ListNode* mergeKLists(vector&lt;ListNode*&gt;&amp; lists) {
+    ListNode *head = new ListNode(0);
+    ListNode *ret = head;
+    while(1) {
+        int min = INT_MAX;
+        ListNode *cur = NULL;
+        int pos = -1;
+        for (int i = 0; i &lt; lists.size(); i++) {
+            if (lists[i] != NULL) {
+                if (lists[i]-&gt;val &lt; min) {cur = lists[i]; min = lists[i]-&gt;val; pos = i;}
+            }
+        }
+        if (!cur) break;
+        lists[pos] = lists[pos]-&gt;next;
+        head-&gt;next = cur;
+        head = head-&gt;next;
+    }
+    return ret-&gt;next;
+}
+</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(nk)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1) </p>
+<h4 id="&#x601D;&#x8DEF;&#x4E09;_1"><a name="&#x601D;&#x8DEF;&#x4E09;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E09;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x601D;&#x8DEF;&#x4E09;</h4>
+<pre><code>// &#x4F7F;&#x7528;&#x4F18;&#x5148;&#x961F;&#x5217;&#x5B9E;&#x73B0;
+class cmp {
+public:
+    bool operator()(const ListNode *l1, const ListNode *l2) {
+        return l1-&gt;val &gt; l2-&gt;val;
+    }
+};
+ListNode *mergeKLists_3(vector&lt;ListNode *&gt;&amp; lists) {
+    std::priority_queue&lt;ListNode *, vector&lt;ListNode *&gt;, cmp&gt; myqueue;
+    ListNode *cur = new ListNode(0), *ret = cur;
+    for (int i = 0; i &lt; lists.size(); i++) {
+        if (lists[i] != NULL) myqueue.push(lists[i]);
+    }
+    while (!myqueue.empty()) {
+        ListNode * node = myqueue.top();
+        cur-&gt;next = node;
+        cur = cur-&gt;next;
+        node = node-&gt;next;
+        myqueue.pop();
+        if (node != NULL) {
+            myqueue.push(node);
+        }
+    }
+    return ret-&gt;next;
+}
+</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(Nlog(k))
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1) </p>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x603B;&#x7ED3;</h2>
+<p>&#x9664;&#x4E86;&#x5E38;&#x89C4;&#x7684;&#x9012;&#x5F52;&#x548C;&#x904D;&#x5386;&#x4E4B;&#x5916;&#xFF0C;&#x4F7F;&#x7528;&#x4F18;&#x5148;&#x961F;&#x5217;&#x5904;&#x7406; K &#x6392;&#x5E8F;&#x95EE;&#x9898;&#xFF0C;&#x4F1A;&#x8282;&#x7701;&#x5F88;&#x591A;&#x65F6;&#x95F4;&#x3002;</p>
 
                                 
                                 </section>
@@ -668,12 +636,12 @@ public List&lt;String&gt; mul(List&lt;String&gt; l1, List&lt;String&gt; l2) {
 
             
                 
-                <a href="016-3SumClosest.html" class="navigation navigation-prev " aria-label="Previous page: 016-3SumClosest">
+                <a href="022-GenerateParentheses.html" class="navigation navigation-prev " aria-label="Previous page: <>022-GenerateParentheses">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="018-4Sum.html" class="navigation navigation-next " aria-label="Next page: 018-4Sum">
+                <a href="024-SwapNodesInPairs.html" class="navigation navigation-next " aria-label="Next page: 024-SwapNodesInPairs">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -684,7 +652,7 @@ public List&lt;String&gt; mul(List&lt;String&gt; l1, List&lt;String&gt; l2) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"017-LetterCombinationsOfAPhoneNumber","level":"1.18","depth":1,"next":{"title":"018-4Sum","level":"1.19","depth":1,"path":"018-4Sum.md","ref":"018-4Sum.md","articles":[]},"previous":{"title":"016-3SumClosest","level":"1.17","depth":1,"path":"016-3SumClosest.md","ref":"016-3SumClosest.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"017-LetterCombinationsOfAPhoneNumber.md","mtime":"2019-10-09T01:20:13.495Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-14T14:07:36.159Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"*023-MergeKSortedLists","level":"1.24","depth":1,"next":{"title":"024-SwapNodesInPairs","level":"1.25","depth":1,"path":"024-SwapNodesInPairs.md","ref":"024-SwapNodesInPairs.md","articles":[]},"previous":{"title":"<>022-GenerateParentheses","level":"1.23","depth":1,"path":"022-GenerateParentheses.md","ref":"022-GenerateParentheses.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"023-MergeKSortedLists.md","mtime":"2019-10-14T14:06:25.855Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-14T14:07:36.159Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
