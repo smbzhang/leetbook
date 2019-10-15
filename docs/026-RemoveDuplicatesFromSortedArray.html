@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>009-PalindromeNumber · leetbook</title>
+        <title>026-RemoveDuplicatesFromSortedArray · leetbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="011-ContainerWithMostWater.html" />
     
-    
-    <link rel="prev" href="008-StringToIntegerAtoi.html" />
+    <link rel="prev" href="024-SwapNodesInPairs.html" />
     
 
 
@@ -264,7 +262,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.11" data-path="009-PalindromeNumber.html">
+        <li class="chapter " data-level="1.11" data-path="009-PalindromeNumber.html">
             
                 <a href="009-PalindromeNumber.html">
             
@@ -459,7 +457,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.26" data-path="026-RemoveDuplicatesFromSortedArray.html">
+        <li class="chapter active" data-level="1.26" data-path="026-RemoveDuplicatesFromSortedArray.html">
             
                 <a href="026-RemoveDuplicatesFromSortedArray.html">
             
@@ -502,7 +500,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >009-PalindromeNumber</a>
+        <a href="." >026-RemoveDuplicatesFromSortedArray</a>
     </h1>
 </div>
 
@@ -517,58 +515,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><li><span class="title-icon "></span><a href="#c-&#x5B9E;&#x73B0;"><b>4. </b>C++ &#x5B9E;&#x73B0;</a></li><ul><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;"><b>4.1. </b>&#x89E3;&#x6CD5;&#x4E00;</a></li></ul><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E8C;"><b>5. </b>&#x89E3;&#x6CD5;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>6. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h2>
-<p><a href="https://leetcode.com/problems/palindrome-number/" target="_blank">https://leetcode.com/problems/palindrome-number/</a>
-<img src="assets/009-1.jpg" alt=""></p>
-<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5224;&#x65AD;&#x8FD9;&#x4E2A;&#x6574;&#x6570;&#x662F;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x56DE;&#x6587;&#x6574;&#x6570;&#x3002;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;"><b>2.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;"><b>2.2. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c-&#x5B9E;&#x73B0;"><b>3.1. </b>C++ &#x5B9E;&#x73B0;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>4. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/" target="_blank">https://leetcode.com/problems/remove-duplicates-from-sorted-array/</a>
+<img src="assets/026-1.jpg" alt=""></p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x62CD;&#x5E8F;&#x597D;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x5143;&#x7D20;&#x3002;&#x5E76;&#x4E14;&#x518D;&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5C06;&#x6240;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x5168;&#x90E8;&#x5B58;&#x653E;&#x5230;&#x524D;&#x9762;&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x6240;&#x4EE5;leetcode&#x5F88;&#x5BB9;&#x6613;&#x68C0;&#x9A8C;&#x524D;&#x9762;&#x51E0;&#x4E2A;&#x6570;&#x662F;&#x4E0D;&#x662F;&#x6574;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x3002;</p>
 <h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
-<p>&#x601D;&#x8DEF;&#x4E00;&#xFF1A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x51FA;&#x8FD9;&#x4E2A;&#x6574;&#x6570;&#x7684;&#x56DE;&#x6587;&#x6574;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x548C;&#x539F;&#x6570;&#x5B57;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x53CD;&#x8F6C;&#x7684;&#x6570;&#x5B57;&#x4F7F;&#x7528;int&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6EA2;&#x51FA;&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x8981;&#x6C42;&#x4F7F;&#x7528;int&#x5B58;&#x50A8;&#xFF0C;&#x6211;&#x4EEC;&#x91C7;&#x7528;long long int&#x5B58;&#x50A8;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x5224;&#x65AD;&#x6EA2;&#x51FA;&#x4E86;&#x3002;</p>
-<p>&#x601D;&#x8DEF;&#x4E8C;&#xFF1A;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x51FA;&#x8FD9;&#x4E2A;&#x6570;&#x7684;&#x4E2A;&#x4F4D;&#x5341;&#x4F4D;&#x767E;&#x4F4D;&#x3002;&#x3002;&#x3002;&#x7136;&#x540E;&#x5B58;&#x5165;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x6700;&#x540E;&#x5224;&#x65AD;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x662F;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x56DE;&#x6587;&#x6570;&#x7EC4;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9996;&#x5C3E;&#x6570;&#x7EC4;&#x6307;&#x9488;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#x3002;</p>
+<h3 id="&#x601D;&#x8DEF;&#x4E00;"><a name="&#x601D;&#x8DEF;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x601D;&#x8DEF;&#x4E00;</h3>
+<p>&#x4E00;&#x5F00;&#x59CB;&#x6211;&#x60F3;&#x7684;&#x529E;&#x6CD5;&#x662F;&#x4EA4;&#x6362;&#xFF0C;&#x4F46;&#x662F;&#x60F3;&#x4E86;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x53D1;&#x73B0;&#x4EA4;&#x6362;&#x7684;&#x60C5;&#x51B5;&#x5F88;&#x590D;&#x6742;&#x3002;&#x4E8E;&#x662F;&#x653E;&#x5F03;&#x4E86;&#x3002;&#x3002;&#x3002;&#x3002;</p>
+<h3 id="&#x601D;&#x8DEF;&#x4E8C;"><a name="&#x601D;&#x8DEF;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x601D;&#x8DEF;&#x4E8C;</h3>
+<p>&#x8FD9;&#x4E2A;&#x601D;&#x8DEF;&#x5176;&#x5B9E;&#x7C7B;&#x4F3C;&#x5FEB;&#x6162;&#x6307;&#x9488;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x4E00;&#x904D;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x6709;&#x591A;&#x5C11;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#xFF0C;&#x8FD9;&#x6837;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x6709;&#x4E86;&#x3002;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(log(n))&#xFF0C;&#x5047;&#x8BBE;&#x4E00;&#x5171;&#x6709;k&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x6570;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A; pos=1 &#xFF0C;&#x6307;&#x5411;&#x5F53;&#x524D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x91CD;&#x590D;&#x7684;&#x6570;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x8BB0;&#x5F55;i&#x6765;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C; &#x5224;&#x65AD; nums[i] == nums[i - 1]; &#x5982;&#x679C;&#x76F8;&#x7B49;&#x7684;&#x8BDD;&#xFF0C;&#x7EE7;&#x7EED;&#x904D;&#x5386;&#xFF0C;&#x77E5;&#x9053;&#x51FA;&#x73B0;&#x4E0D;&#x76F8;&#x540C;&#x7684;&#x60C5;&#x51B5;</p>
+<p>nums[pos++] = nums[i]</p>
+<p>&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD; i &#x59CB;&#x7EC8;&#x9886;&#x5148;&#x4E8E; pos &#x5E76;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x91CD;&#x53E0;&#x7684;&#x60C5;&#x51B5;&#x3002; &#x603B;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E5F;&#x662F; O(log(n))</p>
 <h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
-<h2 id="c-&#x5B9E;&#x73B0;"><a name="c-&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c-&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>4. C++ &#x5B9E;&#x73B0;</h2>
-<h3 id="&#x89E3;&#x6CD5;&#x4E00;"><a name="&#x89E3;&#x6CD5;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#x89E3;&#x6CD5;&#x4E00;</h3>
-<p>&#x8BA1;&#x7B97;&#x51FA;&#x8FD9;&#x4E2A;&#x6574;&#x6570;&#x7684;&#x56DE;&#x6587;&#x6574;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x548C;&#x539F;&#x6570;&#x5B57;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;</p>
+<h3 id="c-&#x5B9E;&#x73B0;"><a name="c-&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c-&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. C++ &#x5B9E;&#x73B0;</h3>
 <pre><code>class Solution {
 public:
-    // &#x89E3;&#x6CD5;&#x4E8C;, &#x8BA1;&#x7B97;&#x51FA;&#x53CD;&#x5411;&#x7684;&#x503C;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;, &#x8FD9;&#x91CC;&#x4E0D;&#x5224;&#x65AD;&#x6EA2;&#x51FA;
-    bool isPalindrome_2(int x) {
-        if (x &lt; 0) return false;
-        long long int num = 0, init = x;
-        while(x){
-            int mod = x % 10;
-            num = num * 10 + mod;
-            x /= 10;
+    int removeDuplicates(vector&lt;int&gt;&amp; nums) {
+        int total = 0, ret = 0;
+        for (int i = 0; i &lt; nums.size(); i++) {
+            if (i == 0) total = 1;
+            else if (nums[i] != nums[i - 1]) total++;
+            else;
         }
-        return (num == init);
-    }
-
-};
-</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1)
-<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1)</p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E8C;"><a name="&#x89E3;&#x6CD5;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x89E3;&#x6CD5;&#x4E8C;</h2>
-<pre><code>class Solution {
-public:
-    // &#x89E3;&#x6CD5;&#x4E00;, &#x901A;&#x8FC7;&#x6C42;&#x4F59;&#x5B58;&#x50A8;&#x6BCF;&#x4E2A;&#x503C;&#xFF0C;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;&#xFF0C;&#x7136;&#x540E;&#x5BF9;vector&#x8FDB;&#x884C;&#x5BF9;&#x79F0;&#x68C0;&#x9A8C;
-    bool isPalindrome(int x) {
-        if (x &lt; 0) return false;
-        vector&lt;int&gt; array;
-        while(x) {
-            int mod = x % 10;
-            array.push_back(mod);
-            x /= 10;
+        ret = total;
+        int pos = 1;
+        for (int i = 1; i &lt; nums.size(); i++) {
+            if (nums[i] != nums[i - 1]) nums[pos++] = nums[i];
         }
-        int i = 0, j = array.size() - 1;
-        while(i &lt; j) {
-            if (array[i++] != array[j--]) return false;
-        }
-        return true;
+        return ret;
     }
 };
-</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n2)
-<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1)</p>
-<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x603B;&#x7ED3;</h2>
-<p>&#x5BF9;&#x4E8E;&#x53CD;&#x8F6C;&#x6574;&#x6570;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x6EA2;&#x51FA;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4F7F;&#x7528;&#x66F4;&#x5927;&#x5BB9;&#x91CF;&#x7684;&#x6574;&#x578B;long long int &#x6765;&#x5B58;&#x653E;&#x53CD;&#x8F6C;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x514D;&#x53BB;&#x5224;&#x65AD;&#x6EA2;&#x51FA;&#x7684;&#x903B;&#x8F91;&#x3002;</p>
-<p>&#x4E0D;&#x4F7F;&#x7528; &#x53CD;&#x8F6C;&#x6574;&#x6570;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x6574;&#x6570;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x4F4D;&#x6570;&#x5B58;&#x50A8;&#x5230;&#x6570;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x903B;&#x8F91;&#x5224;&#x65AD;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x591A;&#x4F7F;&#x7528;&#x7A7A;&#x95F4;&#x3002;</p>
+</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1) </p>
+<p>&#x5176;&#x5B9E;&#x4E0A;&#x9762;&#x7684;&#x5FAA;&#x73AF;&#x53EF;&#x4EE5;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#xFF0C;&#x8BA9;&#x4EE3;&#x7801;&#x770B;&#x8D77;&#x6765;&#x66F4;&#x8F7B;&#x723D;&#x3002;&#xFF08;&#x8FD9;&#x662F;leetcode&#x4E0A;&#x9762;&#x7684;&#x4EBA;&#x5199;&#x7684;&#xFF0C;&#x5F88;&#x79C0;&#xFF0C;&#x548C;&#x6211;&#x60F3;&#x6CD5;&#x4E00;&#x6837;&#x4F46;&#x662F;&#x6BD4;&#x6211;&#x7684;&#x4F18;&#x96C5; n &#x8F29;&#xFF09;</p>
+<pre><code>int removeDuplicates_2(vector&lt;int&gt;&amp; A) {
+    int count = 0, n = A.size();
+    for(int i = 1; i &lt; n; i++){
+        if(A[i] == A[i-1]) count++;
+        else A[i-count] = A[i];
+    }
+    return n-count;
+}
+</code></pre><h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x603B;&#x7ED3;</h2>
+<p>&#x5BF9;&#x4E8E;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x53EA;&#x6709;&#x4EA4;&#x6362;&#x8FD9;&#x4E00;&#x79CD;&#x601D;&#x8DEF;&#xFF0C;&#x8FD9;&#x4E2A;&#x9898;&#x5E76;&#x4E0D;&#x8981;&#x6C42;&#x6211;&#x4EEC;&#x6539;&#x53D8;&#x5B8C;&#x6570;&#x7EC4;&#x4E4B;&#x540E;&#x4FDD;&#x6301;&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x548C;&#x539F;&#x6765;&#x4E00;&#x6837;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x501F;&#x52A9;&#x5FEB;&#x6162;&#x6307;&#x9488;&#x7684;&#x601D;&#x60F3;&#x6765;&#x505A;&#x8FD9;&#x4E2A;&#x9898;&#x3002;</p>
+<p><strong>&#x4E0D;&#x8981;&#x601D;&#x7EF4;&#x5B9A;&#x52BF;</strong></p>
 
                                 
                                 </section>
@@ -596,14 +589,10 @@ public:
 
             
                 
-                <a href="008-StringToIntegerAtoi.html" class="navigation navigation-prev " aria-label="Previous page: 008-StringToIntegerAtoi">
+                <a href="024-SwapNodesInPairs.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 024-SwapNodesInPairs">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="011-ContainerWithMostWater.html" class="navigation navigation-next " aria-label="Next page: 011-ContainerWithMostWater">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -612,7 +601,7 @@ public:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"009-PalindromeNumber","level":"1.11","depth":1,"next":{"title":"011-ContainerWithMostWater","level":"1.12","depth":1,"path":"011-ContainerWithMostWater.md","ref":"011-ContainerWithMostWater.md","articles":[]},"previous":{"title":"008-StringToIntegerAtoi","level":"1.10","depth":1,"path":"008-StringToIntegerAtoi.md","ref":"008-StringToIntegerAtoi.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"009-PalindromeNumber.md","mtime":"2019-10-09T12:53:19.393Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-15T14:02:31.515Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"026-RemoveDuplicatesFromSortedArray","level":"1.26","depth":1,"previous":{"title":"024-SwapNodesInPairs","level":"1.25","depth":1,"path":"024-SwapNodesInPairs.md","ref":"024-SwapNodesInPairs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"026-RemoveDuplicatesFromSortedArray.md","mtime":"2019-10-15T14:01:24.595Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-15T14:02:31.515Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
