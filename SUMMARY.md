@@ -24,6 +24,7 @@
 * [021-MergeTwoSortedLists](021-MergeTwoSortedLists.md)
 * [<>022-GenerateParentheses](022-GenerateParentheses.md)
 * [*023-MergeKSortedLists](023-MergeKSortedLists.md)
+* [~025-ReverseNodesInK-Group](025-ReverseNodesInK-Group.md)
 * [024-SwapNodesInPairs](024-SwapNodesInPairs.md)
 * [026-RemoveDuplicatesFromSortedArray](026-RemoveDuplicatesFromSortedArray.md)
 * [027-RemoveElement](027-RemoveElement.md)

@@ -24,6 +24,7 @@
 <url> <loc>https://leetcode.wang/021-MergeTwoSortedLists.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/022-GenerateParentheses.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/023-MergeKSortedLists.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/025-ReverseNodesInK-Group.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/024-SwapNodesInPairs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/026-RemoveDuplicatesFromSortedArray.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/027-RemoveElement.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
