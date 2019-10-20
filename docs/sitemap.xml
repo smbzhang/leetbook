@@ -29,4 +29,6 @@
 <url> <loc>https://leetcode.wang/026-RemoveDuplicatesFromSortedArray.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/027-RemoveElement.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/028-ImplementstrStr.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/029-DivideTwoIntegers.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/035-SearchInsertPosition.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
