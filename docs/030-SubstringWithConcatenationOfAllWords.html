@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>~025-ReverseNodesInK-Group · leetbook</title>
+        <title>030-SubstringWithConcatenationOfAllWords · leetbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="024-SwapNodesInPairs.html" />
+    <link rel="next" href="035-SearchInsertPosition.html" />
     
     
-    <link rel="prev" href="023-MergeKSortedLists.html" />
+    <link rel="prev" href="029-DivideTwoIntegers.html" />
     
 
 
@@ -446,7 +446,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.25" data-path="025-ReverseNodesInK-Group.html">
+        <li class="chapter " data-level="1.25" data-path="025-ReverseNodesInK-Group.html">
             
                 <a href="025-ReverseNodesInK-Group.html">
             
@@ -524,7 +524,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.31" data-path="030-SubstringWithConcatenationOfAllWords.html">
+        <li class="chapter active" data-level="1.31" data-path="030-SubstringWithConcatenationOfAllWords.html">
             
                 <a href="030-SubstringWithConcatenationOfAllWords.html">
             
@@ -580,7 +580,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >~025-ReverseNodesInK-Group</a>
+        <a href="." >030-SubstringWithConcatenationOfAllWords</a>
     </h1>
 </div>
 
@@ -595,46 +595,125 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c-&#x5B9E;&#x73B0;"><b>3.1. </b>C++ &#x5B9E;&#x73B0;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</h2>
-<p><a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank">https://leetcode.com/problems/reverse-nodes-in-k-group/</a>
-<img src="assets/025-1.jpg" alt=""></p>
-<p>&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x6BCF; k &#x4E2A;&#x8282;&#x70B9;&#x4E00;&#x7EC4;&#x8FDB;&#x884C;&#x7FFB;&#x8F6C;&#xFF0C;&#x8BF7;&#x4F60;&#x8FD4;&#x56DE;&#x7FFB;&#x8F6C;&#x540E;&#x7684;&#x94FE;&#x8868;&#x3002;</p>
-<p>&#x4F60;&#x7684;&#x7B97;&#x6CD5;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5E38;&#x6570;&#x7684;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x3002;</p>
-<p>&#x4F60;&#x4E0D;&#x80FD;&#x53EA;&#x662F;&#x5355;&#x7EAF;&#x7684;&#x6539;&#x53D8;&#x8282;&#x70B9;&#x5185;&#x90E8;&#x7684;&#x503C;&#xFF0C;&#x800C;&#x662F;&#x9700;&#x8981;&#x5B9E;&#x9645;&#x7684;&#x8FDB;&#x884C;&#x8282;&#x70B9;&#x4EA4;&#x6362;&#x3002;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;"><b>2.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;"><b>2.2. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c-&#x5B9E;&#x73B0;"><b>3.1. </b>C++ &#x5B9E;&#x73B0;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>4. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<p><a href="https://leetcode.com/problems/substring-with-concatenation-of-all-words/" target="_blank">https://leetcode.com/problems/substring-with-concatenation-of-all-words/</a>
+<img src="assets/030-1.jpg" alt=""></p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x7EC4;words&#x548C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;s&#xFF0C;&#x7136;&#x540E;&#x627E;&#x51FA;&#x8FD9;&#x4E2A;words&#x4E2D;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x7684;&#x7EC4;&#x5408;&#x5728;s&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FD4;&#x56DE;&#x8FD9;&#x4E9B;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>(words &#x4E2D;&#x7684;&#x5355;&#x8BCD;&#x6BCF;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x90FD;&#x662F;&#x76F8;&#x540C;&#x7684;)</p>
 <h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
-<p>&#x5176;&#x5B9E;&#x8FD9;&#x4E2A;&#x9898;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x53CD;&#x8F6C;&#x7684;&#x9898;&#x3002;&#x6211;&#x4EEC;&#x628A;&#x8F93;&#x5165;&#x7684;&#x94FE;&#x8868;&#x5206;&#x7EC4;&#xFF0C;&#x4E00;&#x7EC4;k&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x4F9D;&#x6B21;&#x53CD;&#x8F6C;&#x5E76;&#x4E14;&#x94FE;&#x63A5;&#xFF0C;&#x8FD4;&#x56DE;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
-<p>&#x5173;&#x4E8E;&#x5355;&#x94FE;&#x8868;&#x7684;&#x53CD;&#x8F6C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5934;&#x63D2;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<h3 id="&#x601D;&#x8DEF;&#x4E00;"><a name="&#x601D;&#x8DEF;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x601D;&#x8DEF;&#x4E00;</h3>
+<p>&#x521A;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x9898;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x5FFD;&#x7565;&#x4E86;words&#x4E2D;&#x5355;&#x8BCD;&#x7684;&#x957F;&#x5EA6;&#x90FD;&#x76F8;&#x540C;&#x8FD9;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x60F3;&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x51FA;words&#x4E2D;&#x6240;&#x6709;&#x5355;&#x8BCD;&#x7684;&#x4E0D;&#x91CD;&#x590D;&#x7EC4;&#x5408;&#x3002;</p>
+<p>&#x62FF;&#x5230;&#x8FD9;&#x4E9B;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x7EC4;&#x5408;&#x4E4B;&#x540E;&#xFF0C;&#x904D;&#x5386;&#x8FD9;&#x4E9B;&#x7EC4;&#x5408;&#xFF0C;&#x5206;&#x522B;&#x627E;&#x51FA;&#x5176;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5728;s&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x3002;</p>
+<p>&#x8BA1;&#x7B97;words&#x4E2D;&#x7684;&#x975E;&#x91CD;&#x590D;&#x7EC4;&#x5408;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x91C7;&#x7528;&#x5168;&#x6392;&#x5217;&#x7136;&#x540E;&#x53BB;&#x91CD;&#x7684;&#x7B97;&#x6CD5;&#x3002;&#x5173;&#x4E8E;&#x5168;&#x6392;&#x5217;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4E4B;&#x540E;&#x4F1A;&#x5199;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x7684;&#x7AE0;&#x8282;&#x3002;</p>
+<p>&#x5168;&#x6392;&#x5217;&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5E94;&#x8BE5;&#x548C;&#x5168;&#x6392;&#x5217;&#x7684;&#x603B;&#x6570; O(n!) &#x4E00;&#x6837;&#x3002;</p>
+<p>&#x5728;&#x8BA1;&#x7B97;&#x5F97;&#x5230;&#x7684;words&#x7684;&#x975E;&#x91CD;&#x590D;&#x7EC4;&#x5408;&#x4E4B;&#x540E;&#xFF0C;&#x4FBF;&#x53EF;&#x4EE5;&#x904D;&#x5386;s&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x67E5;&#x627E;&#x5B50;&#x4E32;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x56E0;&#x4E3A;&#x5B50;&#x4E32;&#x7684;&#x6240;&#x6709;&#x4F4D;&#x7F6E;&#x90FD;&#x8981;&#x627E;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;&#xFF0C; O(mnq), m&#x662F;&#x5B50;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#xFF0C;n&#x662F;s&#x7684;&#x957F;&#x5EA6;&#xFF0C;q&#x662F;words&#x4E2D;&#x5B50;&#x4E32;&#x7684;&#x4E2A;&#x6570;</p>
+<p>&#x8FD9;&#x6837;&#x7684;&#x89E3;&#x6CD5;&#x6700;&#x7EC8;&#x8D85;&#x65F6;&#x4E86;&#x3002;</p>
+<h3 id="&#x601D;&#x8DEF;&#x4E8C;"><a name="&#x601D;&#x8DEF;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x601D;&#x8DEF;&#x4E8C;</h3>
+<p>&#x4ED4;&#x7EC6;&#x8BFB;&#x9898;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;words&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5B50;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x5F97;&#x5230;&#x8FD9;&#x4E2A;&#x4FE1;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x904D;&#x5386;s&#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;&#x548C;words&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5B50;&#x4E32;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x56E0;&#x4E3A;&#x5B50;&#x4E32;&#x957F;&#x5EA6;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x6B21;&#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x5339;&#x914D;&#x4E0A;&#x67D0;&#x4E2A;&#x5B50;&#x4E32;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x600E;&#x4E48;&#x4FDD;&#x8BC1;&#x8FDE;&#x7EED;&#x7684;&#x5339;&#x914D;&#x5230;&#x6240;&#x6709;&#x7684;&#x5B50;&#x4E32;&#x5462;&#xFF1F; &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;hashmap<string, int="">,&#x5B58;&#x50A8;words&#x4E2D;&#x7684;&#x5B50;&#x4E32;&#x548C;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x3002;&#x5728;&#x904D;&#x5386;s&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5F53;&#x524D;&#x6307;&#x9488;&#x662F;i&#xFF0C;&#x90A3;&#x4E48;&#x6839;&#x636E;words&#x5B50;&#x4E32;&#x7684;&#x957F;&#x5EA6; len, &#x4F9D;&#x6B21;&#x5339;&#x914D;words&#x4E2D;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x5E76;&#x4E14;&#x5B58;&#x653E;&#x5728;&#x4E00;&#x4E2A;hashmap&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x8BA1;&#x6570;&#x3002; &#x5728;&#x6280;&#x672F;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x548C;&#x4E4B;&#x524D;&#x7684;hamp&#x5BF9;&#x6BD4;&#xFF0C;&#x5982;&#x679C;i&#x5230;words,size()*len&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x975E;&#x5B50;&#x4E32;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6216;&#x8005;&#x5B50;&#x4E32;&#x7684;&#x6570;&#x91CF;&#x8D85;&#x8FC7;&#x4E86;&#x4E4B;&#x524D;&#x8BB0;&#x5F55;&#x7684;&#x503C;&#xFF0C;&#x5C31;&#x8FD4;&#x56DE;&#x5E76;&#x62A5;&#x9519;&#x3002;</string,></p>
+<p>&#x8FD9;&#x6837;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F; O(m*n) n:s&#x7684;&#x957F;&#x5EA6;&#xFF0C; m&#x662F;&#x5B50;&#x4E32;&#x7684;&#x4E2A;&#x6570;</p>
 <h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
 <h3 id="c-&#x5B9E;&#x73B0;"><a name="c-&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c-&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. C++ &#x5B9E;&#x73B0;</h3>
-<pre><code>class Solution {
-public:
-    ListNode* reverseKGroup(ListNode* head, int k) {
-        int n = 0;
-        ListNode *cur = head;
-        while(cur) {n++; cur = cur-&gt;next;}
-        if (n &lt; k || k &lt;= 1) return head;
-        cur = head;
-        for (int i = 0; i &lt; k; i++) {
-            cur = cur-&gt;next;
+<h4 id="&#x89E3;&#x6CD5;&#x4E00;"><a name="&#x89E3;&#x6CD5;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E00;</h4>
+<pre><code>vector&lt;int&gt; findSubstring(string s, vector&lt;string&gt;&amp; words) {
+    vector&lt;int&gt; result;
+    words = permutation(words);
+    for (int i = 0; i &lt; words.size(); i++) {
+        int pos = 0;
+        pos = s.find(words[i], pos);
+        while (pos != string::npos) {
+            result.push_back(pos);
+            pos = s.find(words[i], pos + 1);
         }
-        auto ret = reverseList(head, k);
-        head-&gt;next = reverseKGroup(cur, k);
-        return ret;
     }
+    return result;
+}
 
-    // &#x4F7F;&#x7528;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#x5355;&#x94FE;&#x8868;&#x7684;&#x53CD;&#x8F6C;
-    ListNode *reverseList(ListNode* head, int k) {
-        if (k &lt;= 1 || head == NULL || head-&gt;next == NULL) {
-            return head;
-        }
-        ListNode *tail = reverseList(head-&gt;next, k - 1);
-        head-&gt;next-&gt;next = head;
-        head-&gt;next = NULL;
-        return tail;
+
+vector&lt;string&gt; permutation(vector&lt;string&gt; &amp;strs) {
+    vector&lt;string&gt; result;
+    if (strs.size() == 0) {
+        return result;
     }
-    // &#x4F7F;&#x7528;&#x5934;&#x63D2;&#x6CD5;&#x5B9E;&#x73B0; O(n) &#x975E;&#x9012;&#x5F52;&#x7684;&#x5355;&#x94FE;&#x8868;&#x53CD;&#x8F6C;&#xFF0C;&#x627E;&#x5230; head&#xFF0C;&#x7136;&#x540E;&#x904D;&#x5386;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x63D2;&#x5165;&#x5230;head&#x7684;&#x524D;&#x9762;&#x3002;
-};
-</code></pre><p>&#x4E0A;&#x9762;&#x4F7F;&#x7528;&#x4E86;&#x9012;&#x5F52;&#x5B9E;&#x73B0;&#x5355;&#x94FE;&#x8868;&#x7684;&#x53CD;&#x8F6C;&#xFF0C;&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;O(n)&#x7684;&#x5934;&#x63D2;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x94FE;&#x8868;&#x7684;&#x53CD;&#x8F6C;&#x3002;</p>
+    range(strs, 0, result);
+    return result;
+}
+
+void range(vector&lt;string&gt; &amp;strs, int start, vector&lt;string&gt; &amp;result) {
+    if (start == strs.size()) {
+        string str;
+        str.clear();
+        for (int i = 0; i &lt; strs.size(); i++) {
+            str += strs[i];
+        }
+        // &#x4F7F;&#x7528; hashmap &#x53BB;&#x91CD;
+        if (this-&gt;records.find(str) == this-&gt;records.end()) {
+            this-&gt;records.insert(str);
+            result.push_back(str);
+        }
+        return;
+    }
+    for (int i = start; i &lt; strs.size(); i++) {
+        // &#x53BB;&#x91CD;
+        //bool flag = true;
+        //for (int j = start; j &lt; i; j++) {
+        //    if (strs[j] == strs[start]) flag == false;
+        //}
+        //if (!flag) continue;
+        swap(strs, start, i);
+        range(strs, start + 1, result);
+        swap(strs, start, i);
+    }
+}
+
+void swap(vector&lt;string&gt; &amp;strs, int i, int j) {
+    string str = strs[i];
+    strs[i] = strs[j];
+    strs[j] = str;
+}
+
+std::unordered_set&lt;string&gt; records;
+</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(m!) + O(nmlen)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1)</p>
+<h4 id="&#x89E3;&#x6CD5;&#x4E8C;"><a name="&#x89E3;&#x6CD5;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E8C;</h4>
+<pre><code>vector&lt;int&gt; findSubstring_2(string s, vector&lt;string&gt; &amp;words) {
+    vector&lt;int&gt; result;
+    if (words.size() == 0 || s.length() == 0) return result;
+    int len = words[0].size(), lens = len * words.size();
+    int n = s.length();
+    std::unordered_map&lt;string, int&gt; hmap;
+    for (int i = 0; i &lt; words.size(); i++) {
+        if (hmap.find(words[i]) != hmap.end()) {
+            hmap[words[i]]++;
+        }else{
+            hmap[words[i]] = 1;
+        }
+    }
+    for (int i = 0; i &lt;= n - lens; i++) {
+        std::unordered_map&lt;string, int&gt; temp_map;
+        bool flag = true;
+        for (int j = 0; j &lt; words.size(); j++) {
+            string str = s.substr(i + len * j, len);
+            if (hmap.find(str) == hmap.end()) {
+                flag =  false;
+                break;
+            }else{
+                if (temp_map.find(str) == temp_map.end()) temp_map[str] = 1;
+                else temp_map[str]++;
+                if (temp_map[str] &gt; hmap[str]) {
+                    flag = false;
+                    break;
+                }
+            }
+        }
+        if (flag) {result.push_back(i);}
+    }
+    return result;
+}
+</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(m<em>n)
+<em>*&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</em></em> O(n)</p>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x603B;&#x7ED3;</h2>
+<p>&#x770B;&#x6E05;&#x9898;&#x610F;&#xFF0C;&#x5584;&#x7528; hashmap&#xFF0C;&#x51CF;&#x5C11;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</p>
 
                                 
                                 </section>
@@ -662,12 +741,12 @@ public:
 
             
                 
-                <a href="023-MergeKSortedLists.html" class="navigation navigation-prev " aria-label="Previous page: *023-MergeKSortedLists">
+                <a href="029-DivideTwoIntegers.html" class="navigation navigation-prev " aria-label="Previous page: 029-DivideTwoIntegers">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="024-SwapNodesInPairs.html" class="navigation navigation-next " aria-label="Next page: 024-SwapNodesInPairs">
+                <a href="035-SearchInsertPosition.html" class="navigation navigation-next " aria-label="Next page: 035-SearchInsertPosition">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -678,7 +757,7 @@ public:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"~025-ReverseNodesInK-Group","level":"1.25","depth":1,"next":{"title":"024-SwapNodesInPairs","level":"1.26","depth":1,"path":"024-SwapNodesInPairs.md","ref":"024-SwapNodesInPairs.md","articles":[]},"previous":{"title":"*023-MergeKSortedLists","level":"1.24","depth":1,"path":"023-MergeKSortedLists.md","ref":"023-MergeKSortedLists.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"025-ReverseNodesInK-Group.md","mtime":"2019-10-18T11:51:58.108Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T12:42:17.029Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"030-SubstringWithConcatenationOfAllWords","level":"1.31","depth":1,"next":{"title":"035-SearchInsertPosition","level":"1.32","depth":1,"path":"035-SearchInsertPosition.md","ref":"035-SearchInsertPosition.md","articles":[]},"previous":{"title":"029-DivideTwoIntegers","level":"1.30","depth":1,"path":"029-DivideTwoIntegers.md","ref":"029-DivideTwoIntegers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"030-SubstringWithConcatenationOfAllWords.md","mtime":"2019-10-22T12:41:56.273Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T12:42:17.029Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

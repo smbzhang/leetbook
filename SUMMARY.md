@@ -30,4 +30,5 @@
 * [027-RemoveElement](027-RemoveElement.md)
 * [028-ImplementstrStr](028-ImplementstrStr.md)
 * [029-DivideTwoIntegers](029-DivideTwoIntegers.md)
+* [030-SubstringWithConcatenationOfAllWords](030-SubstringWithConcatenationOfAllWords.md)
 * [035-SearchInsertPosition](035-SearchInsertPosition.md)
