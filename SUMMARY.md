@@ -32,3 +32,4 @@
 * [029-DivideTwoIntegers](029-DivideTwoIntegers.md)
 * [030-SubstringWithConcatenationOfAllWords](030-SubstringWithConcatenationOfAllWords.md)
 * [035-SearchInsertPosition](035-SearchInsertPosition.md)
+* [038-CountAndSay](038-CountAndSay.md)
