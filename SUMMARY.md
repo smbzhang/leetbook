@@ -31,5 +31,6 @@
 * [028-ImplementstrStr](028-ImplementstrStr.md)
 * [029-DivideTwoIntegers](029-DivideTwoIntegers.md)
 * [030-SubstringWithConcatenationOfAllWords](030-SubstringWithConcatenationOfAllWords.md)
+* [031-NextPermutation](031-NextPermutation.md)
 * [035-SearchInsertPosition](035-SearchInsertPosition.md)
 * [038-CountAndSay](038-CountAndSay.md)
