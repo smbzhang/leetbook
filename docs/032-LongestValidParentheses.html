@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>021-MergeTwoSortedLists · leetbook</title>
+        <title>032-LongestValidParentheses · leetbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="022-GenerateParentheses.html" />
+    <link rel="next" href="035-SearchInsertPosition.html" />
     
     
-    <link rel="prev" href="020-validparentheses.html" />
+    <link rel="prev" href="031-NextPermutation.html" />
     
 
 
@@ -407,7 +407,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.22" data-path="021-MergeTwoSortedLists.html">
+        <li class="chapter " data-level="1.22" data-path="021-MergeTwoSortedLists.html">
             
                 <a href="021-MergeTwoSortedLists.html">
             
@@ -550,7 +550,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.33" data-path="032-LongestValidParentheses.html">
+        <li class="chapter active" data-level="1.33" data-path="032-LongestValidParentheses.html">
             
                 <a href="032-LongestValidParentheses.html">
             
@@ -619,7 +619,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >021-MergeTwoSortedLists</a>
+        <a href="." >032-LongestValidParentheses</a>
     </h1>
 </div>
 
@@ -634,75 +634,173 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;"><b>2.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;"><b>2.2. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E00;"><b>3.1. </b>&#x89E3;&#x6CD5;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x89E3;&#x6CD5;&#x4E8C;"><b>3.2. </b>&#x89E3;&#x6CD5;&#x4E8C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>4. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x7B80;&#x5355;&#x96BE;&#x5EA6;&#xFF09;</h2>
-<p><img src="assets/021-1.png" alt="">
-&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6392;&#x5E8F;&#x94FE;&#x8868;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;"><b>2.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;"><b>2.2. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E09;"><b>2.3. </b>&#x601D;&#x8DEF;&#x4E09;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;_1"><b>3.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;_1"><b>3.2. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E09;_1"><b>3.3. </b>&#x601D;&#x8DEF;&#x4E09;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>4. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<p><a href="https://leetcode.com/problems/longest-valid-parentheses/" target="_blank">https://leetcode.com/problems/longest-valid-parentheses/</a>
+<img src="assets/032.jpg" alt=""></p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x53EA;&#x5305;&#x542B;&#x5B57;&#x7B26;(&#x548C;&#x5B57;&#x7B26;)&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x627E;&#x51FA;&#x5176;&#x4E2D;&#x6700;&#x957F;&#x7684;&#x7B26;&#x5408;&#x89C4;&#x5219;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;</p>
 <h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
-<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5FAA;&#x73AF;&#x904D;&#x5386;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x5728;&#x5FAA;&#x73AF;&#x6BD4;&#x8F83;&#x4E2D;&#x6309;&#x7167;&#x5927;&#x5C0F;&#x987A;&#x5E8F;&#x628A;&#x7ED3;&#x70B9;&#x5B58;&#x5165;&#x4E00;&#x4E2A;queue&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x94FE;&#x63A5;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x7ED3;&#x70B9;&#x8FD4;&#x56DE;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x5C31;&#x4F1A;&#x989D;&#x5916;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x8FD8;&#x8981;&#x904D;&#x5386;&#x4E24;&#x8FB9;&#x3002;&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x4E0D;&#x4F7F;&#x7528;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x5E76;&#x53EA;&#x904D;&#x5386;&#x4E00;&#x904D;&#x7684;&#x89E3;&#x6CD5;&#x3002;</p>
 <h3 id="&#x601D;&#x8DEF;&#x4E00;"><a name="&#x601D;&#x8DEF;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x601D;&#x8DEF;&#x4E00;</h3>
-<p><img src="assets/021-2.png" alt="">
-&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#xFF0C;head&#x548C;pcur&#xFF0C;head&#x6307;&#x5411;&#x8FD4;&#x56DE;&#x7684;&#x94FE;&#x8868;&#x5934;&#x3002;
-&#x9996;&#x5148;&#x8981;&#x786E;&#x5B9A;head&#x548C;pcur&#x7684;&#x6307;&#x5411;&#x3002;&#x5206;&#x56DB;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;</p>
-<ul>
-<li>case1&#xFF1A; &#x5F53;l1&#x7A7A;l2&#x975E;&#x7A7A;</li>
-<li>case2&#xFF1A; &#x5F53;l1&#x7A7A;l2&#x7A7A;</li>
-<li>case3&#xFF1A; &#x5F53;l1&#x975E;&#x7A7A;l2&#x7A7A;</li>
-<li>case4&#xFF1A; &#x5F53;l1&#x975E;&#x7A7A;l2&#x975E;&#x7A7A;</li>
-</ul>
-<p>&#x5728;&#x786E;&#x5B9A;head&#x7684;&#x65F6;&#x5019;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x3002;&#x7136;&#x540E;&#x904D;&#x5386;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x76F4;&#x5230;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#x4E3A;&#x7A7A;&#xFF0C;pcur-&gt;next&#x6307;&#x5411;&#x975E;&#x7A7A;&#x7684;&#x94FE;&#x8868;&#x3002;&#x8FD9;&#x91CC;&#x6CE8;&#x610F;&#xFF0C;pcur&#x53EF;&#x80FD;&#x4E3A;&#x7A7A;&#xFF0C;&#x5982;&#x679C;&#x5176;&#x5B9E;&#x94FE;&#x8868;&#x6709;&#x4E00;&#x4E2A;&#x4E3A;&#x7A7A;&#xFF0C;pcur&#x5FAA;&#x73AF;&#x5B8C;&#x4E4B;&#x540E;&#x5C31;&#x4E3A;&#x7A7A;&#xFF0C;&#x8FD9;&#x4E2A;&#x9700;&#x8981;&#x7279;&#x6B8A;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#x8FD9;&#x4E2A;&#x9898;&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x6210;<a href="020-validparentheses.html">020-ValidParentheses</a>&#x3002;20&#x9898;&#x4E2D;&#x6211;&#x4EEC;&#x5BF9;&#x7ED9;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x5408;&#x6CD5;&#x7684;&#x68C0;&#x67E5;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5E76;&#x4E14;&#x5224;&#x65AD;&#x4EE5;&#x8BE5;&#x5B57;&#x7B26;&#x5F00;&#x5934;&#x7684;&#x5408;&#x6CD5;&#x7684;&#x5B57;&#x7B26;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x957F;&#x5EA6;&#x662F;&#x591A;&#x5C11;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x600E;&#x4E48;&#x5224;&#x65AD;&#xFF0C;records=0;&#x904D;&#x5386;&#x5230;&#x4E00;&#x4E2A; (&#x5C31;+1&#xFF0C;&#x904D;&#x5386;&#x5230;&#x4E00;&#x4E2A; )&#x5C31;-1&#xFF0C;&#x5982;&#x679C;&#x5C0F;&#x4E8E;0&#x76F4;&#x63A5;&#x5931;&#x8D25;&#x3002;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BB0;&#x5F55; records==0&#x7684;&#x60C5;&#x51B5;&#x65F6;&#x4E00;&#x5171;&#x904D;&#x5386;&#x4E86;&#x591A;&#x5C11;&#x5B57;&#x7B26;&#xFF0C;&#x53D6;&#x6700;&#x5927;&#x5373;&#x53EF;&#x3002;</p>
+<p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n!)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1) </p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x901A;&#x8FC7;&#x4E86; leetcode&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x51FB;&#x8D25;&#x4E86; %5 &#x7684;&#x7528;&#x6237;&#x3002;</p>
 <h3 id="&#x601D;&#x8DEF;&#x4E8C;"><a name="&#x601D;&#x8DEF;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x601D;&#x8DEF;&#x4E8C;</h3>
-<p><img src="assets/021-3.png" alt=""></p>
-<p>&#x4E0A;&#x9762;&#x601D;&#x8DEF;&#x4E00;&#x7684;&#x8FB9;&#x754C;&#x60C5;&#x51B5;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x5E26;&#x5934;&#x7ED3;&#x70B9;&#x7684;&#x94FE;&#x8868;&#x7B80;&#x5316;&#x8FB9;&#x754C;&#x5224;&#x65AD;&#x3002;</p>
-<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9; head&#xFF0C;&#x91CC;&#x9762;&#x5B58;&#x653E;&#x7684;&#x662F; INT_MIN&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x7528;&#x53BB;&#x786E;&#x5B9A;head&#x7684;&#x6307;&#x5411;&#x95EE;&#x9898;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#xFF0C;pcur&#x4E3A;&#x7A7A;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F18;&#x5316;&#x4E00;&#x4E0B;&#x601D;&#x8DEF;&#x4E00;&#xFF0C;&#x5982;&#x679C; (&#x4E2A;&#x6570;&#x5927;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x76F4;&#x63A5;&#x5931;&#x8D25;&#x3002;</p>
+<p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n!)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1) </p>
+<p>&#x867D;&#x7136;&#x6709;&#x526A;&#x679D;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x53EA;&#x51FB;&#x8D25;&#x4E86; %5 &#x7684;&#x7528;&#x6237;&#x3002;</p>
+<h3 id="&#x601D;&#x8DEF;&#x4E09;"><a name="&#x601D;&#x8DEF;&#x4E09;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E09;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x601D;&#x8DEF;&#x4E09;</h3>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x5C1D;&#x8BD5;&#x53EF;&#x4EE5;&#x76F4;&#x5230;&#xFF0C;&#x8FD9;&#x4E2A;&#x9898;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x90A3;&#x4E48;&#x66B4;&#x529B;&#x7684;&#x529E;&#x6CD5;&#x6765;&#x89E3;&#x3002;&#x6211;&#x4EEC;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF1A;
+<img src="assets/032-1.jpg" alt=""></p>
+<p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(nlogn)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n)</p>
 <h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
-<h3 id="&#x89E3;&#x6CD5;&#x4E00;"><a name="&#x89E3;&#x6CD5;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x89E3;&#x6CD5;&#x4E00;</h3>
-<pre><code>// &#x89E3;&#x6CD5;&#x4E00;&#xFF0C; &#x5934;&#x6307;&#x9488;&#x7684;&#x786E;&#x5B9A;&#x5F88;&#x7E41;&#x7410;&#xFF0C;&#x6761;&#x4EF6;&#x5F88;&#x591A;
-ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-    ListNode *head = NULL, *pcur = NULL;
-    while(l1 &amp;&amp; l2) {
-        if (pcur == NULL) {
-            pcur = (l1-&gt;val &lt;= l2-&gt;val) ? l1 : l2;
-            head = pcur;
-            if (l1-&gt;val &lt;= l2-&gt;val) l1 = l1-&gt;next;
-            else l2 = l2-&gt;next;
+<h3 id="&#x601D;&#x8DEF;&#x4E00;_1"><a name="&#x601D;&#x8DEF;&#x4E00;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x601D;&#x8DEF;&#x4E00;</h3>
+<h4 id="c&#x5B9E;&#x73B0;"><a name="c&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>C++&#x5B9E;&#x73B0;</h4>
+<pre><code>// &#x89E3;&#x6CD5;&#x4E00;&#xFF1A; &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(n!), &#x867D;&#x7136; leetcode &#x6CA1;&#x6709;&#x63D0;&#x793A;&#x8D85;&#x65F6;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x51FB;&#x8D25;&#x4E86; 5.x% &#x7684;&#x7528;&#x6237;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E0A;&#x9762;
+int longestValidParentheses(string s) {
+    if (s.length() &lt;= 1) return 0;
+    int result = 0;
+    // &#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x6CE8;&#x610F;&#xFF0C;&#x5F53;s.length() = 0 &#x7684;&#x65F6;&#x5019;&#xFF0C; 0 - 1 &#x4F1A;&#x6EA2;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5728;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x628A;&#x8FB9;&#x754C;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x4E00;&#x4E0B;&#x3002;
+    for (int i = 0; i &lt; s.length() - 1; i++) {
+        int record = 0, len = 0;
+        for (int j = i; j &lt; s.length(); j++) {
+            if (s[j] == &apos;(&apos;) {
+                record++;
+            }else{
+                record--;
+                if (record == 0) {
+                    len = (j - i + 1) &gt; len ? (j - i + 1) : len;
+                }
+                if (record &lt; 0) {
+                    break;
+                }
+            }
+        }
+        result = len &gt; result ? len : result;
+    }
+    return result;
+}
+</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n!)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1) </p>
+<h3 id="&#x601D;&#x8DEF;&#x4E8C;_1"><a name="&#x601D;&#x8DEF;&#x4E8C;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x601D;&#x8DEF;&#x4E8C;</h3>
+<h4 id="c&#x5B9E;&#x73B0;_1"><a name="c&#x5B9E;&#x73B0;_1" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;_1"><i class="fa fa-link" aria-hidden="true"></i></a>C++&#x5B9E;&#x73B0;</h4>
+<pre><code>// &#x89E3;&#x6CD5;&#x4E8C;&#xFF1A;&#x5728;&#x8BA1;&#x7B97; record &#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x76F4;&#x5728;&#x52A0;&#xFF0C;&#x5176;&#x5B9E;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x5931;&#x8D25;&#xFF0C;&#x5982;&#x679C;&apos;(&apos;&#x7684;&#x4E2A;&#x6570;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x5224;&#x65AD;&#x7684;&#x5B50;&#x4E32;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x5C31;&#x76F4;&#x63A5;&#x5931;&#x8D25;&#x5C31;&#x597D;&#x4E86;
+// &#x65F6;&#x95F4;&#x8282;&#x7701;&#x4E86;&#x4E00;&#x534A;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x662F;&#x53EA;&#x8D85;&#x8FC7;&#x4E86; 5.x% ........
+int longestValidParentheses_2(string s) {
+    if (s.length() &lt;= 1) return 0;
+    int result = 0;
+    // &#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x6CE8;&#x610F;&#xFF0C;&#x5F53;s.length() = 0 &#x7684;&#x65F6;&#x5019;&#xFF0C; 0 - 1 &#x4F1A;&#x6EA2;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5728;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x628A;&#x8FB9;&#x754C;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x4E00;&#x4E0B;&#x3002;
+    for (int i = 0; i &lt; s.length() - 1; i++) {
+        int record = 0, len = 0, leftlen = s.length() - i;
+        for (int j = i; j &lt; s.length(); j++) {
+            if (s[j] == &apos;(&apos;) {
+                record++;
+                // &#x505A;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x5931;&#x8D25;
+                if (record &gt; leftlen / 2) break;
+            }else{
+                record--;
+                if (record == 0) {
+                    len = (j - i + 1) &gt; len ? (j - i + 1) : len;
+                    leftlen = s.length() - i - len;
+                }
+                if (record &lt; 0) {
+                    break;
+                }
+            }
+        }
+        result = len &gt; result ? len : result;
+    }
+    return result;
+}
+</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n!)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1) </p>
+<h3 id="&#x601D;&#x8DEF;&#x4E09;_1"><a name="&#x601D;&#x8DEF;&#x4E09;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E09;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x601D;&#x8DEF;&#x4E09;</h3>
+<h4 id="c&#x5B9E;&#x73B0;_2"><a name="c&#x5B9E;&#x73B0;_2" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;_2"><i class="fa fa-link" aria-hidden="true"></i></a>C++&#x5B9E;&#x73B0;</h4>
+<pre><code>// &#x89E3;&#x6CD5;&#x4E09;&#xFF1A;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;, &#x9012;&#x5F52;&#x5B9E;&#x73B0;&#xFF0C;&#x65F6;&#x95F4;&#x4E0A;&#x51FB;&#x8D25;&#x4E86; 90&#xFF0C; &#x7A7A;&#x95F4;&#x4E0A; 50
+/**
+    * d[i]  &#x4EE5;s[i]&#x7ED3;&#x5C3E;&#x7684;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x5B57;&#x7B26;&#x4E32;
+    * d[i] = 0  if(s[i] == &apos;(&apos;)
+    * else:
+    * d[i] = d[i - 2] + 2    if (s[i - 1] == &apos;(&apos;)
+    * d[i] = d[i - 1] + 2 + d[i - d[i - 1] - 1 - 1]    if (s[i - 1] == &apos;)&apos;
+    * d[i] = 0        if (s[i - 1] == &apos;)&apos;
+    */
+int longestValidParentheses_3(string s) {
+    vector&lt;int&gt; records(s.length(), -1);
+    int result = 0;
+    for (int i = 0; i &lt; s.length(); i++) {
+        int ret = func(s, i, records);
+        result = ret &gt; result ? ret : result;
+    }
+    return result;
+}
+
+int func(const string &amp;s, int i, std::vector&lt;int&gt; &amp;records) {
+    if (i &lt; 0 || i &gt;= s.length()) return 0;
+    if (records[i] != -1) return records[i];
+    if (i &lt; 1) {
+        records[i] = 0;
+        return 0;
+    }
+    if (s[i] == &apos;(&apos;) {
+        records[i] = 0;
+        return 0;
+    }
+    int result = 0;
+    if (s[i - 1] == &apos;(&apos;) {
+        records[i] = func(s, i - 2, records) + 2;
+        result = records[i];
+    }else{
+        int pre_len = func(s, i - 1, records);
+        int j = i - pre_len - 1;
+        if (j &gt;= 0 &amp;&amp; s[j] == &apos;(&apos;) {
+            records[i] = pre_len + 2 + func(s, j - 1, records);
+            result = records[i];
+        }
+        else {
+            records[i] = 0;
+            result = records[i];
+        }
+    }
+    return result;
+}
+</code></pre><pre><code>// &#x4E0D;&#x5B9E;&#x7528;&#x9012;&#x5F52;&#x6765;&#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x89C4;&#x5212;
+int longestValidParentheses_4(string s) {
+    vector&lt;int&gt; records(s.length(), 0);
+    int result = 0;
+    for (int i = 1; i &lt; s.length(); i++) {
+        if (s[i] == &apos;(&apos;) {
+            records[i] = 0;
             continue;
         }
-        if (l1-&gt;val &lt;= l2-&gt;val) {
-            pcur-&gt;next = l1;
-            l1 = l1-&gt;next;
-            pcur = pcur-&gt;next;
+        if (s[i - 1] == &apos;)&apos;) {
+            int j = i - 1 - records[i - 1];
+            if (j &lt; 0) {
+                records[i] = 0;
+                continue;
+            }else{
+                if (s[j] == &apos;(&apos;) {
+                    records[i] = j - 1 &lt; 0 ? 2 + records[i - 1] : 2 + records[i - 1] + records[j - 1];
+                    result = records[i] &gt; result ? records[i] : result;
+                }else{
+                    records[i] = 0;
+                }
+            }
         }else{
-            pcur-&gt;next = l2;
-            l2 = l2-&gt;next;
-            pcur = pcur-&gt;next;
+            int j = i - 2;
+            records[i] = (j &gt;= 0) ? 2 + records[j] : 2;
+            result = records[i] &gt; result ? records[i] : result;
         }
     }
-    if (pcur == NULL) head = l1 ? l1 : l2;
-    else pcur-&gt;next = l1 ? l1 : l2;
-    return head;
+    return result;
 }
-</code></pre><h3 id="&#x89E3;&#x6CD5;&#x4E8C;"><a name="&#x89E3;&#x6CD5;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x89E3;&#x6CD5;&#x4E8C;</h3>
-<pre><code>// &#x89E3;&#x6CD5;&#x4E8C;&#xFF0C;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#x5E26;&#x5934;&#x7ED3;&#x70B9;&#x7684;&#x94FE;&#x8868;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x5934;&#x7ED3;&#x70B9;&#x5B58;&#x653E; INT_MIN&#xFF0C;&#x8FD9;&#x6837;&#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x5019;&#x53EA;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x5934;&#x7ED3;&#x70B9;&#x7684;next&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5224;&#x65AD;&#x7B2C;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x662F;l1&#x8FD8;&#x662F;l2
-ListNode* mergeTwoLists_2(ListNode* l1, ListNode* l2) {
-    ListNode *head = new ListNode(INT_MIN), *pcur = head;
-    while (l1 &amp;&amp; l2) {
-        if (l1-&gt;val &lt;= l2-&gt;val) {
-            pcur-&gt;next = l1;
-            l1 = l1-&gt;next;
-            pcur= pcur-&gt;next;
-        }else{
-            pcur-&gt;next = l2;
-            l2 = l2-&gt;next;
-            pcur= pcur-&gt;next;
-        }
-    }
-    pcur-&gt;next = l1 ? l1 : l2;
-    return head-&gt;next;
-}
-</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n)
-<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1)</p>
+</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(nlogn)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n)</p>
 <h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x603B;&#x7ED3;</h2>
-<p>&#x94FE;&#x8868;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5F53;&#x5934;&#x7ED3;&#x70B9;&#x8FB9;&#x754C;&#x6761;&#x4EF6;&#x5F88;&#x591A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5E26;&#x5934;&#x7ED3;&#x70B9;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x7B80;&#x5316;&#x8FB9;&#x754C;&#x5904;&#x7406;</p>
+<p>&#x5176;&#x5B9E;&#x6709;&#x4E9B;&#x9898;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x6362;&#x4E86;&#x4E0B;&#x95EE;&#x9898;&#x80CC;&#x666F;</p>
+<p>&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x9898;&#x8FD8;&#x662F;&#x4F7F;&#x7528;&#x9012;&#x63A8;&#x6765;&#x505A;&#x5427;&#xFF0C;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x6765;&#x505A;&#xFF0C;&#x53CD;&#x800C;&#x66F4;&#x9EBB;&#x70E6;&#x4E00;&#x70B9;</p>
 
                                 
                                 </section>
@@ -730,12 +828,12 @@ ListNode* mergeTwoLists_2(ListNode* l1, ListNode* l2) {
 
             
                 
-                <a href="020-validparentheses.html" class="navigation navigation-prev " aria-label="Previous page: 020-ValidParentheses">
+                <a href="031-NextPermutation.html" class="navigation navigation-prev " aria-label="Previous page: 031-NextPermutation">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="022-GenerateParentheses.html" class="navigation navigation-next " aria-label="Next page: <>022-GenerateParentheses">
+                <a href="035-SearchInsertPosition.html" class="navigation navigation-next " aria-label="Next page: 035-SearchInsertPosition">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -746,7 +844,7 @@ ListNode* mergeTwoLists_2(ListNode* l1, ListNode* l2) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"021-MergeTwoSortedLists","level":"1.22","depth":1,"next":{"title":"<>022-GenerateParentheses","level":"1.23","depth":1,"path":"022-GenerateParentheses.md","ref":"022-GenerateParentheses.md","articles":[]},"previous":{"title":"020-ValidParentheses","level":"1.21","depth":1,"path":"020-validparentheses.md","ref":"020-validparentheses.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"021-MergeTwoSortedLists.md","mtime":"2019-10-06T03:34:32.253Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-31T14:03:31.388Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"032-LongestValidParentheses","level":"1.33","depth":1,"next":{"title":"035-SearchInsertPosition","level":"1.34","depth":1,"path":"035-SearchInsertPosition.md","ref":"035-SearchInsertPosition.md","articles":[]},"previous":{"title":"031-NextPermutation","level":"1.32","depth":1,"path":"031-NextPermutation.md","ref":"031-NextPermutation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"032-LongestValidParentheses.md","mtime":"2019-10-31T14:00:01.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-31T14:03:31.388Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
