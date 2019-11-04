@@ -35,3 +35,4 @@
 * [032-LongestValidParentheses](032-LongestValidParentheses.md)
 * [035-SearchInsertPosition](035-SearchInsertPosition.md)
 * [038-CountAndSay](038-CountAndSay.md)
+* [043-MultiplyStrings](043-MultiplyStrings.md)

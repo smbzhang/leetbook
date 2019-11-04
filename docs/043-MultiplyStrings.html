@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>002-AddTwoNumbers · leetbook</title>
+        <title>043-MultiplyStrings · leetbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="003-LongestSubstringWithoutRepeatingCharacters.html" />
     
-    
-    <link rel="prev" href="001-TwoSum.html" />
+    <link rel="prev" href="038-CountAndSay.html" />
     
 
 
@@ -173,7 +171,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="002-AddTwoNumbers.html">
+        <li class="chapter " data-level="1.4" data-path="002-AddTwoNumbers.html">
             
                 <a href="002-AddTwoNumbers.html">
             
@@ -589,7 +587,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.36" data-path="043-MultiplyStrings.html">
+        <li class="chapter active" data-level="1.36" data-path="043-MultiplyStrings.html">
             
                 <a href="043-MultiplyStrings.html">
             
@@ -632,7 +630,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >002-AddTwoNumbers</a>
+        <a href="." >043-MultiplyStrings</a>
     </h1>
 </div>
 
@@ -647,178 +645,93 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c&#x5B9E;&#x73B0;"><b>3.1. </b>C++&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#python&#x5B9E;&#x73B0;"><b>3.2. </b>python&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#go&#x5B9E;&#x73B0;"><b>3.3. </b>Go&#x5B9E;&#x73B0;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
-<p><img src="assets/import.png" alt=""></p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;"><b>3.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#c-&#x5B9E;&#x73B0;"><b>3.2. </b>C++ &#x5B9E;&#x73B0;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<p><a href="https://leetcode.com/problems/multiply-strings/" target="_blank">https://leetcode.com/problems/multiply-strings/</a></p>
+<p><img src="assets/043-1.jpg" alt=""></p>
+<p>&#x5927;&#x6570;&#x76F8;&#x4E58;&#x6CA1;&#x4EC0;&#x4E48;&#x597D;&#x8BF4;&#x7684;</p>
 <h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
-<p><img src="assets/list.png" alt=""></p>
-<p>&#x8FD9;&#x4E2A;&#x9898;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5927;&#x6570;&#x52A0;&#x6CD5;&#x9898;&#xFF0C;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x8868;&#x793A;&#x4E24;&#x4E2A;&#x5927;&#x6570;&#x5B57;&#xFF0C;&#x4E0D;&#x8FC7;&#x94FE;&#x8868;&#x7684;&#x8282;&#x70B9;&#x662F;&#x6309;&#x7167;&#x6570;&#x5B57;&#x7684;&#x4F4E;&#x4F4D;&#x5230;&#x9AD8;&#x4F4D;&#x8FDB;&#x884C;&#x6392;&#x5217;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4ECE;&#x5934;&#x904D;&#x5386;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x5E76;&#x628A;&#x7ED3;&#x70B9;&#x503C;&#x76F8;&#x52A0;&#xFF0C;&#x8FDB;&#x4F4D;&#x7528;carry&#x8868;&#x793A;&#x3002;&#x4F2A;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>1. &#x521D;&#x59CB;&#x5316;&#x4E24;&#x4E2A;NULL&#x8282;&#x70B9; pcur &#x548C; ret&#xFF0C; ret&#x7528;&#x6765;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x94FE;&#x8868;&#xFF0C;pcur&#x6307;&#x5411;&#x5F53;&#x524D;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#x94FE;&#x8868;&#x8282;&#x70B9;
-2. &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;int&#x7C7B;&#x578B;&#x7684;&#x8FDB;&#x4F4D;&#x503C; carry = 0
-3. &#x521D;&#x59CB;&#x5316;&#x4E24;&#x4E2A;int&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x5F53;&#x524D;&#x4E24;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x503C;&#xFF0C; num1 = 0 num2 = 0
-4. while(l1 != NULL || l2 != NULL)
-    1. num1 = (l1 == NULL) ? 0 : l1-&gt;val
-    2. num2 = (l2 == NULL) ? 0 : l2-&gt;val
-    3. &#x8BA1;&#x7B97; mod = num1 + num2 + carry % 10
-    4. &#x8BA1;&#x7B97; carry = num1 + num2 + carry / 10
-    &#x5982;&#x679C; pcur &#x7B49;&#x4E8E; NULL
-        5. &#x65B0;&#x5EFA;&#x4E00;&#x4E2A; node &#x8282;&#x70B9;&#xFF0C;&#x4F7F;&#x7528; mod &#x521D;&#x59CB;&#x5316;&#xFF0C; &#x5E76;&#x4E14; pcur &#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#xFF0C; ret = pcur &#x521D;&#x59CB;&#x5316;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x5934;
-    &#x5426;&#x5219;&#x7684;&#x8BDD;
-        5. &#x65B0;&#x5EFA;&#x4E00;&#x4E2A; node &#x8282;&#x70B9;&#xFF0C;&#x4F7F;&#x7528; mod &#x521D;&#x59CB;&#x5316;&#xFF0C; &#x5E76;&#x4E14; pcur-&gt;next &#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;, pcur = node
-    6. &#x5224;&#x65AD; l1 &#x548C; l2 &#x662F;&#x5426;&#x4E3A; NULL &#x5E76;&#x5411;&#x524D;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x8282;&#x70B9;
-5. &#x5224;&#x65AD; carry &#x662F;&#x4E0D;&#x662F;0&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x7684;&#x8BDD;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8282;&#x70B9;node&#x4F7F;&#x7528;carry&#x521D;&#x59CB;&#x5316;&#xFF0C;pcur&#x6307;&#x5411;&#x8FD9;&#x4E2A;node
-6. &#x8FD4;&#x56DE; ret
-</code></pre><p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(n) &#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)</p>
+<p>&#x4E58;&#x6CD5;&#x7684;&#x8BDD;&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x662F;&#x7AD6;&#x5F0F;&#x76F8;&#x4E58;
+<img src="assets/043-2.jpg" alt=""></p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x60F3;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6765;&#x5B58;&#x653E;&#x6CA1;&#x559D;&#x6570;&#x5B57;&#x76F8;&#x4E58;&#x7684;&#x4F59;&#x6570;(%10)&#x548C;&#x8FDB;&#x4F4D;&#xFF0C;&#x6700;&#x540E;&#x5728;&#x8FDB;&#x884C;&#x76F8;&#x52A0;&#x3002;</p>
+<p>num1&#x7684;&#x957F;&#x5EA6;&#x662F; n1&#xFF0C; num2&#x7684;&#x957F;&#x5EA6;&#x662F; n2</p>
+<p>&#x90A3;&#x4E48;num1 * num2&#x7684;&#x7ED3;&#x679C;&#x7684;&#x957F;&#x5EA6;&#x80AF;&#x5B9A;&#x4E0D;&#x4F1A;&#x5927;&#x4E8E; n1 + n2&#xFF0C;&#x6240;&#x4EE5;&#x5B9A;&#x4E49;array1&#x548C;array2&#x7684;&#x957F;&#x5EA6;&#x662F; n1 + n2</p>
+<p>&#x90A3;&#x4E48;array&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x4F1A;&#x4E0D;&#x4F1A;&#x6EA2;&#x51FA;&#x5462;&#xFF1F;&#x4E0D;&#x4F1A;&#x7684;&#x56E0;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x662F; 110,&#x6240;&#x4EE5; array&#x4E2D;&#x7684;&#x6570;&#x7EC4;&#x6700;&#x5927;&#x662F; 9 * 110 = 990;</p>
+<p>&#x5728;&#x8BA1;&#x7B97;array1 + array2 &#x4E4B;&#x540E;&#xFF0C;&#x904D;&#x5386;&#x7ED3;&#x679C;&#x6570;&#x7EC4;&#xFF0C;&#x9996;&#x5148;&#x53BB;&#x9664;&#x524D;&#x9762;&#x7684;0&#xFF0C;&#x7136;&#x540E;&#x904D;&#x5386;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x3002;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x76F4;&#x63A5;&#x7528;array1&#xFF0C;&#x4F59;&#x6570;&#x548C;&#x8FDB;&#x4F4D;&#x76F4;&#x63A5;&#x52A0;&#x5728;&#x76F8;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#x5C31;&#x597D;&#x4E86;&#x3002;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x548C;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x89E3;&#x6CD5;&#x3002;</p>
 <h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
-<h3 id="c&#x5B9E;&#x73B0;"><a name="c&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. C++&#x5B9E;&#x73B0;</h3>
-<p>&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x5176;&#x5B9E;&#x5B9E;&#x73B0;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x7B2C;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x4F7F;&#x7528; num1&#x548C;num2&#x6765;&#x8FDB;&#x884C;&#x8BBE;&#x8BA1;&#xFF0C;&#x6240;&#x4EE5;&#x5199;&#x51FA;&#x6765;&#x7684;&#x7A0B;&#x5E8F;&#x5F88;&#x4E11;&#x964B;&#x3002;</p>
-<pre><code>class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode *pcur1 = l1, *pcur2 = l2, *pcur = NULL, *ret = NULL;
-        int carry = 0;
-        while (pcur1 != NULL) {
-            int num1 = pcur1-&gt;val;
-            if (pcur2 != NULL) {
-                int num2 = pcur2-&gt;val;
-                    int mod = (num1 + num2 + carry) % 10;
-                    if (pcur == NULL) {
-                        pcur = new ListNode(mod);
-                        ret = pcur;
-                    }else {
-                        ListNode *node = new ListNode(mod);
-                        pcur-&gt;next = node;
-                        pcur = node;
-                    }
-                    carry = (num1 + num2 + carry) / 10;
-                    pcur2 = pcur2-&gt;next;
-            }else
-                break;
-            pcur1 = pcur1-&gt;next;
+<h3 id="&#x601D;&#x8DEF;&#x4E00;"><a name="&#x601D;&#x8DEF;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x601D;&#x8DEF;&#x4E00;</h3>
+<h3 id="c-&#x5B9E;&#x73B0;"><a name="c-&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c-&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. C++ &#x5B9E;&#x73B0;</h3>
+<p>&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;</p>
+<pre><code>string multiply(string num1, string num2) {
+    int n1 = num1.size(), n2 = num2.size();
+    string result = &quot;&quot;;
+    if (n1 == 0 || n2 == 0) return result;
+    if (num1 == &quot;0&quot; || num2 == &quot;0&quot;) return &quot;0&quot;;
+    std::vector&lt;int&gt; array1(n1 + n2, 0), array2(n1 + n2, 0);
+    int pos1 = n1 + n2, pos2 = n1 + n2 - 1;
+    for (int i = n1 - 1; i &gt;= 0; i--) {
+        pos1--;
+        pos2--;
+        int m = 0;
+        for (int j = n2 - 1; j &gt;= 0; j--) {
+            int a = num1[i] - &apos;0&apos;, b = num2[j] - &apos;0&apos;;
+            array1[pos1 - m] += (a * b) % 10;
+            array2[pos2 - m] += (a * b) / 10;
+            m++;
         }
-        while(pcur1 != NULL) {
-            int mod = (pcur1-&gt;val + carry) % 10;
-            carry = (pcur1-&gt;val + carry) / 10;
-            ListNode *node = new ListNode(mod);
-            pcur-&gt;next = node;
-            pcur = node;
-            pcur1 = pcur1-&gt;next;
-        }
-        while(pcur2 != NULL) {
-            int mod = (pcur2-&gt;val + carry) % 10;
-            carry = (pcur2-&gt;val + carry) / 10;
-            ListNode *node = new ListNode(mod);
-            pcur-&gt;next = node;
-            pcur = node;
-            pcur2 = pcur2-&gt;next;
+    }
+    int high = 0;
+    for (int i = n1 + n2 - 1; i &gt;= 0; i--) {
+        int sum = array1[i] + array2[i] + high;
+        array1[i] = sum % 10;
+        high = sum / 10;
+    }
+    int i = 0;
+    while (array1[i] == 0) {
+        i++;
+    }
+    for (; i &lt; n1 + n2; i++) {
+        result += array1[i] + &apos;0&apos;;
+    }
 
-        }
-
-        if (carry != 0) {
-            ListNode *node = new ListNode(carry);
-            pcur-&gt;next = node;
-            pcur = node;
-        }
-        return ret;
-    }
-};
-</code></pre><pre><code>class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode *ret = NULL, *pcur = NULL;
-        int num1 = 0, num2 = 0, carry = 0;
-        while (l1 != NULL || l2 != NULL) {
-            num1 = (l1 == NULL) ? 0 : l1-&gt;val;
-            num2 = (l2 == NULL) ? 0 : l2-&gt;val;
-            int mod = (num1 + num2 + carry) % 10;
-            carry = (num1 + num2 + carry) / 10;
-            ListNode *node = new ListNode(mod);
-            if (pcur == NULL) {
-                pcur = node;
-                ret = pcur;
-            } else {
-                pcur-&gt;next = node;
-                pcur = node;
-            }
-            if (l1 != NULL) l1 = l1-&gt;next;
-            if (l2 != NULL) l2 = l2-&gt;next;
-        }
-        if (carry != 0) {
-            ListNode *node = new ListNode(carry);
-            pcur-&gt;next = node;
-        }
-        return ret;
-    }
-};
-</code></pre><h3 id="python&#x5B9E;&#x73B0;"><a name="python&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#python&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. python&#x5B9E;&#x73B0;</h3>
-<pre><code>class Solution(object):
-    def addTwoNumbers(self, l1, l2):
-        &quot;&quot;&quot;
-        :type l1: ListNode
-        :type l2: ListNode
-        :rtype: ListNode
-        &quot;&quot;&quot;
-        ret = None
-        pcur = ret
-        num1 = 0
-        num2 = 0
-        carry = 0
-        while l1 != None or l2 != None :
-            if l1 == None:
-                num1 = 0
-            else:
-                num1 = l1.val
-            if l2 == None:
-                num2 = 0
-            else:
-                num2 = l2.val
-            mod = (num1 + num2 + carry) % 10
-            carry = (num1 + num2 + carry) / 10
-            node = ListNode(mod)
-            if pcur == None:
-                pcur = node
-                ret = pcur
-            else:
-                pcur.next = node
-                pcur = node
-            if l1 != None:
-                l1 = l1.next
-            if l2 != None:
-                l2 = l2.next
-        if carry != 0:
-            node = ListNode(carry)
-            pcur.next = node
-        return ret
-</code></pre><h3 id="go&#x5B9E;&#x73B0;"><a name="go&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#go&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. Go&#x5B9E;&#x73B0;</h3>
-<pre><code>func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-    var pcur, ret *ListNode = nil, nil
-    var num1, num2, carry int = 0, 0, 0
-    for l1 != nil || l2 != nil {
-        if (l1 == nil) {num1 = 0} else {num1 = l1.Val}
-        if (l2 == nil) {num2 = 0} else {num2 = l2.Val}
-        mod := (num1 + num2 + carry) % 10
-        carry = (num1 + num2 + carry) / 10
-        node := new(ListNode)
-        node.Val = mod
-        node.Next = nil
-        if (pcur == nil) {
-            pcur = node
-            ret = node
-        }else {
-            pcur.Next = node
-            pcur = node
-        }
-        if (l1 != nil) {l1 = l1.Next}
-        if (l2 != nil) {l2 = l2.Next}
-    }
-    if (carry != 0) {
-        node := new(ListNode)
-        node.Val = carry
-        node.Next = nil
-        pcur.Next = node
-    }
-    return ret
+    return result;
 }
-</code></pre>
+</code></pre><p>&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</p>
+<pre><code>string multiply(string num1, string num2) {
+    int n1 = num1.size(), n2 = num2.size();
+    string result = &quot;&quot;;
+    if (n1 == 0 || n2 == 0) return result;
+    if (num1 == &quot;0&quot; || num2 == &quot;0&quot;) return &quot;0&quot;;
+    std::vector&lt;int&gt; array1(n1 + n2, 0);
+    int pos1 = n1 + n2, pos2 = n1 + n2 - 1;
+    for (int i = n1 - 1; i &gt;= 0; i--) {
+        pos1--; pos2--;
+        int m = 0;
+        for (int j = n2 - 1; j &gt;= 0; j--) {
+            int a = num1[i] - &apos;0&apos;, b = num2[j] - &apos;0&apos;;
+            array1[pos1 - m] += (a * b) % 10;
+            array1[pos2 - m] += (a * b) / 10;
+            m++;
+        }
+    }
+    int high = 0;
+    for (int i = n1 + n2 - 1; i &gt;= 0; i--) {
+        int sum = array1[i] + high;
+        array1[i] = sum % 10;
+        high = sum / 10;
+    }
+    int i = 0;
+    while (array1[i] == 0) {
+        i++;
+    }
+    for (; i &lt; n1 + n2; i++) {
+        result += array1[i] + &apos;0&apos;;
+    }
+    return result;
+}
+</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n2)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n) </p>
+
                                 
                                 </section>
                             
@@ -845,14 +758,10 @@ public:
 
             
                 
-                <a href="001-TwoSum.html" class="navigation navigation-prev " aria-label="Previous page: 001-TwoSum">
+                <a href="038-CountAndSay.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 038-CountAndSay">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="003-LongestSubstringWithoutRepeatingCharacters.html" class="navigation navigation-next " aria-label="Next page: 003-LongestSubstringWithoutRepeatingCharacters">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -861,7 +770,7 @@ public:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"002-AddTwoNumbers","level":"1.4","depth":1,"next":{"title":"003-LongestSubstringWithoutRepeatingCharacters","level":"1.5","depth":1,"path":"003-LongestSubstringWithoutRepeatingCharacters.md","ref":"003-LongestSubstringWithoutRepeatingCharacters.md","articles":[]},"previous":{"title":"001-TwoSum","level":"1.3","depth":1,"path":"001-TwoSum.md","ref":"001-TwoSum.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"002-AddTwoNumbers.md","mtime":"2019-10-10T06:16:04.717Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-04T14:06:17.837Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"043-MultiplyStrings","level":"1.36","depth":1,"previous":{"title":"038-CountAndSay","level":"1.35","depth":1,"path":"038-CountAndSay.md","ref":"038-CountAndSay.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"043-MultiplyStrings.md","mtime":"2019-11-04T13:58:55.328Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-04T14:06:17.837Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
