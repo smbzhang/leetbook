@@ -35,5 +35,6 @@
 <url> <loc>https://leetcode.wang/032-LongestValidParentheses.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/035-SearchInsertPosition.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/038-CountAndSay.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://leetcode.wang/042-TrappingRainWater.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://leetcode.wang/043-MultiplyStrings.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

@@ -35,4 +35,5 @@
 * [032-LongestValidParentheses](032-LongestValidParentheses.md)
 * [035-SearchInsertPosition](035-SearchInsertPosition.md)
 * [038-CountAndSay](038-CountAndSay.md)
+* [042-TrappingRainWater](042-TrappingRainWater.md)
 * [043-MultiplyStrings](043-MultiplyStrings.md)

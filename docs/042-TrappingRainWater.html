@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>043-MultiplyStrings · leetbook</title>
+        <title>042-TrappingRainWater · leetbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,8 +81,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="043-MultiplyStrings.html" />
     
-    <link rel="prev" href="042-TrappingRainWater.html" />
+    
+    <link rel="prev" href="038-CountAndSay.html" />
     
 
 
@@ -587,7 +589,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.36" data-path="042-TrappingRainWater.html">
+        <li class="chapter active" data-level="1.36" data-path="042-TrappingRainWater.html">
             
                 <a href="042-TrappingRainWater.html">
             
@@ -600,7 +602,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.37" data-path="043-MultiplyStrings.html">
+        <li class="chapter " data-level="1.37" data-path="043-MultiplyStrings.html">
             
                 <a href="043-MultiplyStrings.html">
             
@@ -643,7 +645,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >043-MultiplyStrings</a>
+        <a href="." >042-TrappingRainWater</a>
     </h1>
 </div>
 
@@ -658,92 +660,82 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;"><b>3.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#c-&#x5B9E;&#x73B0;"><b>3.2. </b>C++ &#x5B9E;&#x73B0;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
-<p><a href="https://leetcode.com/problems/multiply-strings/" target="_blank">https://leetcode.com/problems/multiply-strings/</a></p>
-<p><img src="assets/043-1.jpg" alt=""></p>
-<p>&#x5927;&#x6570;&#x76F8;&#x4E58;&#x6CA1;&#x4EC0;&#x4E48;&#x597D;&#x8BF4;&#x7684;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;"><b>2.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;"><b>2.2. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E09;"><b>2.3. </b>&#x601D;&#x8DEF;&#x4E09;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E00;_1"><b>3.1. </b>&#x601D;&#x8DEF;&#x4E00;</a></li><li><span class="title-icon "></span><a href="#c&#x5B9E;&#x73B0;"><b>3.2. </b>C++&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E8C;_1"><b>3.3. </b>&#x601D;&#x8DEF;&#x4E8C;</a></li><li><span class="title-icon "></span><a href="#c&#x5B9E;&#x73B0;_1"><b>3.4. </b>C++&#x5B9E;&#x73B0;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;&#x4E09;_1"><b>3.5. </b>&#x601D;&#x8DEF;&#x4E09;</a></li><li><span class="title-icon "></span><a href="#c&#x5B9E;&#x73B0;_2"><b>3.6. </b>C++&#x5B9E;&#x73B0;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>4. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x56F0;&#x96BE;&#x96BE;&#x5EA6;&#xFF09;</h2>
+<p><a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">https://leetcode.com/problems/trapping-rain-water/</a></p>
+<p><img src="assets/042-1.jpg" alt=""></p>
+<p>&#x8FD9;&#x4E2A;&#x9898;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#x8868;&#x793A;&#x5728;&#x5750;&#x6807;&#x8F74;&#x4E2D;&#x7684;&#x9AD8;&#x5EA6;&#x3002;&#x6700;&#x540E;&#x6C42;&#x51FA;&#x8FD9;&#x4E00;&#x7EC4;&#x5750;&#x6807;&#x6240;&#x80FD;&#x76DB;&#x7684;&#x6C34;&#x91CF;&#x3002;</p>
 <h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
-<p>&#x4E58;&#x6CD5;&#x7684;&#x8BDD;&#x9996;&#x5148;&#x60F3;&#x5230;&#x7684;&#x662F;&#x7AD6;&#x5F0F;&#x76F8;&#x4E58;
-<img src="assets/043-2.jpg" alt=""></p>
-<p>&#x8FD9;&#x91CC;&#x6211;&#x60F3;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6765;&#x5B58;&#x653E;&#x6CA1;&#x559D;&#x6570;&#x5B57;&#x76F8;&#x4E58;&#x7684;&#x4F59;&#x6570;(%10)&#x548C;&#x8FDB;&#x4F4D;&#xFF0C;&#x6700;&#x540E;&#x5728;&#x8FDB;&#x884C;&#x76F8;&#x52A0;&#x3002;</p>
-<p>num1&#x7684;&#x957F;&#x5EA6;&#x662F; n1&#xFF0C; num2&#x7684;&#x957F;&#x5EA6;&#x662F; n2</p>
-<p>&#x90A3;&#x4E48;num1 * num2&#x7684;&#x7ED3;&#x679C;&#x7684;&#x957F;&#x5EA6;&#x80AF;&#x5B9A;&#x4E0D;&#x4F1A;&#x5927;&#x4E8E; n1 + n2&#xFF0C;&#x6240;&#x4EE5;&#x5B9A;&#x4E49;array1&#x548C;array2&#x7684;&#x957F;&#x5EA6;&#x662F; n1 + n2</p>
-<p>&#x90A3;&#x4E48;array&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x4F1A;&#x4E0D;&#x4F1A;&#x6EA2;&#x51FA;&#x5462;&#xFF1F;&#x4E0D;&#x4F1A;&#x7684;&#x56E0;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x662F; 110,&#x6240;&#x4EE5; array&#x4E2D;&#x7684;&#x6570;&#x7EC4;&#x6700;&#x5927;&#x662F; 9 * 110 = 990;</p>
-<p>&#x5728;&#x8BA1;&#x7B97;array1 + array2 &#x4E4B;&#x540E;&#xFF0C;&#x904D;&#x5386;&#x7ED3;&#x679C;&#x6570;&#x7EC4;&#xFF0C;&#x9996;&#x5148;&#x53BB;&#x9664;&#x524D;&#x9762;&#x7684;0&#xFF0C;&#x7136;&#x540E;&#x904D;&#x5386;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x540E;&#x3002;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x3002;</p>
-<p>&#x5176;&#x5B9E;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x76F4;&#x63A5;&#x7528;array1&#xFF0C;&#x4F59;&#x6570;&#x548C;&#x8FDB;&#x4F4D;&#x76F4;&#x63A5;&#x52A0;&#x5728;&#x76F8;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#x5C31;&#x597D;&#x4E86;&#x3002;&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x548C;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x89E3;&#x6CD5;&#x3002;</p>
+<p>&#x521A;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x9898;&#x7684;&#x65F6;&#x5019;&#x6211;&#x7684;&#x601D;&#x8DEF;&#x51FA;&#x73B0;&#x4E86;&#x504F;&#x5DEE;&#xFF0C;&#x6211;&#x4E00;&#x76F4;&#x60F3;&#x627E;&#x51FA;&#x4E00;&#x4E2A;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x6216;&#x8005;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x6BD4;&#x5982;f(n)&#x662F;&#x4EE5;n&#x4E3A;&#x5F00;&#x5934;&#x7684;&#x5B58;&#x6C34;&#x91CF;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x4EE5;n&#x4E3A;&#x7ED3;&#x5C3E;&#x7684;&#x5B58;&#x6C34;&#x91CF;&#x3002;&#x6216;&#x8005;f(m,n)&#x662F;&#x4EE5;m&#x5F00;&#x5934;&#xFF0C;n&#x7ED3;&#x5C3E;&#x7684;&#x5B58;&#x6C34;&#x91CF;&#x3002;&#x4F46;&#x662F;&#x5728;&#x7ECF;&#x8FC7;&#x591A;&#x6B21;&#x601D;&#x8003;&#x4E4B;&#x540E;&#x53D1;&#x73B0;&#x5E76;&#x4E0D;&#x80FD;&#x627E;&#x51FA;&#x9012;&#x5F52;&#x89E3;&#xFF0C;&#x6216;&#x8005;&#x6EE1;&#x8DB3;&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;&#x7684;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#x3002;</p>
+<p>&#x7EC6;&#x6316;&#x9898;&#x610F;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x6309;&#x7167;&#x884C;&#x6216;&#x8005;&#x5217;&#x6765;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x6BCF;&#x4E00;&#x884C;&#x7684;&#x50A8;&#x6C34;&#x91CF;&#x6216;&#x8005;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x50A8;&#x6C34;&#x91CF;&#xFF0C;&#x5E76;&#x4E14;&#x6700;&#x540E;&#x8FDB;&#x884C;&#x7D2F;&#x52A0;&#xFF0C;&#x4FBF;&#x53EF;&#x4EE5;&#x5F97;&#x51FA;&#x7ED3;&#x679C;&#x3002;
+<img src="assets/042-2.jpg" alt="">
+<img src="assets/042-3.jpg" alt=""></p>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x4E24;&#x5F20;&#x56FE;&#x4E2D;&#x6211;&#x4EEC;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x5C31;&#x80FD;&#x53D1;&#x73B0;&#x6C42;&#x884C;&#x548C;&#x5217;&#x7684;&#x50A8;&#x6C34;&#x91CF;&#x7684;&#x89E3;&#x6CD5;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x5982;&#x4F55;&#x6C42;&#x89E3;&#x6BCF;&#x4E00;&#x884C;&#x7684;&#x50A8;&#x6C34;&#x91CF;&#x5462;&#xFF1F;&#x5BF9;&#x4E8E;&#x7B2C;n&#x884C;&#xFF0C;&#x904D;&#x5386;&#x5217;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5217;&#x7684;&#x9AD8;&#x5EA6;&#x5C0F;&#x4E8E;n&#xFF0C;&#x5E76;&#x4E14;&#x5176;&#x5DE6;&#x8FB9;&#x548C;&#x53F3;&#x8FB9;&#x7684;&#x5217;&#x90FD;&#x6709;&#x9AD8;&#x4E8E;&#x5F53;&#x524D;&#x5217;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x50A8;&#x6C34;&#x91CF;+1&#xFF1B;</p>
+<p>&#x600E;&#x4E48;&#x6C42;&#x6BCF;&#x4E00;&#x5217;&#x7684;&#x50A8;&#x6C34;&#x91CF;&#x5462;&#xFF1F;</p>
+<h3 id="&#x601D;&#x8DEF;&#x4E00;"><a name="&#x601D;&#x8DEF;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x601D;&#x8DEF;&#x4E00;</h3>
+<p>&#x5BF9;&#x4E8E;&#x7B2C;n&#x5217;&#x7684;&#x50A8;&#x6C34;&#x91CF;&#xFF0C;&#x9700;&#x8981;&#x786E;&#x5B9A;&#x5F53;&#x524D;&#x5217;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x4EE5;&#x53CA;&#x5DE6;&#x8FB9;&#x5217;&#x91CC;&#x9762;&#x6700;&#x9AD8;&#x7684; lmax&#x548C; &#x53F3;&#x8FB9;&#x5217;&#x4E2D;&#x6700;&#x9AD8;&#x7684; rmax,&#x5982;&#x679C; lamx &#x548C; rmax &#x90FD;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x5217;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x90A3;&#x4E48;
+&#x5F53;&#x524D;&#x5217;&#x7684;&#x50A8;&#x6C34;&#x91CF;&#x5C31;&#x662F; std::min(lamx, rmax) - height[n]</p>
+<p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n2)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1) </p>
+<h3 id="&#x601D;&#x8DEF;&#x4E8C;"><a name="&#x601D;&#x8DEF;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x601D;&#x8DEF;&#x4E8C;</h3>
+<p>&#x5BF9;&#x4E8E;&#x601D;&#x8DEF;&#x4E00;&#x4E2D;&#x7684;&#x4E2D;&#x95F4;&#x8FC7;&#x7A0B;&#x8FD8;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x6C42;&#x7B2C;n&#x5217;&#x5DE6;&#x8FB9;&#x548C;&#x53F3;&#x8FB9;&#x5217;&#x7684;&#x6700;&#x5927;&#x503C;&#x3002;</p>
+<p>lmax(i) = std::max(lmax(i - 1), height[i - 1])</p>
+<p>rmax(i) = std::max(rmax(i + 1), height[i + 1])</p>
+<p>&#x4E0A;&#x9762;&#x7684;&#x6C42;&#x89E3;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x6C42;&#x89E3;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x3002;&#x51CF;&#x5C11;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x3002;</p>
+<p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(nlogn)
+<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n)</p>
+<h3 id="&#x601D;&#x8DEF;&#x4E09;"><a name="&#x601D;&#x8DEF;&#x4E09;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E09;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x601D;&#x8DEF;&#x4E09;</h3>
+<p>&#x91C7;&#x7528;&#x53CC;&#x91CD;&#x6307;&#x9488;&#x6765;&#x8FDB;&#x884C;&#x6C42;&#x89E3;&#xFF0C;&#x4EE3;&#x7801;&#x673A;&#x5668;&#x7CBE;&#x7B80;&#x3002;&#x8FD9;&#x662F;&#x770B;leetcode&#x9898;&#x89E3;&#x53D1;&#x73B0;&#x7684;&#x3002;&#x5177;&#x4F53;&#x76F4;&#x63A5;&#x770B;&#x4EE3;&#x7801;</p>
 <h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
-<h3 id="&#x601D;&#x8DEF;&#x4E00;"><a name="&#x601D;&#x8DEF;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x601D;&#x8DEF;&#x4E00;</h3>
-<h3 id="c-&#x5B9E;&#x73B0;"><a name="c-&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c-&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. C++ &#x5B9E;&#x73B0;</h3>
-<p>&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;</p>
-<pre><code>string multiply(string num1, string num2) {
-    int n1 = num1.size(), n2 = num2.size();
-    string result = &quot;&quot;;
-    if (n1 == 0 || n2 == 0) return result;
-    if (num1 == &quot;0&quot; || num2 == &quot;0&quot;) return &quot;0&quot;;
-    std::vector&lt;int&gt; array1(n1 + n2, 0), array2(n1 + n2, 0);
-    int pos1 = n1 + n2, pos2 = n1 + n2 - 1;
-    for (int i = n1 - 1; i &gt;= 0; i--) {
-        pos1--;
-        pos2--;
-        int m = 0;
-        for (int j = n2 - 1; j &gt;= 0; j--) {
-            int a = num1[i] - &apos;0&apos;, b = num2[j] - &apos;0&apos;;
-            array1[pos1 - m] += (a * b) % 10;
-            array2[pos2 - m] += (a * b) / 10;
-            m++;
+<h3 id="&#x601D;&#x8DEF;&#x4E00;_1"><a name="&#x601D;&#x8DEF;&#x4E00;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E00;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x601D;&#x8DEF;&#x4E00;</h3>
+<h3 id="c&#x5B9E;&#x73B0;"><a name="c&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. C++&#x5B9E;&#x73B0;</h3>
+<pre><code>int trap(vector&lt;int&gt;&amp; height) {
+    int result = 0, n = height.size();
+    for (int i = 1; i &lt; n; i++) {
+        int lmax = 0, rmax = 0;
+        for (int m = 0; m &lt; i; m++) {
+            lmax = height[m] &gt; lmax ? height[m] : lmax;
         }
-    }
-    int high = 0;
-    for (int i = n1 + n2 - 1; i &gt;= 0; i--) {
-        int sum = array1[i] + array2[i] + high;
-        array1[i] = sum % 10;
-        high = sum / 10;
-    }
-    int i = 0;
-    while (array1[i] == 0) {
-        i++;
-    }
-    for (; i &lt; n1 + n2; i++) {
-        result += array1[i] + &apos;0&apos;;
-    }
-
-    return result;
-}
-</code></pre><p>&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;</p>
-<pre><code>string multiply(string num1, string num2) {
-    int n1 = num1.size(), n2 = num2.size();
-    string result = &quot;&quot;;
-    if (n1 == 0 || n2 == 0) return result;
-    if (num1 == &quot;0&quot; || num2 == &quot;0&quot;) return &quot;0&quot;;
-    std::vector&lt;int&gt; array1(n1 + n2, 0);
-    int pos1 = n1 + n2, pos2 = n1 + n2 - 1;
-    for (int i = n1 - 1; i &gt;= 0; i--) {
-        pos1--; pos2--;
-        int m = 0;
-        for (int j = n2 - 1; j &gt;= 0; j--) {
-            int a = num1[i] - &apos;0&apos;, b = num2[j] - &apos;0&apos;;
-            array1[pos1 - m] += (a * b) % 10;
-            array1[pos2 - m] += (a * b) / 10;
-            m++;
+        for (int m = i + 1; m &lt; n; m++) {
+            rmax = height[m] &gt; rmax ? height[m] : rmax;
         }
-    }
-    int high = 0;
-    for (int i = n1 + n2 - 1; i &gt;= 0; i--) {
-        int sum = array1[i] + high;
-        array1[i] = sum % 10;
-        high = sum / 10;
-    }
-    int i = 0;
-    while (array1[i] == 0) {
-        i++;
-    }
-    for (; i &lt; n1 + n2; i++) {
-        result += array1[i] + &apos;0&apos;;
+        if (lmax &gt; height[i] &amp;&amp; rmax &gt; height[i]) result += ((rmax &lt; lmax) ? rmax : lmax) - height[i];
     }
     return result;
 }
-</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n2)
-<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n) </p>
+</code></pre><h3 id="&#x601D;&#x8DEF;&#x4E8C;_1"><a name="&#x601D;&#x8DEF;&#x4E8C;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E8C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x601D;&#x8DEF;&#x4E8C;</h3>
+<h3 id="c&#x5B9E;&#x73B0;_1"><a name="c&#x5B9E;&#x73B0;_1" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. C++&#x5B9E;&#x73B0;</h3>
+<pre><code>int trap_2(vector&lt;int&gt;&amp; a){
+    int n = a.size(), result = 0;
+    vector&lt;int&gt; lmax(n, 0), rmax(n, 0);
+    for (int i = 1; i &lt; n; i++) {
+        lmax[i] = a[i - 1] &gt; lmax[i - 1] ? a[i - 1] : lmax[i - 1];
+    }
+    for (int i = n - 2; i &gt;= 0; i--) {
+        rmax[i] = a[i + 1] &gt; rmax[i + 1] ? a[i + 1] : rmax[i + 1];
+    }
+    for (int i = 1; i &lt; n; i++) {
+        int l = lmax[i], r = rmax[i];
+        if (a[i] &lt; l &amp;&amp; a[i] &lt; r) {
+            result += std::min(l, r) - a[i];
+        }
+    }
+    return result;
+}
+</code></pre><h3 id="&#x601D;&#x8DEF;&#x4E09;_1"><a name="&#x601D;&#x8DEF;&#x4E09;_1" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;&#x4E09;_1"><i class="fa fa-link" aria-hidden="true"></i></a>3.5. &#x601D;&#x8DEF;&#x4E09;</h3>
+<h3 id="c&#x5B9E;&#x73B0;_2"><a name="c&#x5B9E;&#x73B0;_2" class="anchor-navigation-ex-anchor" href="#c&#x5B9E;&#x73B0;_2"><i class="fa fa-link" aria-hidden="true"></i></a>3.6. C++&#x5B9E;&#x73B0;</h3>
+<pre><code>int trap_3(vector&lt;int&gt;&amp; height) {
+    int l = 0, r = height.size()-1, level = 0, water = 0;
+    while (l &lt; r) {
+        int lower = height[height[l] &lt; height[r] ? l++ : r--];
+        level = max(level, lower);
+        water += level - lower;
+    }
+    return water;
+}
+</code></pre><h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x603B;&#x7ED3;</h2>
+<p>&#x5F53;&#x53D1;&#x73B0;&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6216;&#x8005;&#x8D2A;&#x5FC3;&#x89E3;&#x6CD5;&#x4E0D;&#x5B58;&#x5728;&#x6216;&#x8005;&#x5F88;&#x96BE;&#x627E;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x9700;&#x6DF1;&#x5165;&#x9898;&#x610F;&#xFF0C;&#x62C6;&#x89E3;&#x95EE;&#x9898;&#x627E;&#x51FA;&#x5408;&#x9002;&#x7684;&#x89E3;&#x6CD5;&#x3002;
+&#x5728;&#x4E0A;&#x9762;&#x601D;&#x8DEF;&#x4E8C;&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF0C;&#x7528;&#x7A7A;&#x95F4;&#x6362;&#x53D6;&#x4E86;&#x65F6;&#x95F4;&#x3002;</p>
 
                                 
                                 </section>
@@ -771,10 +763,14 @@
 
             
                 
-                <a href="042-TrappingRainWater.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 042-TrappingRainWater">
+                <a href="038-CountAndSay.html" class="navigation navigation-prev " aria-label="Previous page: 038-CountAndSay">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="043-MultiplyStrings.html" class="navigation navigation-next " aria-label="Next page: 043-MultiplyStrings">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -783,7 +779,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"043-MultiplyStrings","level":"1.37","depth":1,"previous":{"title":"042-TrappingRainWater","level":"1.36","depth":1,"path":"042-TrappingRainWater.md","ref":"042-TrappingRainWater.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"043-MultiplyStrings.md","mtime":"2019-11-04T14:09:01.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-05T02:23:21.886Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"042-TrappingRainWater","level":"1.36","depth":1,"next":{"title":"043-MultiplyStrings","level":"1.37","depth":1,"path":"043-MultiplyStrings.md","ref":"043-MultiplyStrings.md","articles":[]},"previous":{"title":"038-CountAndSay","level":"1.35","depth":1,"path":"038-CountAndSay.md","ref":"038-CountAndSay.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"042-TrappingRainWater.md","mtime":"2019-11-05T02:22:54.724Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-05T02:23:21.886Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
