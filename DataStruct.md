@@ -437,3 +437,37 @@ for k in dict.keys():
 ```
 
 遍历的方式非常的多
+
+
+# string操作
+
+## C++中std::string的操作
+
+### 删除操作
+
+```
+sequence (1) 删除 pos 开始的长度为 len 的字符
+string& erase (size_t pos = 0, size_t len = npos);
+character (2)	
+iterator erase (const_iterator p);
+range (3)	
+iterator erase (const_iterator first, const_iterator last);
+
+// 输出：Hlo World!
+std::string str = "Hello World!";
+str.erase(1, 2);
+std::cout << str << std::endl;
+
+// 输出：Hlo World!
+str = "Hello World!";
+auto begin = str.begin() + 1, end = str.begin() + 3;
+str.erase(begin, end);
+std::cout << str << std::endl;
+
+// 输出：Hllo World!
+str = "Hello World!";
+begin = str.begin() + 1;
+str.erase(begin);
+std::cout << str << std::endl;
+```
+
