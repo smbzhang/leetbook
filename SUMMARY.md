@@ -2,6 +2,8 @@
 
 * [Introduction](README.md)
 * [常用数据结构梳理](DataStruct.md)
+* [python相关](python的相关用法.md)
+* [C++相关](c++的相关用法.md)
 * [001-TwoSum](001-TwoSum.md)
 * [002-AddTwoNumbers](002-AddTwoNumbers.md)
 * [003-LongestSubstringWithoutRepeatingCharacters](003-LongestSubstringWithoutRepeatingCharacters.md)

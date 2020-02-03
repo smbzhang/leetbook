@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>008-StringToIntegerAtoi · leetbook</title>
+        <title>C++相关 · leetbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="009-PalindromeNumber.html" />
+    <link rel="next" href="001-TwoSum.html" />
     
     
-    <link rel="prev" href="007-ReverseInteger.html" />
+    <link rel="prev" href="python的相关用法.html" />
     
 
 
@@ -173,7 +173,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="c++的相关用法.html">
+        <li class="chapter active" data-level="1.4" data-path="c++的相关用法.html">
             
                 <a href="c++的相关用法.html">
             
@@ -277,7 +277,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12" data-path="008-StringToIntegerAtoi.html">
+        <li class="chapter " data-level="1.12" data-path="008-StringToIntegerAtoi.html">
             
                 <a href="008-StringToIntegerAtoi.html">
             
@@ -671,7 +671,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >008-StringToIntegerAtoi</a>
+        <a href="." >C++相关</a>
     </h1>
 </div>
 
@@ -686,94 +686,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><b>1. </b>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x601D;&#x8DEF;"><b>2. </b>&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;"><b>3. </b>&#x4EE3;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#c-&#x5B9E;&#x73B0;"><b>3.1. </b>C++ &#x5B9E;&#x73B0;</a></li></ul><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>4. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><a name="&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF08;&#x4E2D;&#x7B49;&#x96BE;&#x5EA6;&#xFF09;</h2>
-<p><a href="https://leetcode.com/problems/string-to-integer-atoi/" target="_blank">https://leetcode.com/problems/string-to-integer-atoi/</a>
-<img src="assets/008-1.jpg" alt=""></p>
-<p>&#x8FD9;&#x4E2A;&#x9898;&#x5C31;&#x662F;&#x5B9E;&#x73B0; atoi, &#x5BF9;&#x4E8E;&#x6570;&#x5B57;&#x5B57;&#x7B26;&#x524D;&#x9762;&#x7684;&#x53EA;&#x80FD;&#x51FA;&#x73B0;&#x7A7A;&#x683C;&#x548C;&apos;-&apos;,  &#x5BF9;&#x4E8E;&#x8D85;&#x51FA;&#x6574;&#x6570;&#x8303;&#x56F4;[&#x2212;231, 231 &#x2212; 1]&#x7684;&#x6570;&#xFF0C;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684; -231 &#x6216;&#x8005; 231</p>
-<h2 id="&#x601D;&#x8DEF;"><a name="&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x601D;&#x8DEF;</h2>
-<ul>
-<li>&#x53BB;&#x9664;&#x5B57;&#x7B26;&#x4E32;&#x524D;&#x7F00;&#x7684;&#x7A7A;&#x683C;</li>
-<li>&#x5224;&#x65AD;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x662F;&#x4E0D;&#x662F; &apos;-&apos;,&apos;+&apos;, &#x5982;&#x679C;&#x4E0D;&#x662F;continue&#xFF0C;&#x662F;&#x7684;&#x8BDD;&#x6807;&#x8BB0;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x8D1F;(&#x6B63;)&#x6570;</li>
-<li>&#x5FAA;&#x73AF;&#x5269;&#x4E0B;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x76F4;&#x5230;&#x51FA;&#x73B0;&#x975E;&#x6570;&#x5B57;&#x5B57;&#x7B26;&#x6216;&#x8005;&#x904D;&#x5386;&#x5B8C;&#x6210;&#x3002;&#x904D;&#x5386;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BA1;&#x7B97; result&#xFF0C;&#x5E76;&#x4E14;&#x6839;&#x636E;&#x6570;&#x5B57;&#x6B63;&#x8D1F;&#x5224;&#x65AD;&#x6EA2;&#x51FA;&#x3002;</li>
-</ul>
-<h2 id="&#x4EE3;&#x7801;"><a name="&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4EE3;&#x7801;</h2>
-<h3 id="c-&#x5B9E;&#x73B0;"><a name="c-&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#c-&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. C++ &#x5B9E;&#x73B0;</h3>
-<h4 id="&#x89E3;&#x6CD5;&#x4E00;"><a name="&#x89E3;&#x6CD5;&#x4E00;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E00;</h4>
-<p>&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x4F7F;&#x7528; int &#x5B58;&#x50A8;&#xFF0C;&#x6EA2;&#x51FA;&#x7684;&#x5224;&#x65AD;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;</p>
-<pre><code>class Solution {
-public:
-    int myAtoi(string str) {
-        int n = str.size(), i = 0;
-        int res = 0;
-        bool flag = true;
-        while(i &lt; n &amp;&amp; str[i] == &apos; &apos;) i++;
-        if (str[i] == &apos;-&apos; || str[i] == &apos;+&apos;) {flag = (str[i] == &apos;+&apos;) ? true : false; i++;}
-        for(; i &lt; n; i++) {
-            if (str[i] &gt; &apos;9&apos; || str[i] &lt; &apos;0&apos;) break;
-            int num = str[i] - &apos;0&apos;;
-            if (flag &amp;&amp; ((res &gt; INT_MAX / 10) || (res == INT_MAX / 10 &amp;&amp; num &gt; INT_MAX % 10))) return INT_MAX;
-            if (!flag &amp;&amp; ((-res &lt; INT_MIN / 10) || (-res == INT_MIN / 10 &amp;&amp; -num &lt;= INT_MIN % 10))) return INT_MIN;
-            res = res * 10 + num; 
-        }
-        return (flag) ? res : -res;
-    }
-};
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#c-&#x7528;&#x6CD5;&#x7B14;&#x8BB0;"><b> </b>C++ &#x7528;&#x6CD5;&#x7B14;&#x8BB0;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E3A;&#x4EC0;&#x4E48;c&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x5B9E;&#x73B0;&#x53EA;&#x80FD;&#x5199;&#x5728;&#x540C;&#x4E00;&#x4E2A;h&#x6587;&#x4EF6;&#x4E2D;"><b>1. </b>&#x4E3A;&#x4EC0;&#x4E48;C++&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x5B9E;&#x73B0;&#x53EA;&#x80FD;&#x5199;&#x5728;&#x540C;&#x4E00;&#x4E2A;.h&#x6587;&#x4EF6;&#x4E2D;</a></li><li><span class="title-icon "></span><a href="#throw-&#x548C;-noexception"><b>2. </b>throw &#x548C; noexception</a></li><li><span class="title-icon "></span><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x5462;"><b>3. </b>&#x4E3A;&#x4EC0;&#x4E48;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x5462;</a></li></ul></ul></div><a href="#c-&#x7528;&#x6CD5;&#x7B14;&#x8BB0;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="c-&#x7528;&#x6CD5;&#x7B14;&#x8BB0;"><a name="c-&#x7528;&#x6CD5;&#x7B14;&#x8BB0;" class="anchor-navigation-ex-anchor" href="#c-&#x7528;&#x6CD5;&#x7B14;&#x8BB0;"><i class="fa fa-link" aria-hidden="true"></i></a> C++ &#x7528;&#x6CD5;&#x7B14;&#x8BB0;</h1>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;c&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x5B9E;&#x73B0;&#x53EA;&#x80FD;&#x5199;&#x5728;&#x540C;&#x4E00;&#x4E2A;h&#x6587;&#x4EF6;&#x4E2D;"><a name="&#x4E3A;&#x4EC0;&#x4E48;c&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x5B9E;&#x73B0;&#x53EA;&#x80FD;&#x5199;&#x5728;&#x540C;&#x4E00;&#x4E2A;h&#x6587;&#x4EF6;&#x4E2D;" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;c&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x5B9E;&#x73B0;&#x53EA;&#x80FD;&#x5199;&#x5728;&#x540C;&#x4E00;&#x4E2A;h&#x6587;&#x4EF6;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4E3A;&#x4EC0;&#x4E48;C++&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x5B9E;&#x73B0;&#x53EA;&#x80FD;&#x5199;&#x5728;&#x540C;&#x4E00;&#x4E2A;.h&#x6587;&#x4EF6;&#x4E2D;</h2>
+<p>&#x5982;&#x679C;&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x5B9E;&#x73B0;&#x5206;&#x522B;&#x5199;&#x5728;.h&#x548C;.cpp&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x662F;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x7F16;&#x8BD1;&#x5355;&#x5143;&#x662F;&#x5355;&#x4E2A;&#x7684;cpp&#x6587;&#x4EF6;&#x3002;&#x5BF9;&#x4E8E;&#x6709;&#x6A21;&#x677F;&#x5B9A;&#x4E49;&#x7684;cpp&#x6587;&#x4EF6;&#x6765;&#x8BF4;&#xFF0C;&#x6A21;&#x677F;&#x51FD;&#x6570;&#x662F;&#x4E00;&#x79CD;&#x4E0D;&#x5B8C;&#x6574;&#x7684;&#x5B9A;&#x4E49;.&#x7F16;&#x8BD1;&#x5668;&#x4E0D;&#x77E5;&#x9053;&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#xFF0C;&#x65E0;&#x6CD5;&#x4E3A;&#x5176;&#x751F;&#x6210;&#x4EE3;&#x7801;&#x3002;&#x5BF9;&#x4E8E;&#x6A21;&#x677F;&#x51FD;&#x6570;&#x53EA;&#x6709;&#x5728;&#x8C03;&#x7528;&#x7684;&#x5730;&#x65B9;&#x624D;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x751F;&#x6210;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#xFF0C;&#x5176;&#x4ED6;cpp&#x6587;&#x4EF6;&#x5F15;&#x7528;&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x9636;&#x6BB5;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x5728;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x505A;&#x7B26;&#x53F7;&#x6807;&#x8BB0;&#xFF0C;&#x7B49;&#x5230;&#x94FE;&#x63A5;&#x9636;&#x6BB5;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5230;&#x6A21;&#x677F;&#x51FD;&#x6570;&#x7684;&#x76F8;&#x5E94;.o&#x6587;&#x4EF6;&#x4E2D;&#x67E5;&#x627E;&#x76F8;&#x5E94;&#x5B9E;&#x4F8B;&#x5316;&#x540E;&#x7684;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#xFF0C;&#x56E0;&#x4E3A;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x786E;&#x5B9A;&#x4E3A;&#x4E0D;&#x5B8C;&#x6574;&#x5B9A;&#x4E49;&#x800C;&#x6CA1;&#x6709;&#x771F;&#x6B63;&#x751F;&#x6210;&#x4EE3;&#x7801;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x94FE;&#x63A5;&#x9636;&#x6BB5;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+<p><img src="assets/cpp-001.jpg" alt=""></p>
+<h2 id="throw-&#x548C;-noexception"><a name="throw-&#x548C;-noexception" class="anchor-navigation-ex-anchor" href="#throw-&#x548C;-noexception"><i class="fa fa-link" aria-hidden="true"></i></a>2. throw &#x548C; noexception</h2>
+<p>C++11&#x4E2D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; noexception &#x4EE3;&#x66FF; throw&#xFF0C;&#x56E0;&#x4E3A;c++17&#x4EE5;&#x540E;throw&#x76F8;&#x5173;&#x7684;&#x6240;&#x6709;&#x7528;&#x6CD5;&#x5C31;&#x88AB;&#x5E9F;&#x5F03;&#x4E86;</p>
+<pre><code>void except_func() throw(int, double) 
+&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x5F02;&#x5E38;&#x58F0;&#x660E;throw(int, double)&#xFF0C;&#x8BE5;&#x58F0;&#x660E;&#x6307;&#x51FA;&#x4E86;excpt_func&#x53EF;&#x80FD;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x8BE5;&#x7279;&#x6027;&#x5F88;&#x5C11;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x5728;C++11&#x4E2D;&#x88AB;&#x5F03;&#x7528;&#x4E86;
 
-class Solution {
-public:
-    int myAtoi(string str) {
-        int n = str.size(), i = 0;
-        int res = 0;
-        bool flag = true;
-        while(i &lt; n &amp;&amp; str[i] == &apos; &apos;) i++;
-        if (str[i] == &apos;-&apos; || str[i] == &apos;+&apos;) {flag = (str[i] == &apos;+&apos;) ? true : false; i++;}
-        for(; i &lt; n; i++) {
-            if (str[i] &gt; &apos;9&apos; || str[i] &lt; &apos;0&apos;) break;
-            int num = str[i] - &apos;0&apos;;
-            if (flag &amp;&amp; ((res &gt; INT_MAX / 10) || (res == INT_MAX / 10 &amp;&amp; num &gt; INT_MAX % 10))) return INT_MAX;
-            if (!flag &amp;&amp; ((-res &lt; INT_MIN / 10) || (-res == INT_MIN / 10 &amp;&amp; -num &lt;= INT_MIN % 10))) return INT_MIN;
-            res = res * 10 + num; 
-        }
-        return (flag) ? res : -res;
-    }
-};
-</code></pre><p><strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(n)
-<strong>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</strong> O(1)</p>
-<h4 id="&#x89E3;&#x6CD5;&#x4E8C;"><a name="&#x89E3;&#x6CD5;&#x4E8C;" class="anchor-navigation-ex-anchor" href="#&#x89E3;&#x6CD5;&#x4E8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x6CD5;&#x4E8C;</h4>
-<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4F7F;&#x7528; long long int&#x5B58;&#x50A8;&#xFF0C;&#x6EA2;&#x51FA;&#x7684;&#x5224;&#x65AD;&#x7B80;&#x5355;</p>
-<pre><code>class Solution {
-public:
-    int myAtoi(string str) {
-        int n = str.size(), i = 0;
-        long long int res = 0;
-        bool flag = true;
-        while(i &lt; n &amp;&amp; str[i] == &apos; &apos;) i++;
-        if (str[i] == &apos;-&apos; || str[i] == &apos;+&apos;) {flag = (str[i] == &apos;+&apos;) ? true : false; i++;}
-        for(; i &lt; n; i++) {
-            if (str[i] &gt; &apos;9&apos; || str[i] &lt; &apos;0&apos;) break;
-            int num = str[i] - &apos;0&apos;;
-            res = res * 10 + num;  // &#x5982;&#x679C; flag = false&#xFF0C; &#x8D1F;&#x503C;&#x7684;&#x6700;&#x5927;&#x503C;&#x5728;&#x8FD9;&#x91CC;&#x4F1A;&#x6EA2;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528; long long int &#x6765;&#x5B58;&#x50A8; res
-            if (flag &amp;&amp; res &gt; INT_MAX) return INT_MAX;
-            if (!flag &amp;&amp; res - 1 &gt; INT_MAX) return INT_MIN;
-        }
-        return (flag) ? res : -res;
-    }
-};
-</code></pre><h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x603B;&#x7ED3;</h2>
-<p>&#x8FD9;&#x4E2A;&#x9898;&#x7684;&#x96BE;&#x5EA6;&#x4E0D;&#x5927;&#xFF0C;&#x8003;&#x9A8C;&#x4EBA;&#x7684;&#x5730;&#x65B9;&#x662F;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x4F18;&#x7F8E;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x8FB9;&#x754C;&#x7684;&#x5224;&#x65AD;&#x7B49;&#x7B49;&#x3002;&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x4F18;&#x96C5;&#x7684;&#x5B9E;&#x73B0;&#x6EA2;&#x51FA;&#x7684;&#x5224;&#x65AD;&#x3002;</p>
-<p><strong>&#x6574;&#x6570;&#x6EA2;&#x51FA;&#x5224;&#x65AD;&#xFF1A;</strong>
-&#x5982;&#x679C;result&#x7684;&#x7C7B;&#x578B;&#x662F;int&#xFF0C; &#x5224;&#x65AD;quot&#x662F;&#x4E0D;&#x662F;&#x5927;&#x4E8E; INT_MAX/10, &#x7136;&#x540E;&#x5224;&#x65AD;&#x4E2A;&#x4F4D;&#x6570;</p>
-<pre><code>if (flag &amp;&amp; ((res &gt; INT_MAX / 10) || (res == INT_MAX / 10 &amp;&amp; num &gt; INT_MAX % 10))) return INT_MAX;
-if (!flag &amp;&amp; ((-res &lt; INT_MIN / 10) || (-res == INT_MIN / 10 &amp;&amp; -num &lt;= INT_MIN % 10))) return INT_MIN;
-res = res * 10 + num;
+&#x800C;&#x8868;&#x793A;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x7684;&#x52A8;&#x6001;&#x5F02;&#x5E38;&#x58F0;&#x660E;throw()&#x4E5F;&#x88AB;&#x65B0;&#x7684;noexcept&#x5F02;&#x5E38;&#x58F0;&#x660E;&#x6240;&#x53D6;&#x4EE3;&#x3002;
+1. void noexcept_func() throw() {}
+2. void noexcept_func() noexcept (ture) {}
+3. void noexcept_func() noexcept (false) {}
 
- (-res == INT_MIN / 10 &amp;&amp; -num &lt;= INT_MIN % 10)  &#x8D1F;&#x6570;&#x5224;&#x65AD;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x4E00;&#x5B9A;&#x8981; &lt;=&#xFF0C;&#x56E0;&#x4E3A;res&#x6211;&#x4EEC;&#x662F;&#x6309;&#x7167;&#x6B63;&#x6570;&#x5904;&#x7406;&#x6700;&#x540E;&#x518D;&#x7EDF;&#x4E00;&#x52A0;&#x7B26;&#x53F7;&#xFF0C;&#x6240;&#x4EE5;&#x8D1F;&#x6570;&#x7B49;&#x4E8E;INT_MIN&#x7684;&#x65F6;&#x5019;&#x5C31;&#x76F4;&#x63A5;&#x8FD4;&#x56DE; INT_MIN&#xFF0C;&#x5426;&#x5219;&#x7684;&#x8BDD; res &#x5C31;&#x6EA2;&#x51FA;&#x4E86;
-</code></pre><p>&#x76F4;&#x63A5;&#x8BA9; res &#x5E26;&#x7B26;&#x53F7;&#x5E76;&#x4E14;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x5355;&#x72EC;&#x5904;&#x7406;&#x4E0A;&#x9762;&#x7684;&#x8D1F;&#x6570;&#x6EA2;&#x51FA;&#x4E86;&#xFF0C;&#x53C2;&#x8003; <a href="007-ReverseInteger.html">007-ReverseInterger</a></p>
-<p>&#x5982;&#x679C; result &#x4F7F;&#x7528; long long int &#x5B58;&#x50A8;, &#x53EF;&#x4EE5;&#x5148;&#x8BA1;&#x7B97; res&#x7136;&#x540E;&#x5728;&#x8FDB;&#x884C;&#x6EA2;&#x51FA;&#x5224;&#x65AD;</p>
-<pre><code>res = res * 10 + num;  // &#x5982;&#x679C; flag = false&#xFF0C; &#x8D1F;&#x503C;&#x7684;&#x6700;&#x5927;&#x503C;&#x5728;&#x8FD9;&#x91CC;&#x4F1A;&#x6EA2;&#x51FA;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528; long long int &#x6765;&#x5B58;&#x50A8; res
-if (flag &amp;&amp; res &gt; INT_MAX) return INT_MAX;
-if (!flag &amp;&amp; res - 1 &gt; INT_MAX) return INT_MIN;
-</code></pre>
+1 &#x7B49;&#x4EF7;&#x4E8E; 2
+2 &#x8868;&#x793A;&#x8BE5;&#x51FD;&#x6570;&#x4E0D;&#x5141;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x51FD;&#x6570;&#x4E2D;&#x6709;&#x5F02;&#x5E38;&#x629B;&#x51FA;&#x7684;&#x8BDD;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x76F4;&#x63A5;&#x8C03;&#x7528; std::terminate &#x7EC8;&#x6B62;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;
+3 &#x4E0D;&#x963B;&#x6B62;&#x8BE5;&#x51FD;&#x6570;&#x629B;&#x51FA;&#x5F02;&#x5E38;
+
+noexcept&#x5F62;&#x5982;&#x5176;&#x540D;&#x5730;&#xFF0C;&#x8868;&#x793A;&#x5176;&#x4FEE;&#x9970;&#x7684;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;&#x4E0D;&#x8FC7;&#x4E0E;throw()&#x52A8;&#x6001;&#x5F02;&#x5E38;&#x58F0;&#x660E;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5728;C++11&#x4E2D;&#x5982;&#x679C;noexcept&#x4FEE;&#x9970;&#x7684;&#x51FD;&#x6570;&#x629B;&#x51FA;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;
+
+&#x7F16;&#x8BD1;&#x5668;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x76F4;&#x63A5;&#x8C03;&#x7528;std::terminate()&#x51FD;&#x6570;&#x6765;&#x7EC8;&#x6B62;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#xFF0C;&#x8FD9;&#x6BD4;&#x57FA;&#x4E8E;&#x5F02;&#x5E38;&#x673A;&#x5236;&#x7684;throw()&#x5728;&#x6548;&#x7387;&#x4E0A;&#x4F1A;&#x9AD8;&#x4E00;&#x4E9B;&#x3002;
+
+&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5F02;&#x5E38;&#x673A;&#x5236;&#x4F1A;&#x5E26;&#x6765;&#x4E00;&#x4E9B;&#x989D;&#x5916;&#x5F00;&#x9500;&#xFF0C;&#x6BD4;&#x5982;&#x51FD;&#x6570;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x51FD;&#x6570;&#x6808;&#x88AB;&#x4F9D;&#x6B21;&#x5730;&#x5C55;&#x5F00;&#xFF08;unwind&#xFF09;&#xFF0C;&#x5E76;&#x4F9D;&#x5E27;&#x8C03;&#x7528;&#x5728;&#x672C;&#x5E27;&#x4E2D;&#x5DF2;&#x6784;&#x9020;&#x7684;&#x81EA;&#x52A8;&#x53D8;&#x91CF;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;&#x7B49;&#x3002;
+</code></pre><p><img src="assets/cpp-002.jpg" alt=""></p>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x5462;"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x5462;" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x5462;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4E3A;&#x4EC0;&#x4E48;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x5462;</h2>
+<p>more effective c++&#x63D0;&#x51FA;&#x4E24;&#x70B9;&#x7406;&#x7531;&#xFF1A;</p>
+<ol>
+<li><p>&#x5982;&#x679C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x5F02;&#x5E38;&#x70B9;&#x4E4B;&#x540E;&#x7684;&#x7A0B;&#x5E8F;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF0C;&#x5982;&#x679C;&#x6790;&#x6784;&#x51FD;&#x6570;&#x5728;&#x5F02;&#x5E38;&#x70B9;&#x4E4B;&#x540E;&#x6267;&#x884C;&#x4E86;&#x67D0;&#x4E9B;&#x5FC5;&#x8981;&#x7684;&#x52A8;&#x4F5C;&#x6BD4;&#x5982;&#x91CA;&#x653E;&#x67D0;&#x4E9B;&#x8D44;&#x6E90;&#xFF0C;&#x5219;&#x8FD9;&#x4E9B;&#x52A8;&#x4F5C;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF0C;&#x4F1A;&#x9020;&#x6210;&#x8BF8;&#x5982;&#x8D44;&#x6E90;&#x6CC4;&#x6F0F;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+<li><p>&#x901A;&#x5E38;&#x5F02;&#x5E38;&#x53D1;&#x751F;&#x65F6;&#xFF0C;c++&#x7684;&#x673A;&#x5236;&#x4F1A;&#x8C03;&#x7528;&#x5DF2;&#x7ECF;&#x6784;&#x9020;&#x5BF9;&#x8C61;&#x7684;&#x6790;&#x6784;&#x51FD;&#x6570;&#x6765;&#x91CA;&#x653E;&#x8D44;&#x6E90;&#xFF0C;&#x6B64;&#x65F6;&#x82E5;&#x6790;&#x6784;&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x4E5F;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x524D;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x5C1A;&#x672A;&#x5904;&#x7406;&#xFF0C;&#x53C8;&#x6709;&#x65B0;&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x4F1A;&#x9020;&#x6210;&#x7A0B;&#x5E8F;&#x5D29;&#x6E83;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+</ol>
+<p><img src="assets/cpp-003.jpg" alt=""></p>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5F88;&#x597D;&#x7684;&#x89E3;&#x91CA;&#x4E86;&#x4E3A;&#x4EC0;&#x4E48;&#x6790;&#x6784;&#x51FD;&#x6570;&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;&#x5982;&#x679C;&#x5728;&#x4E00;&#x4E2A;catch&#x5757;&#x4E2D;&#xFF0C;&#x6253;&#x5F00;&#x6808;&#x4E4B;&#x540E;&#x6790;&#x6784;&#x5176;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x629B;&#x51FA;&#x5F02;&#x5E38;,&#x7A0B;&#x5E8F;&#x518D;&#x6B21;&#x53BB;&#x90A3;&#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#x627E;&#x94FE;&#x8868;&#x5934;&#xFF0C;&#x4F46;&#x662F;&#x94FE;&#x8868;&#x5934;&#x5DF2;&#x7ECF;&#x88AB;&#x4E22;&#x5F03;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x7A0B;&#x5E8F;&#x5C31;&#x627E;&#x4E0D;&#x5230;&#x4E4B;&#x524D;&#x7684;catch&#x5757;&#x3002;</p>
+
                                 
                                 </section>
                             
@@ -800,12 +748,12 @@ if (!flag &amp;&amp; res - 1 &gt; INT_MAX) return INT_MIN;
 
             
                 
-                <a href="007-ReverseInteger.html" class="navigation navigation-prev " aria-label="Previous page: 007-ReverseInteger">
+                <a href="python的相关用法.html" class="navigation navigation-prev " aria-label="Previous page: python相关">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="009-PalindromeNumber.html" class="navigation navigation-next " aria-label="Next page: 009-PalindromeNumber">
+                <a href="001-TwoSum.html" class="navigation navigation-next " aria-label="Next page: 001-TwoSum">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -816,7 +764,7 @@ if (!flag &amp;&amp; res - 1 &gt; INT_MAX) return INT_MIN;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"008-StringToIntegerAtoi","level":"1.12","depth":1,"next":{"title":"009-PalindromeNumber","level":"1.13","depth":1,"path":"009-PalindromeNumber.md","ref":"009-PalindromeNumber.md","articles":[]},"previous":{"title":"007-ReverseInteger","level":"1.11","depth":1,"path":"007-ReverseInteger.md","ref":"007-ReverseInteger.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"008-StringToIntegerAtoi.md","mtime":"2019-11-04T14:09:01.294Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T08:08:31.025Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"C++相关","level":"1.4","depth":1,"next":{"title":"001-TwoSum","level":"1.5","depth":1,"path":"001-TwoSum.md","ref":"001-TwoSum.md","articles":[]},"previous":{"title":"python相关","level":"1.3","depth":1,"path":"python的相关用法.md","ref":"python的相关用法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","splitter","anchor-navigation-ex","github-buttons","copy-code-button","-lunr","-search","search-plus","-livereload","meta","sitemap","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"meta":{"content":"","data":[{"name":"baidu-site-verification","content":"iFzduP9Qsi"},{"name":"google-site-verification","content":"qwgHd8kl7vEvBa4OR81jLieQG9UKcY2r8ocztMhzA8o"}],"name":""},"splitter":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"https://leetcode.wang"},"github-buttons":{"buttons":[{"user":"smbzhang","repo":"leetcode","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"smbzhang","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"leetbook","language":"zh-hans","links":{"sidebar":{"Home":"https://smbzhang.top"},"gitbook":true},"gitbook":"3.2.3","description":"leetcode刷题"},"file":{"path":"c++的相关用法.md","mtime":"2020-02-03T08:08:07.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-03T08:08:31.025Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
